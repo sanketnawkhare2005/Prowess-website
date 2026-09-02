@@ -1,0 +1,1228 @@
+/* .belief-prow-section {
+  background-color: #ffffff;
+  padding: 32px 30px;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.belief-prow-container {
+  max-width: 1600px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.belief-prow-heading-block {
+  flex: 0 0 250px;
+}
+
+.belief-prow-title {
+  color: #0a0a0a;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 19px;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin: 0 0 10px 0;
+}
+
+.belief-prow-underline {
+  display: block;
+  width: 30px;
+  height: 3px;
+  background-color: #f5b301;
+  border-radius: 2px;
+  margin-bottom: 14px;
+}
+
+.belief-prow-bold-line {
+  color: #0a0a0a;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.4;
+  margin: 0 0 10px 0;
+}
+
+.belief-prow-accent {
+  color: #f5b301;
+}
+
+.belief-prow-desc {
+  color: #6b6b6b;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12.5px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.belief-prow-row {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.belief-prow-step-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  min-width: 0;
+}
+
+.belief-prow-step {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.belief-prow-icon-circle {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 1.5px solid #f5b301;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.belief-prow-icon-circle svg {
+  width: 26px;
+  height: 26px;
+}
+
+.belief-prow-step-title {
+  margin: 0 0 4px 0;
+  color: #0a0a0a;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+  line-height: 1.3;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.belief-prow-step-desc {
+  margin: 0;
+  color: #6b6b6b;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10.5px;
+  line-height: 1.4;
+}
+
+
+
+.belief-prow-arrow {
+  flex: 0 0 auto;
+  width: 20px;
+  height: 20px;
+  margin-bottom: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.belief-prow-arrow svg {
+  width: 100%;
+  height: 100%;
+}
+
+.belief-prow-divider {
+  flex: 0 0 1px;
+  width: 1px;
+  align-self: stretch;
+  background-color: #e2e2e2;
+  margin: 0 4px;
+}
+
+.belief-prow-quote {
+  flex: 0 0 220px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.belief-prow-quote-icon {
+  color: #f5b301;
+  font-size: 30px;
+  font-weight: 900;
+  line-height: 1;
+  font-family: Georgia, serif;
+}
+
+.belief-prow-quote-text {
+  margin: 0;
+  color: #0a0a0a;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+@media (max-width: 1350px) {
+  .belief-prow-icon-circle {
+    width: 48px;
+    height: 48px;
+  }
+
+  .belief-prow-icon-circle svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .belief-prow-step-title {
+    font-size: 10px;
+    white-space: normal;
+  }
+
+  .belief-prow-step-desc {
+    font-size: 10px;
+  }
+
+  .belief-prow-quote {
+    flex-basis: 190px;
+  }
+
+  .belief-prow-quote-text {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 1180px) {
+  .belief-prow-heading-block {
+    flex-basis: 210px;
+  }
+
+  .belief-prow-row {
+    gap: 6px;
+  }
+
+  .belief-prow-step-wrap {
+    gap: 6px;
+  }
+
+  .belief-prow-arrow {
+    display: none;
+  }
+
+  .belief-prow-quote {
+    flex-basis: 170px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .belief-prow-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 22px;
+  }
+
+  .belief-prow-heading-block {
+    flex-basis: auto;
+  }
+
+  .belief-prow-row {
+    width: 100%;
+    flex-wrap: wrap;
+    row-gap: 20px;
+  }
+
+  .belief-prow-step-wrap {
+    flex: 1 1 30%;
+    min-width: 140px;
+  }
+
+  .belief-prow-divider {
+    display: none;
+  }
+
+  .belief-prow-quote {
+    flex: 1 1 100%;
+  }
+}
+
+@media (max-width: 700px) {
+  .belief-prow-section {
+    padding: 26px 20px;
+  }
+
+  .belief-prow-step-wrap {
+    flex: 1 1 45%;
+  }
+}
+
+@media (max-width: 520px) {
+  .belief-prow-section {
+    padding: 22px 16px;
+  }
+
+  .belief-prow-title {
+    font-size: 17px;
+  }
+
+  .belief-prow-step-wrap {
+    flex: 1 1 45%;  
+  }
+
+  .belief-prow-icon-circle {
+    width: 52px;
+    height: 52px;
+  }
+
+  .belief-prow-step-title {
+    white-space: normal;
+    font-size: 11px;
+  }
+
+  .belief-prow-step-desc {
+    font-size: 11px;
+  }
+
+  .belief-prow-quote-text {
+    font-size: 12.5px;
+  }
+}
+
+
+
+
+
+
+
+
+@keyframes ap4-slideLeft {
+  from { opacity: 0; transform: translateX(-30px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes ap4-scaleX {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
+}
+@keyframes ap4-snapIn {
+  0%   { opacity: 0; transform: scale(0.5) translateY(-15px); }
+  70%  { transform: scale(1.08) translateY(0); }
+  100% { opacity: 1; transform: scale(1) translateY(0); }
+}
+@keyframes ap4-growH {
+  from { transform: scaleY(0); }
+  to   { transform: scaleY(1); }
+}
+@keyframes ap4-fadeRight {
+  from { opacity: 0; transform: translateX(30px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+.belief-prow-heading-block { opacity: 0; transform: translateX(-30px); }
+.belief-prow-underline     { transform: scaleX(0); transform-origin: left center; }
+.belief-prow-step         { opacity: 0; transform: scale(0.5) translateY(-15px); }
+.belief-prow-arrow        { opacity: 0; transform: scaleX(0); transform-origin: center; }
+.belief-prow-divider      { transform: scaleY(0); transform-origin: center; }
+.belief-prow-quote        { opacity: 0; transform: translateX(30px); }
+
+.belief-prow-heading-block.revealed {
+  animation: ap4-slideLeft 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0s forwards;
+}
+.belief-prow-heading-block.revealed .belief-prow-underline {
+  animation: ap4_scaleX 0.5s cubic-bezier(0.22, 1, 0.36, 1) 0.15s forwards;
+}
+
+.belief-prow-step.revealed {
+  animation: ap4-snapIn 0.55s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  animation-delay: calc(var(--d, 0) * 0.1s + 0.2s);
+}
+
+.belief-prow-arrow.revealed {
+  animation: ap4_scaleX 0.4s ease forwards;
+  animation-delay: calc(var(--d, 0) * 0.1s + 0.35s);
+}
+
+.belief-prow-divider.revealed {
+  animation: ap4-growH 0.5s ease 0.7s forwards;
+}
+
+.belief-prow-quote.revealed {
+  animation: ap4-fadeRight 0.6s ease 0.8s forwards;
+}
+
+
+.belief-prow-heading-block.hover-ready { opacity: 1; transform: translateX(0); animation: none; }
+.belief-prow-heading-block.hover-ready .belief-prow-underline { transform: scaleX(1); animation: none; }
+.belief-prow-step.hover-ready { opacity: 1; transform: scale(1) translateY(0); animation: none; }
+.belief-prow-arrow.hover-ready { opacity: 1; transform: scaleX(1); animation: none; }
+.belief-prow-divider.hover-ready { transform: scaleY(1); animation: none; }
+.belief-prow-quote.hover-ready { opacity: 1; transform: translateX(0); animation: none; }
+
+
+.belief-prow-icon-circle {
+  transition: transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1),
+              border-color 0.3s ease,
+              box-shadow 0.3s ease;
+}
+.belief-prow-step.hover-ready:hover .belief-prow-icon-circle {
+  transform: scale(1.12) translateY(-3px);
+  border-color: #f5b301;
+  box-shadow: 0 6px 16px rgba(245, 179, 1, 0.25);
+}
+
+.belief-prow-icon-circle svg {
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.belief-prow-step.hover-ready:hover .belief-prow-icon-circle svg {
+  transform: rotate(-10deg) scale(1.1);
+}
+
+.belief-prow-step-title {
+  transition: color 0.3s ease;
+}
+.belief-prow-step.hover-ready:hover .belief-prow-step-title {
+  color: #c48f00;
+}
+
+.belief-prow-arrow.hover-ready {
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.belief-prow-arrow.hover-ready:hover {
+  transform: translateX(4px);
+}
+
+.belief-prow-quote {
+  transition: background-color 0.4s ease;
+  padding: 8px;
+  margin: -8px; 
+  border-radius: 6px;
+}
+.belief-prow-quote.hover-ready:hover {
+  background-color: rgba(245, 179, 1, 0.06);
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+  .belief-prow-heading-block,
+  .belief-prow-underline,
+  .belief-prow-step,
+  .belief-prow-arrow,
+  .belief-prow-divider,
+  .belief-prow-quote {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .belief-prow-icon-circle,
+  .belief-prow-icon-circle svg,
+  .belief-prow-step-title,
+  .belief-prow-arrow.hover-ready,
+  .belief-prow-quote {
+    transition: none !important;
+  }
+  .belief-prow-step.hover-ready:hover .belief-prow-icon-circle {
+    box-shadow: none !important;
+    transform: none !important;
+  }
+} */
+
+
+
+
+
+
+
+
+
+
+.belief-prow-section {
+  background-color: #ffffff;
+  padding: 32px 30px;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.belief-prow-container {
+  max-width: 1600px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.belief-prow-heading-block {
+  flex: 0 0 250px;
+}
+
+.belief-prow-title {
+  color: #0a0a0a;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin: 0 0 10px 0;
+}
+
+.belief-prow-underline {
+  position: relative;
+  display: block;
+  width: 30px;
+  height: 3px;
+  background-color: #f5b301;
+  border-radius: 2px;
+  margin-bottom: 14px;
+  overflow: visible;
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 0.4s ease;
+  transform-origin: left center;
+}
+
+.belief-prow-bold-line {
+  color: #0a0a0a;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.4;
+  margin: 0 0 10px 0;
+}
+
+.belief-prow-accent {
+  color: #f5b301;
+}
+
+.belief-prow-desc {
+  color: #6b6b6b;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ---------- Right: one row of steps + divider + quote ---------- */
+.belief-prow-row {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.belief-prow-step-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  min-width: 0;
+}
+
+.belief-prow-step {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.belief-prow-icon-circle {
+  position: relative;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  /* border: 1.5px solid #f5b301; */
+  border: 1.5px solid transparent;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+/* expanding ping ring, played once on reveal */
+/* .belief-prow-icon-circle::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 1.5px solid #f5b301;
+  opacity: 0;
+  pointer-events: none;
+} */
+
+.belief-prow-icon-circle::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 1.5px solid #f5b301;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 3;
+}
+
+/* .belief-prow-icon-circle svg {
+  width: 26px;
+  height: 26px;
+} */
+
+/* NAYA */
+.belief-prow-icon-circle svg {
+  width: 38px;
+  height: 38px;
+  position: relative;
+  z-index: 2;
+  border: 1.5px solid #f5b301;
+  border-radius: 50%;
+}
+
+.belief-prow-step-title {
+  margin: 0 0 4px 0;
+  color: #0a0a0a;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+  line-height: 1.3;
+  text-transform: uppercase;
+  /* white-space: nowrap; */
+
+  /* CHANGE */
+  white-space: normal;
+  max-width: 85px;      /* apne design ke hisab se 80-90px kar sakte ho */
+  text-align: center;
+}
+
+.belief-prow-step-desc {
+  margin: 0;
+  color: #6b6b6b;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+/* ---------- Rotating gradient ring on icon circles ---------- */
+.belief-prow-icon-circle::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: 50%;
+  background: conic-gradient(
+    from 0deg,
+    #f5b301 0%,
+    rgba(245, 179, 1, 0.4) 10%,
+    rgba(245, 179, 1, 0.1) 22%,
+    transparent 32%,
+    transparent 68%,
+    rgba(245, 179, 1, 0.1) 78%,
+    rgba(245, 179, 1, 0.4) 90%,
+    #f5b301 100%
+  );
+  -webkit-mask: radial-gradient(circle, transparent 44.5%, black 45.5%);
+  mask: radial-gradient(circle, transparent 44.5%, black 45.5%);
+  animation: ap4-gradientSpin 2.5s linear infinite;
+  z-index: 1;
+  pointer-events: none;
+}
+
+@keyframes ap4-gradientSpin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+
+/* ---------- Arrow between circles ---------- */
+.belief-prow-arrow {
+  flex: 0 0 auto;
+  width: 20px;
+  height: 20px;
+  margin-bottom: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.belief-prow-arrow svg {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease;
+}
+
+/* ---------- Divider ---------- */
+.belief-prow-divider {
+  position: relative;
+  flex: 0 0 1px;
+  width: 1px;
+  align-self: stretch;
+  background-color: #e2e2e2;
+  margin: 0 4px;
+  overflow: hidden;
+}
+
+.belief-prow-divider::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent, #f5b301, transparent);
+  background-size: 100% 250%;
+  opacity: 0;
+}
+
+/* ---------- Quote ---------- */
+.belief-prow-quote {
+  position: relative;
+  flex: 0 0 220px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.belief-prow-quote-icon {
+  position: relative;
+  color: #f5b301;
+  font-size: 30px;
+  font-weight: 900;
+  line-height: 1;
+  font-family: Georgia, serif;
+}
+
+.belief-prow-quote-text {
+  position: relative;
+  margin: 0;
+  color: #0a0a0a;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.5;
+  z-index: 1;
+}
+
+/* one-shot highlighter sweep behind the quote text */
+.belief-prow-quote-text::before {
+  content: "";
+  position: absolute;
+  left: -4px;
+  right: 100%;
+  top: 10%;
+  bottom: 10%;
+  background: rgba(245, 179, 1, 0.18);
+  border-radius: 3px;
+  z-index: -1;
+}
+
+/* ==========================================================================
+   RESPONSIVE — stays a SINGLE ROW through desktop *and* laptop widths.
+   Mobile keeps the same stacked/wrapped structure as before, just with
+   slightly larger, easier-to-read type.
+   ========================================================================== */
+
+/* Laptop / small desktop */
+@media (max-width: 1350px) {
+  .belief-prow-icon-circle {
+    width: 48px;
+    height: 48px;
+  }
+
+  .belief-prow-icon-circle svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .belief-prow-step-title {
+    font-size: 10px;
+    white-space: normal;
+  }
+
+  .belief-prow-step-desc {
+    font-size: 10px;
+  }
+
+  .belief-prow-quote {
+    flex-basis: 190px;
+  }
+
+  .belief-prow-quote-text {
+    font-size: 12px;
+  }
+}
+
+/* Small laptop */
+@media (max-width: 1180px) {
+  .belief-prow-heading-block {
+    flex-basis: 210px;
+  }
+
+  .belief-prow-row {
+    gap: 6px;
+  }
+
+  .belief-prow-step-wrap {
+    gap: 6px;
+  }
+
+  .belief-prow-arrow {
+    display: none;
+  }
+
+  .belief-prow-quote {
+    flex-basis: 170px;
+  }
+}
+
+/* Laptop tier — extra tightening so the row NEVER wraps or overlaps,
+   replacing what used to be a hard break into a stacked layout here */
+@media (max-width: 1024px) {
+  .belief-prow-container {
+    gap: 18px;
+  }
+
+  .belief-prow-heading-block {
+    flex-basis: 175px;
+  }
+
+  .belief-prow-title {
+    font-size: 16px;
+  }
+
+  .belief-prow-bold-line {
+    font-size: 12.5px;
+  }
+
+  .belief-prow-desc {
+    font-size: 11px;
+  }
+
+  .belief-prow-row {
+    gap: 4px;
+  }
+
+  .belief-prow-step-wrap {
+    gap: 4px;
+  }
+
+  .belief-prow-icon-circle {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 7px;
+  }
+
+  .belief-prow-icon-circle svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .belief-prow-step-title {
+    font-size: 9px;
+  }
+
+  .belief-prow-step-desc {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-size: 9px;
+  }
+
+  .belief-prow-quote {
+    flex-basis: 135px;
+  }
+
+  .belief-prow-quote-icon {
+    font-size: 22px;
+  }
+
+  .belief-prow-quote-text {
+    font-size: 10.5px;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+
+/* ---- Below this point: the original "mobile" stacked layout, moved
+   down from 1024px so it only triggers at true mobile widths ---- */
+
+/* Tablet / mobile */
+@media (max-width: 700px) {
+  .belief-prow-section {
+    padding: 26px 20px;
+  }
+
+  .belief-prow-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 22px;
+  }
+
+  .belief-prow-heading-block {
+    flex-basis: auto;
+  }
+
+  .belief-prow-row {
+    width: 100%;
+    flex-wrap: wrap;
+    row-gap: 20px;
+  }
+
+  .belief-prow-step-wrap {
+    flex: 1 1 45%;
+    min-width: 140px;
+  }
+
+  .belief-prow-divider {
+    display: none;
+  }
+
+  .belief-prow-quote {
+    flex: 1 1 100%;
+  }
+
+  .belief-prow-icon-circle {
+    width: 52px;
+    height: 52px;
+    margin-bottom: 10px;
+  }
+
+  .belief-prow-icon-circle svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .belief-prow-step-title {
+    white-space: normal;
+    font-size: 11.5px;
+  }
+
+  .belief-prow-step-desc {
+    -webkit-line-clamp: unset;
+    font-size: 11px;
+  }
+
+  .belief-prow-quote-text {
+    -webkit-line-clamp: unset;
+    font-size: 12.5px;
+  }
+}
+
+/* Mobile — same structure, just a little larger / friendlier type */
+@media (max-width: 520px) {
+  .belief-prow-section {
+    padding: 22px 16px;
+  }
+
+  .belief-prow-title {
+    font-size: 18px;
+  }
+
+  .belief-prow-bold-line {
+    font-size: 14.5px;
+  }
+
+  .belief-prow-desc {
+    font-size: 13px;
+  }
+
+  .belief-prow-step-wrap {
+    flex: 1 1 45%;
+  }
+
+  .belief-prow-icon-circle {
+    width: 54px;
+    height: 54px;
+  }
+
+  .belief-prow-icon-circle svg {
+    width: 25px;
+    height: 25px;
+  }
+
+  .belief-prow-step-title {
+    white-space: normal;
+    font-size: 12px;
+  }
+
+  .belief-prow-step-desc {
+    font-size: 11.5px;
+  }
+
+  .belief-prow-quote-icon {
+    font-size: 32px;
+  }
+
+  .belief-prow-quote-text {
+    font-size: 13.5px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   ABOUT4 ANIMATION EFFECTS — deliberately reuses the signature motions
+   already established elsewhere on the site (continuous flowing arrow,
+   flowing gradient line, whole-component hover on the underline, ambient
+   pulse) so this section feels consistent, plus one new touch specific
+   to this section: a one-shot highlighter sweep behind the quote.
+   ========================================================================== */
+
+/* --- Keyframes --- */
+@keyframes ap4-slideLeft {
+  from { opacity: 0; transform: translateX(-30px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes ap4-scaleX {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
+}
+@keyframes ap4-underlineDot {
+  0%   { opacity: 0; left: 0; }
+  15%  { opacity: 1; }
+  85%  { opacity: 1; }
+  100% { opacity: 0; left: 100%; }
+}
+
+/* step icons pop in with a spin instead of a plain scale */
+@keyframes ap4-spinPop {
+  0%   { opacity: 0; transform: scale(0.4) rotate(-100deg); }
+  70%  { transform: scale(1.08) rotate(6deg); }
+  100% { opacity: 1; transform: scale(1) rotate(0deg); }
+}
+
+/* expanding ping ring on each icon right after it lands */
+@keyframes ap4-ping {
+  0%   { transform: scale(0.9); opacity: 0.6; }
+  100% { transform: scale(1.7); opacity: 0; }
+}
+
+@keyframes ap4-growH {
+  from { transform: scaleY(0); }
+  to   { transform: scaleY(1); }
+}
+
+/* continuous flowing glow travelling down the divider, like the
+   flowing gradient used on the Home4 rail / About2 bottom bar */
+@keyframes ap4-dividerFlow {
+  0%   { background-position: 0 -150%; }
+  100% { background-position: 0 100%; }
+}
+
+@keyframes ap4-fadeRight {
+  from { opacity: 0; transform: translateX(30px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+/* one-shot highlighter sweep behind the quote text */
+@keyframes ap4-highlightSweep {
+  from { right: 100%; }
+  to   { right: 0%; }
+}
+
+/* gentle ambient pulse for the quotation mark, same idea as the
+   ≠ sign pulse used in "The Gap We Observed" */
+@keyframes ap4-quotePulse {
+  0%, 100% { text-shadow: 0 0 0 rgba(245, 179, 1, 0); }
+  50%      { text-shadow: 0 0 8px rgba(245, 179, 1, 0.5); }
+}
+
+/* continuous nudge for each arrow, same motion as the centre arrow
+   used in the Performance Shift bar */
+@keyframes ap4-arrowFlow {
+  0%, 100% { transform: translateX(0); opacity: 0.85; }
+  50%      { transform: translateX(4px); opacity: 1; }
+}
+
+@keyframes ap4-gradientSpin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* --- Initial hidden states (no layout shift) --- */
+.belief-prow-heading-block { opacity: 0; transform: translateX(-30px); }
+.belief-prow-underline     { transform: scaleX(0); transform-origin: left center; }
+.belief-prow-step          { opacity: 0; transform: scale(0.4) rotate(-100deg); }
+.belief-prow-arrow         { opacity: 0; transform: scaleX(0); transform-origin: center; }
+.belief-prow-divider       { transform: scaleY(0); transform-origin: center; }
+.belief-prow-quote         { opacity: 0; transform: translateX(30px); }
+
+/* --- Reveal animations with stagger via --d --- */
+.belief-prow-heading-block.revealed {
+  animation: ap4-slideLeft 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0s forwards;
+}
+.belief-prow-heading-block.revealed .belief-prow-underline {
+  animation: ap4-scaleX 0.5s cubic-bezier(0.22, 1, 0.36, 1) 0.15s forwards;
+}
+.belief-prow-heading-block.revealed .belief-prow-underline::after {
+  animation: ap4-underlineDot 0.7s ease 0.55s forwards;
+}
+
+.belief-prow-step.revealed {
+  animation: ap4-spinPop 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation-delay: calc(var(--d, 0) * 0.1s + 0.2s);
+}
+.belief-prow-step.revealed .belief-prow-icon-circle::after {
+  animation: ap4-ping 0.7s ease-out;
+  animation-delay: calc(var(--d, 0) * 0.1s + 0.55s);
+}
+
+.belief-prow-arrow.revealed {
+  animation: ap4-scaleX 0.4s ease forwards;
+  animation-delay: calc(var(--d, 0) * 0.1s + 0.35s);
+}
+
+.belief-prow-divider.revealed {
+  animation: ap4-growH 0.5s ease 0.7s forwards;
+}
+.belief-prow-divider.revealed::before {
+  opacity: 1;
+  animation: ap4-dividerFlow 2.6s ease-in-out infinite 1.2s;
+}
+
+.belief-prow-quote.revealed {
+  animation: ap4-fadeRight 0.6s ease 0.8s forwards;
+}
+.belief-prow-quote.revealed .belief-prow-quote-text::before {
+  animation: ap4-highlightSweep 0.6s cubic-bezier(0.22, 1, 0.36, 1) 1.15s forwards;
+}
+
+/* --- Post-reveal: lock final values, kill one-shot animation, start
+   the small continuous ones (arrow flow + quote pulse) --- */
+.belief-prow-heading-block.hover-ready { opacity: 1; transform: translateX(0); animation: none; }
+.belief-prow-heading-block.hover-ready .belief-prow-underline { transform: scaleX(1); animation: none; }
+.belief-prow-heading-block.hover-ready .belief-prow-underline::after { animation: none; opacity: 0; }
+.belief-prow-step.hover-ready { opacity: 1; transform: scale(1) rotate(0deg); animation: none; }
+.belief-prow-arrow.hover-ready {
+  opacity: 1;
+  transform: scaleX(1);
+  animation: none;
+}
+.belief-prow-arrow.hover-ready svg {
+  animation: ap4-arrowFlow 1.4s ease-in-out infinite;
+}
+.belief-prow-divider.hover-ready { transform: scaleY(1); animation: none; }
+.belief-prow-divider.hover-ready::before {
+  opacity: 1;
+  animation: ap4-dividerFlow 2.6s ease-in-out infinite;
+}
+.belief-prow-quote.hover-ready { opacity: 1; transform: translateX(0); animation: none; }
+.belief-prow-quote.hover-ready .belief-prow-quote-text::before { right: 0%; animation: none; }
+.belief-prow-quote.hover-ready .belief-prow-quote-icon {
+  animation: ap4-quotePulse 2.6s ease-in-out infinite;
+}
+
+/* ==========================================================================
+   HOVER EFFECTS
+   ========================================================================== */
+
+/* --- Whole-component hover: matches the treatment on "The Reality We
+   Saw" — hovering anywhere on the section makes the heading underline
+   stretch and glow --- */
+.belief-prow-section:hover .belief-prow-heading-block.hover-ready .belief-prow-underline {
+  transform: scaleX(1.6);
+  box-shadow: 0 0 10px rgba(245, 179, 1, 0.65);
+}
+
+/* --- Step Circle: Gold Glow + Bounce --- */
+.belief-prow-icon-circle {
+  transition: transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1),
+              border-color 0.3s ease,
+              box-shadow 0.3s ease;
+}
+.belief-prow-step.hover-ready:hover .belief-prow-icon-circle {
+  transform: scale(1.12) translateY(-3px);
+  /* border-color: #f5b301; */
+  box-shadow: 0 6px 16px rgba(245, 179, 1, 0.25);
+}
+
+/* --- SVG Icon rotate --- */
+.belief-prow-icon-circle svg {
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.belief-prow-step.hover-ready:hover .belief-prow-icon-circle svg {
+  transform: rotate(-10deg) scale(1.1);
+}
+
+/* --- Title color shift --- */
+.belief-prow-step-title {
+  transition: color 0.3s ease;
+}
+.belief-prow-step.hover-ready:hover .belief-prow-step-title {
+  color: #c48f00;
+}
+
+/* --- Arrow: hover gives an extra, snappier nudge on top of the
+   continuous idle flow --- */
+.belief-prow-arrow.hover-ready svg {
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.belief-prow-arrow.hover-ready:hover svg {
+  animation-play-state: paused;
+  transform: translateX(6px);
+}
+
+/* --- Quote subtle shadow --- */
+.belief-prow-quote {
+  transition: background-color 0.4s ease;
+  padding: 8px;
+  margin: -8px; /* negative margin to prevent layout shift */
+  border-radius: 6px;
+}
+.belief-prow-quote.hover-ready:hover {
+  background-color: rgba(245, 179, 1, 0.06);
+}
+
+/* ==========================================================================
+   REDUCED MOTION
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  .belief-prow-heading-block,
+  .belief-prow-underline,
+  .belief-prow-underline::after,
+  .belief-prow-step,
+  .belief-prow-icon-circle::after,
+  .belief-prow-arrow,
+  .belief-prow-arrow svg,
+  .belief-prow-divider,
+  .belief-prow-divider::before,
+  .belief-prow-quote,
+  .belief-prow-quote-text::before,
+  .belief-prow-quote-icon {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  .belief-prow-quote-text::before { right: 0% !important; }
+  .belief-prow-icon-circle,
+  .belief-prow-icon-circle svg,
+  .belief-prow-step-title,
+  .belief-prow-quote {
+    transition: none !important;
+  }
+  .belief-prow-step.hover-ready:hover .belief-prow-icon-circle {
+    box-shadow: none !important;
+    transform: none !important;
+  }
+  .belief-prow-icon-circle::before {
+  animation: none !important;
+}
+.belief-prow-icon-circle {
+  border-color: #f5b301 !important;
+}
+}

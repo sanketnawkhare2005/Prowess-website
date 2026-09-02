@@ -1,0 +1,112 @@
+.sb-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 9999;
+  overflow: hidden;
+}
+
+.sb-main,
+.sb-trail {
+  position: absolute;
+  top: -70px;
+  right: -70px;
+}
+
+.sb-main {
+  animation: sbFall 8s cubic-bezier(0.45, 0, 0.85, 1) infinite;
+  z-index: 10;
+}
+
+.sb-trail-1 {
+  animation: sbTrail1 8s cubic-bezier(0.45, 0, 0.85, 1) infinite;
+  z-index: 7;
+}
+
+.sb-trail-2 {
+  animation: sbTrail2 8s cubic-bezier(0.45, 0, 0.85, 1) infinite;
+  z-index: 5;
+}
+
+.sb-trail-3 {
+  animation: sbTrail3 8s cubic-bezier(0.45, 0, 0.85, 1) infinite;
+  z-index: 3;
+}
+
+@keyframes sbFall {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+    opacity: 0;
+  }
+  2% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0.85;
+  }
+  78% {
+    transform: translate(-120vw, 125vh) rotate(200deg);
+    opacity: 0;
+  }
+  79%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes sbTrail1 {
+  0% {
+    transform: translate(30px, -30px);
+    opacity: 0;
+  }
+  5% {
+    opacity: 0.3;
+  }
+  78% {
+    transform: translate(-120vw, 125vh);
+    opacity: 0;
+  }
+  79%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes sbTrail2 {
+  0% {
+    transform: translate(60px, -55px);
+    opacity: 0;
+  }
+  8% {
+    opacity: 0.15;
+  }
+  78% {
+    transform: translate(-120vw, 125vh);
+    opacity: 0;
+  }
+  79%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes sbTrail3 {
+  0% {
+    transform: translate(90px, -80px);
+    opacity: 0;
+  }
+  11% {
+    opacity: 0.06;
+  }
+  78% {
+    transform: translate(-120vw, 125vh);
+    opacity: 0;
+  }
+  79%,
+  100% {
+    opacity: 0;
+  }
+}

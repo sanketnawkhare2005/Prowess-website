@@ -1,0 +1,1396 @@
+/* .steps-prow-section {
+  background: #ffffff;
+  padding: 10px 50px 20px;
+  width: 100%;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.steps-prow-section * {
+  box-sizing: border-box;
+}
+
+.steps-prow-heading-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  margin-bottom: 40px;
+}
+
+.steps-prow-heading-line {
+  flex: 1 1 auto;
+  max-width: 50px;
+  height: 2px;
+  background: #f5a623;
+}
+
+.steps-prow-heading {
+  color: #111111;
+  font-size: 21px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  margin: 0;
+  flex: 0 0 auto;
+}
+
+.steps-prow-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0;
+}
+
+.steps-prow-block {
+  display: flex;
+  align-items: flex-start;
+  flex: 0 1 auto;
+  min-width: 0;
+}
+
+.steps-prow-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 84px;
+  flex-shrink: 0;
+}
+
+
+.steps-prow-title,
+.steps-prow-desc {
+  width: 128px;
+  margin-left: -22px;
+  margin-right: -22px;
+}
+
+.steps-prow-circle-wrap {
+  position: relative;
+  width: 84px;
+  height: 84px;
+  margin-bottom: 14px;
+}
+
+.steps-prow-number {
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #f5a623;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #ffffff;
+  z-index: 2;
+}
+
+.steps-prow-circle {
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 2px solid var(--step-color);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--step-color) 12%, transparent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.steps-prow-circle svg {
+  width: 32px;
+  height: 32px;
+}
+
+.steps-prow-title {
+  font-size: 14px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  margin-top: 0;
+  margin-bottom: 6px;
+}
+
+.steps-prow-desc {
+  color: #6f6f6f;
+  font-size: 12px;
+  line-height: 1.5;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+
+.steps-prow-connector {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 80px;
+  flex: 1 1 20px;
+  min-width: 16px;
+  height: 84px;
+  margin-top: 0;
+}
+
+.steps-prow-connector-line {
+  width: 100%;
+  height: 0;                    
+  border-top: 2px dotted #f5a623; 
+}
+
+.steps-prow-arrow {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  background: #ffffff;
+  border-radius: 50%;
+  padding: 2px;
+}
+
+
+.steps-prow-connector-final {
+  width: 30px;
+  flex: 0 0 80px;
+}
+
+.steps-prow-card {
+  flex-shrink: 0;
+  width: 220px;
+  height: 170px;
+  background: #111111;
+  border-radius: 8px;
+  padding: 20px 18px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 0;
+}
+
+.steps-prow-card-icon {
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid #f5a623;
+}
+
+.steps-prow-card-icon svg {
+  width: 26px;
+  height: 26px;
+}
+
+.steps-prow-card-text {
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.steps-prow-card-text span {
+  color: #f5a623;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+
+@media (max-width: 1300px) {
+  .steps-prow-section {
+    padding: 40px 28px 44px;
+  }
+  .steps-prow-item {
+    width: 72px;
+  }
+  .steps-prow-circle-wrap,
+  .steps-prow-circle {
+    width: 72px;
+    height: 72px;
+  }
+  .steps-prow-circle svg {
+    width: 28px;
+    height: 28px;
+  }
+  .steps-prow-title,
+  .steps-prow-desc {
+    width: 112px;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+  .steps-prow-connector {
+    width: 26px;
+    height: 72px;
+  }
+  .steps-prow-card {
+    width: 190px;
+    min-height: 72px;
+    padding: 16px 14px;
+  }
+  .steps-prow-title {
+    font-size: 13px;
+  }
+  .steps-prow-desc {
+    font-size: 11.5px;
+  }
+}
+
+
+@media (max-width: 1080px) {
+  .steps-prow-row {
+    flex-wrap: wrap;
+    row-gap: 30px;
+  }
+
+  .steps-prow-block {
+    flex: 1 1 33.333%;
+    max-width: 33.333%;
+    justify-content: center;
+  }
+
+  .steps-prow-item {
+    width: 84px;
+    max-width: 84px;
+  }
+
+  .steps-prow-title,
+  .steps-prow-desc {
+    width: 128px;
+    margin-left: -22px;
+    margin-right: -22px;
+  }
+
+  .steps-prow-block:nth-child(3) .steps-prow-connector,
+  .steps-prow-block:nth-child(6) .steps-prow-connector {
+    display: none;
+  }
+
+  .steps-prow-connector {
+    width: 100%;
+    max-width: 46px;
+    height: 72px;
+  }
+
+  .steps-prow-connector-final {
+    display: none;
+  }
+
+  .steps-prow-card {
+    flex: 1 1 100%;
+    max-width: 420px;
+    margin: 10px auto 0;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 760px) {
+  .steps-prow-heading-line {
+    max-width: 60px;
+  }
+  .steps-prow-heading {
+    font-size: 17px;
+    white-space: normal;
+    text-align: center;
+  }
+
+  .steps-prow-block {
+    flex: 1 1 calc(50% - 10px) !important;   
+    max-width: calc(50% - 10px) !important;  
+    justify-content: flex-start !important; 
+  }
+
+  .steps-prow-connector {
+    max-width: none;               
+    margin-left: -2px;            
+  }
+
+  .steps-prow-row {
+    gap: 20px;                     
+    justify-content: center;
+  }
+
+  .steps-prow-block:nth-child(3) .steps-prow-connector {
+    display: flex;
+  }
+  .steps-prow-block:nth-child(2n) .steps-prow-connector {
+    display: none;
+  }
+}
+
+@media (max-width: 520px) {
+  .steps-prow-section {
+    padding: 32px 20px 36px;
+  }
+
+  .steps-prow-heading-row {
+    gap: 10px;
+    margin-bottom: 28px;
+  }
+
+  .steps-prow-row {
+    flex-wrap: wrap;           
+    justify-content: center;   
+    row-gap: 30px;
+  }
+
+  .steps-prow-block {
+    flex: 0 0 calc(50% - 15px); 
+    max-width: calc(50% - 15px);
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .steps-prow-connector {
+    display: none !important;   
+  }
+
+  .steps-prow-card {
+    flex: 1 1 100%;            
+    width: 100%;
+    max-width: 300px;
+    margin: 10px auto 0;
+  }
+}
+
+
+
+
+.steps-prow-block,
+.steps-prow-card {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  transition-delay: var(--reveal-delay, 0s);
+  will-change: opacity, transform;
+}
+
+.steps-prow-block.steps-prow-visible,
+.steps-prow-card.steps-prow-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.steps-prow-circle {
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.steps-prow-item:hover .steps-prow-circle {
+  transform: translateY(-6px) scale(1.06);
+  box-shadow: 0 0 0 6px color-mix(in srgb, var(--step-color) 20%, transparent),
+    0 10px 22px -8px color-mix(in srgb, var(--step-color) 55%, transparent);
+}
+
+.steps-prow-item:hover .steps-prow-circle svg {
+  transform: scale(1.08);
+  transition: transform 0.35s ease;
+}
+
+.steps-prow-number {
+  transition: transform 0.35s ease;
+}
+
+.steps-prow-item:hover .steps-prow-number {
+  transform: scale(1.15);
+}
+
+.steps-prow-title {
+  transition: transform 0.3s ease, letter-spacing 0.3s ease;
+}
+
+.steps-prow-item:hover .steps-prow-title {
+  transform: translateY(-2px);
+  letter-spacing: 0.8px;
+}
+
+.steps-prow-connector-line {
+  transition: border-color 0.35s ease;
+}
+
+.steps-prow-block:hover .steps-prow-connector-line {
+  border-top-color: #e8622c;
+}
+
+.steps-prow-arrow {
+  transition: transform 0.35s ease;
+}
+
+.steps-prow-block:hover .steps-prow-arrow {
+  transform: translate(-50%, -50%) translateX(3px);
+}
+
+.steps-prow-card {
+  transition: opacity 0.6s ease, transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.steps-prow-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 28px -12px rgba(0, 0, 0, 0.45);
+}
+
+.steps-prow-card:hover .steps-prow-card-icon {
+  transform: scale(1.1) rotate(8deg);
+  transition: transform 0.35s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .steps-prow-block,
+  .steps-prow-card {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .steps-prow-item:hover .steps-prow-circle,
+  .steps-prow-card:hover,
+  .steps-prow-card:hover .steps-prow-card-icon,
+  .steps-prow-block:hover .steps-prow-arrow {
+    transform: none;
+  }
+} */
+
+
+
+
+
+
+
+
+
+
+
+.steps-prow-section {
+  background: #ffffff;
+  padding: 10px 50px 20px;
+  width: 100%;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.steps-prow-section * {
+  box-sizing: border-box;
+}
+
+/* ===== Heading ===== */
+.steps-prow-heading-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  margin-bottom: 40px;
+}
+
+.steps-prow-heading-line {
+  flex: 1 1 auto;
+  max-width: 50px;
+  height: 2px;
+  background: #f5a623;
+  transition: max-width 0.4s ease, box-shadow 0.4s ease;
+}
+
+.steps-prow-heading {
+  position: relative;
+  color: #111111;
+  font-size: 22px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  margin: 0;
+  flex: 0 0 auto;
+  background-image: linear-gradient(
+    100deg,
+    #111111 30%,
+    #f5a623 45%,
+    #ffd873 50%,
+    #f5a623 55%,
+    #111111 70%
+  );
+  background-size: 250% 100%;
+  background-position: 100% 0;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: steps-prow-headingShine 5s linear infinite;
+}
+
+@keyframes steps-prow-headingShine {
+  0%   { background-position: 180% 0; }
+  100% { background-position: -80% 0; }
+}
+
+/* ===== Row ===== */
+.steps-prow-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0;
+}
+
+.steps-prow-block {
+  display: flex;
+  align-items: flex-start;
+  flex: 0 1 auto;
+  min-width: 0;
+}
+
+/* item width matches the circle exactly (84px) so the connector
+   line starts right at the circle's edge, no gap */
+.steps-prow-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 84px;
+  flex-shrink: 0;
+}
+
+/* text is allowed to be wider than the 84px icon column via
+   negative margins — this does NOT affect where the line touches */
+.steps-prow-title,
+.steps-prow-desc {
+  width: 128px;
+  margin-left: -22px;
+  margin-right: -22px;
+}
+
+/* ===== Circle ===== */
+.steps-prow-circle-wrap {
+  position: relative;
+  width: 84px;
+  height: 84px;
+  margin-bottom: 14px;
+}
+
+.steps-prow-number {
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #f5a623;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #ffffff;
+  z-index: 2;
+}
+
+.steps-prow-circle {
+  position: relative;
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 2px solid var(--step-color);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--step-color) 12%, transparent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* expanding ping ring, played once on reveal */
+.steps-prow-circle::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 2px solid var(--step-color);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.steps-prow-circle svg {
+  width: 32px;
+  height: 32px;
+}
+
+.steps-prow-title {
+  font-size: 15px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  margin-top: 0;
+  margin-bottom: 6px;
+}
+
+.steps-prow-desc {
+  color: #6f6f6f;
+  font-size: 12.5px;
+  line-height: 1.5;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* ===== Connector : dotted line, touching circles both sides,
+   arrow sits centered right on top of the line ===== */
+.steps-prow-connector {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 80px;
+  flex: 1 1 20px;
+  min-width: 16px;
+  height: 84px;
+  margin-top: 0;
+  overflow: hidden;
+}
+
+.steps-prow-connector-line {
+  width: 100%;
+  height: 0;
+  border-top: 2px dotted #f5a623;
+}
+
+/* continuous "flow" sweeping along each connector, suggesting
+   progress moving from one step to the next */
+.steps-prow-connector::before {
+  content: "";
+  position: absolute;
+  left: -30%;
+  top: 50%;
+  width: 30%;
+  height: 10px;
+  transform: translateY(-50%);
+  background: linear-gradient(90deg, transparent, rgba(245, 166, 35, 0.55), transparent);
+  opacity: 0;
+}
+
+.steps-prow-arrow {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  background: #ffffff;
+  border-radius: 50%;
+  padding: 2px;
+}
+
+/* the last connector, going into the card, is a bit shorter
+   but still touches the circle on one side and the card on the other */
+.steps-prow-connector-final {
+  width: 30px;
+  flex: 0 0 80px;
+}
+
+/* ===== Result card ===== */
+.steps-prow-card {
+  position: relative;
+  flex-shrink: 0;
+  width: 250px;
+  height: 170px;
+  background: #111111;
+  border-radius: 8px;
+  padding: 20px 18px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 0;
+  border: 1px solid transparent;
+}
+
+.steps-prow-card-icon {
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid #f5a623;
+}
+
+.steps-prow-card-icon svg {
+  width: 26px;
+  height: 26px;
+}
+
+.steps-prow-card-text {
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.steps-prow-card-text span {
+  color: #f5a623;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+/* =========================================================
+   RESPONSIVE — the 6 steps + card stay in ONE ROW through
+   desktop *and* laptop widths (several tightening tiers below).
+   The wrapped "mobile" layout further down is the same design
+   as before, just triggered at true mobile widths and with a
+   touch more font size.
+   ========================================================= */
+
+/* Laptop: shrink circles / gaps a bit so all 7 fit */
+@media (max-width: 1300px) {
+  .steps-prow-section {
+    padding: 40px 28px 44px;
+  }
+  .steps-prow-item {
+    width: 72px;
+  }
+  .steps-prow-circle-wrap,
+  .steps-prow-circle {
+    width: 72px;
+    height: 72px;
+  }
+  .steps-prow-circle svg {
+    width: 28px;
+    height: 28px;
+  }
+  .steps-prow-title,
+  .steps-prow-desc {
+    width: 112px;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+  .steps-prow-connector {
+    width: 26px;
+    height: 72px;
+  }
+  .steps-prow-card {
+    width: 250px;
+    min-height: 72px;
+    padding: 16px 14px;
+  }
+  .steps-prow-title {
+    font-size: 14px;
+  }
+  .steps-prow-desc {
+    font-size: 12px;
+  }
+}
+
+/* Small laptop — keeps everything on ONE row still, just tighter */
+@media (max-width: 1150px) {
+  .steps-prow-section {
+    padding: 34px 22px 38px;
+  }
+  .steps-prow-item {
+    width: 62px;
+  }
+  .steps-prow-circle-wrap,
+  .steps-prow-circle {
+    width: 62px;
+    height: 62px;
+  }
+  .steps-prow-circle svg {
+    width: 24px;
+    height: 24px;
+  }
+  .steps-prow-title,
+  .steps-prow-desc {
+    width: 100px;
+    margin-left: -19px;
+    margin-right: -19px;
+  }
+  .steps-prow-connector {
+    width: 20px;
+    height: 62px;
+  }
+  .steps-prow-card {
+    width: 250px;
+    height: 100px;
+    padding: 14px 12px;
+  }
+  .steps-prow-title {
+    font-size: 12.5px;
+  }
+  .steps-prow-desc {
+    font-size: 11px;
+  }
+  .steps-prow-card-text {
+    font-size: 12px;
+  }
+  .steps-prow-card-text span {
+    font-size: 13.5px;
+  }
+}
+
+/* Tablet / large-phone-landscape — still ONE row, tighter again */
+@media (max-width: 980px) {
+  .steps-prow-section {
+    padding: 30px 18px 34px;
+  }
+  .steps-prow-item {
+    width: 52px;
+  }
+  .steps-prow-circle-wrap,
+  .steps-prow-circle {
+    width: 52px;
+    height: 52px;
+  }
+  .steps-prow-number {
+    width: 18px;
+    height: 18px;
+    font-size: 9.5px;
+  }
+  .steps-prow-circle svg {
+    width: 20px;
+    height: 20px;
+  }
+  .steps-prow-title,
+  .steps-prow-desc {
+    width: 88px;
+    margin-left: -18px;
+    margin-right: -18px;
+  }
+  .steps-prow-title {
+    font-size: 11.5px;
+  }
+  .steps-prow-desc {
+    font-size: 10.5px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .steps-prow-connector {
+    width: 15px;
+    height: 52px;
+  }
+  .steps-prow-arrow {
+    width: 16px;
+    height: 16px;
+  }
+  .steps-prow-card {
+    width: 180px;
+    height: 100px;
+    padding: 12px 10px;
+    gap: 8px;
+  }
+  .steps-prow-card-icon {
+    width: 28px;
+    height: 28px;
+  }
+  .steps-prow-card-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+  .steps-prow-card-text {
+    font-size: 11px;
+  }
+  .steps-prow-card-text span {
+    font-size: 12.5px;
+  }
+}
+
+/* Small tablet — last "row" tier before wrapping to the mobile layout */
+@media (max-width: 800px) {
+  .steps-prow-section {
+    padding: 26px 14px 30px;
+  }
+  .steps-prow-item {
+    width: 44px;
+  }
+  .steps-prow-circle-wrap,
+  .steps-prow-circle {
+    width: 44px;
+    height: 44px;
+  }
+  .steps-prow-circle svg {
+    width: 17px;
+    height: 17px;
+  }
+  .steps-prow-title,
+  .steps-prow-desc {
+    width: 76px;
+    margin-left: -16px;
+    margin-right: -16px;
+  }
+  .steps-prow-title {
+    font-size: 10.5px;
+  }
+  .steps-prow-desc {
+    font-size: 9.5px;
+  }
+  .steps-prow-connector {
+    width: 10px;
+    height: 44px;
+  }
+  .steps-prow-card {
+    width: 180px;
+    height: 100px;
+    padding: 10px 8px;
+    gap: 6px;
+  }
+  .steps-prow-card-icon {
+    width: 24px;
+    height: 24px;
+  }
+  .steps-prow-card-text {
+    font-size: 10px;
+  }
+  .steps-prow-card-text span {
+    font-size: 11px;
+  }
+}
+
+/* ---- Below this point: the original wrapped "mobile" layout, moved
+   down from 1080/760/520 so it only triggers at true mobile widths.
+   Content is the same as before — circle size + fonts are explicitly
+   restored here (and given a little extra size) since the row-mode
+   tightening above would otherwise leak smaller values in. ---- */
+
+/* Small laptop / large tablet: wrap into two rows of the 6 steps,
+   card moves to its own full-width row underneath */
+@media (max-width: 640px) {
+  .steps-prow-row {
+    flex-wrap: wrap;
+    row-gap: 30px;
+  }
+
+  .steps-prow-block {
+    flex: 1 1 33.333%;
+    max-width: 33.333%;
+    justify-content: center;
+  }
+
+  .steps-prow-item {
+    width: 84px;
+    max-width: 84px;
+  }
+
+  .steps-prow-circle-wrap,
+  .steps-prow-circle {
+    width: 72px;
+    height: 72px;
+  }
+  .steps-prow-circle svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .steps-prow-title,
+  .steps-prow-desc {
+    width: 128px;
+    margin-left: -22px;
+    margin-right: -22px;
+  }
+  .steps-prow-title {
+    font-size: 14.5px;
+  }
+  .steps-prow-desc {
+    font-size: 12.5px;
+    -webkit-line-clamp: unset;
+    display: block;
+    overflow: visible;
+  }
+
+  /* hide the horizontal connector after every 3rd item (row break) */
+  .steps-prow-block:nth-child(3) .steps-prow-connector,
+  .steps-prow-block:nth-child(6) .steps-prow-connector {
+    display: none;
+  }
+
+  .steps-prow-connector {
+    width: 100%;
+    max-width: 46px;
+    height: 72px;
+  }
+
+  .steps-prow-connector-final {
+    display: none;
+  }
+
+  .steps-prow-card {
+    flex: 1 1 100%;
+    max-width: 420px;
+    width: auto;
+    height: auto;
+    margin: 10px auto 0;
+    justify-content: center;
+  }
+  .steps-prow-card-text {
+    font-size: 14px;
+  }
+  .steps-prow-card-text span {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 580px) {
+  .steps-prow-heading-line {
+    max-width: 60px;
+  }
+  .steps-prow-heading {
+    font-size: 18px;
+    white-space: normal;
+    text-align: center;
+  }
+
+  .steps-prow-block {
+    flex: 1 1 calc(50% - 10px) !important;
+    max-width: calc(50% - 10px) !important;
+    justify-content: flex-start !important;
+  }
+
+  .steps-prow-connector {
+    max-width: none;
+    margin-left: -2px;
+  }
+
+  .steps-prow-row {
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .steps-prow-block:nth-child(3) .steps-prow-connector {
+    display: flex;
+  }
+  .steps-prow-block:nth-child(2n) .steps-prow-connector {
+    display: none;
+  }
+}
+
+/* Mobile: single column, connectors hidden, vertical stack —
+   layout unchanged from before, fonts given a small bump */
+@media (max-width: 480px) {
+  .steps-prow-section {
+    padding: 32px 20px 36px;
+  }
+
+  .steps-prow-heading-row {
+    gap: 10px;
+    margin-bottom: 28px;
+  }
+
+  .steps-prow-row {
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 30px;
+  }
+
+  .steps-prow-block {
+    flex: 0 0 calc(50% - 15px);
+    max-width: calc(50% - 15px);
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .steps-prow-circle-wrap,
+  .steps-prow-circle {
+    width: 74px;
+    height: 74px;
+  }
+  .steps-prow-circle svg {
+    width: 29px;
+    height: 29px;
+  }
+  .steps-prow-title {
+    font-size: 14.5px;
+  }
+  .steps-prow-desc {
+    font-size: 12.5px;
+  }
+
+  .steps-prow-connector {
+    display: none !important;
+  }
+
+  .steps-prow-card {
+    flex: 1 1 100%;
+    width: 100%;
+    max-width: 300px;
+    margin: 10px auto 0;
+  }
+  .steps-prow-card-text {
+    font-size: 14px;
+  }
+  .steps-prow-card-text span {
+    font-size: 16px;
+  }
+}
+
+
+
+/* Animation Effect */
+/* =========================================================
+   SCROLL-REVEAL ANIMATION (AOS-style) + HOVER EFFECTS
+   ✅ Layout properties (width/height/flex/margin) NOT touched
+   ✅ Only opacity + transform used, so responsive structure
+      stays 100% same on desktop/laptop/tablet/mobile
+   ========================================================= */
+
+.steps-prow-block,
+.steps-prow-card {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  transition-delay: var(--reveal-delay, 0s);
+  will-change: opacity, transform;
+}
+
+.steps-prow-block.steps-prow-visible,
+.steps-prow-card.steps-prow-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* icon inside the circle breathes gently, continuously */
+.steps-prow-block.steps-prow-visible .steps-prow-circle svg {
+  animation: steps-prow-iconBreathe 2.6s ease-in-out infinite;
+  animation-delay: calc(var(--reveal-delay, 0s) + 0.6s);
+}
+
+@keyframes steps-prow-iconBreathe {
+  0%, 100% { transform: scale(1); filter: drop-shadow(0 0 0 transparent); }
+  50%      { transform: scale(1.08); filter: drop-shadow(0 0 4px color-mix(in srgb, var(--step-color) 60%, transparent)); }
+}
+.steps-prow-block.steps-prow-visible .steps-prow-number {
+  animation: steps-prow-numBounce 2.2s ease-in-out infinite;
+  animation-delay: calc(var(--reveal-delay, 0s) + 0.5s);
+}
+
+@keyframes steps-prow-numBounce {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50%      { transform: translateY(-3px) scale(1.08); }
+}
+
+/* circle's outer ring keeps a continuous soft shine/glow */
+.steps-prow-block.steps-prow-visible .steps-prow-circle {
+  animation: steps-prow-ringShine 2.6s ease-in-out infinite;
+  animation-delay: calc(var(--reveal-delay, 0s) + 0.5s);
+}
+
+@keyframes steps-prow-ringShine {
+  0%, 100% {
+    box-shadow: 0 0 0 4px color-mix(in srgb, var(--step-color) 12%, transparent);
+  }
+  50% {
+    box-shadow: 0 0 0 6px color-mix(in srgb, var(--step-color) 24%, transparent),
+      0 0 14px color-mix(in srgb, var(--step-color) 45%, transparent);
+  }
+}
+.steps-prow-block.steps-prow-visible .steps-prow-circle::after {
+  animation: steps-prow-ping 0.75s ease-out;
+  animation-delay: calc(var(--reveal-delay, 0s) + 0.35s);
+}
+
+@keyframes steps-prow-ping {
+  0%   { transform: scale(0.9); opacity: 0.65; }
+  100% { transform: scale(1.55); opacity: 0; }
+}
+
+/* continuous flow sweeping along each connector once it's on screen,
+   like progress travelling from one step to the next */
+.steps-prow-block.steps-prow-visible .steps-prow-connector::before {
+  opacity: 1;
+  animation: steps-prow-connectorFlow 1.8s linear infinite;
+  animation-delay: calc(var(--reveal-delay, 0s) + 0.6s);
+}
+
+@keyframes steps-prow-connectorFlow {
+  from { left: -30%; }
+  to   { left: 100%; }
+}
+
+/* gentle continuous glow around the final "performance" card, marking
+   it as the destination of the cycle */
+.steps-prow-card.steps-prow-visible {
+  animation: steps-prow-fadeIn 0.6s ease forwards, steps-prow-cardGlow 2.8s ease-in-out infinite;
+  animation-delay: var(--reveal-delay, 0s), calc(var(--reveal-delay, 0s) + 0.7s);
+}
+
+@keyframes steps-prow-fadeIn {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes steps-prow-cardGlow {
+  0%, 100% { border-color: rgba(245, 166, 35, 0.15); box-shadow: 0 0 0 rgba(245, 166, 35, 0); }
+  50%      { border-color: rgba(245, 166, 35, 0.55); box-shadow: 0 0 16px rgba(245, 166, 35, 0.25); }
+}
+
+/* whole-component hover: hovering anywhere on the section makes the
+   heading's flanking lines extend and glow */
+.steps-prow-section:hover .steps-prow-heading-line {
+  max-width: 70px;
+  box-shadow: 0 0 8px rgba(245, 166, 35, 0.6);
+}
+
+/* ===== Hover: circle ===== */
+.steps-prow-circle {
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.steps-prow-item:hover .steps-prow-circle {
+  animation-play-state: paused;
+  transform: translateY(-6px) scale(1.06);
+  box-shadow: 0 0 0 6px color-mix(in srgb, var(--step-color) 20%, transparent),
+    0 10px 22px -8px color-mix(in srgb, var(--step-color) 55%, transparent);
+}
+
+.steps-prow-item:hover .steps-prow-circle svg {
+  transform: scale(1.08);
+  transition: transform 0.35s ease;
+}
+
+/* ===== Hover: number badge ===== */
+.steps-prow-number {
+  transition: transform 0.35s ease;
+}
+
+.steps-prow-item:hover .steps-prow-number {
+  transform: scale(1.15);
+}
+
+/* ===== Hover: title ===== */
+.steps-prow-title {
+  transition: transform 0.3s ease, letter-spacing 0.3s ease;
+}
+
+.steps-prow-item:hover .steps-prow-title {
+  transform: translateY(-2px);
+  letter-spacing: 0.8px;
+}
+
+/* ===== Hover: connector line + arrow ===== */
+.steps-prow-connector-line {
+  transition: border-color 0.35s ease;
+}
+
+.steps-prow-block:hover .steps-prow-connector-line {
+  border-top-color: #e8622c;
+}
+
+.steps-prow-arrow {
+  transition: transform 0.35s ease;
+}
+
+.steps-prow-block:hover .steps-prow-arrow {
+  transform: translate(-50%, -50%) translateX(3px);
+}
+
+/* ===== Hover: result card ===== */
+.steps-prow-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 28px -12px rgba(0, 0, 0, 0.45);
+}
+
+/* L-shaped corner borders that shine continuously, intensifying on hover */
+.steps-prow-card::before,
+.steps-prow-card::after {
+  content: "";
+  position: absolute;
+  width: 85px;
+  height: 55px;
+  border: 5px solid #f5a623;
+  opacity: 0.55;
+  animation: steps-prow-cornerPulse 2.4s ease-in-out infinite;
+  transition: opacity 0.35s ease, width 0.35s ease, height 0.35s ease;
+}
+
+.steps-prow-card::before {
+  top: -2px;
+  left: -2px;
+  border-right: none;
+  border-bottom: none;
+  border-radius: 8px 0 0 0;
+}
+
+.steps-prow-card::after {
+  bottom: -2px;
+  right: -2px;
+  border-left: none;
+  border-top: none;
+  border-radius: 0 0 8px 0;
+  animation-delay: 0.3s;
+}
+
+/* @keyframes steps-prow-cornerPulse {
+  0%, 100% { opacity: 0.4; width: 30px; height: 30px; }
+  50%      { opacity: 1; width: 38px; height: 38px; }
+} */
+
+@keyframes steps-prow-cornerPulse {
+  0%, 100% {
+    opacity: 0.4;
+    width: 85px;
+    height: 85px;
+  }
+
+  50% {
+    opacity: 1;
+    width: 95px;
+    height: 95px;
+  }
+}
+
+.steps-prow-card:hover::before,
+.steps-prow-card:hover::after {
+  animation-play-state: paused;
+  opacity: 1;
+  width: 70px;
+  height: 70px;
+}
+
+.steps-prow-card:hover .steps-prow-card-icon {
+  transform: scale(1.1) rotate(8deg);
+  transition: transform 0.35s ease;
+}
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .steps-prow-block,
+  .steps-prow-card {
+    opacity: 1;
+    transform: none;
+    transition: none;
+    animation: none !important;
+  }
+  .steps-prow-circle::after,
+  .steps-prow-connector::before,
+  .steps-prow-heading-line,
+  .steps-prow-number,
+  .steps-prow-circle,
+  .steps-prow-circle svg,
+  .steps-prow-card::before,
+  .steps-prow-card::after {
+    animation: none !important;
+    transition: none !important;
+    opacity: 0 !important;
+  }
+  .steps-prow-heading {
+    animation: none !important;
+    background: none !important;
+    -webkit-text-fill-color: #111111 !important;
+    color: #111111 !important;
+  }
+  .steps-prow-card::before,
+  .steps-prow-card::after {
+    opacity: 0.55 !important;
+  }
+  .steps-prow-item:hover .steps-prow-circle,
+  .steps-prow-card:hover,
+  .steps-prow-card:hover .steps-prow-card-icon,
+  .steps-prow-block:hover .steps-prow-arrow {
+    transform: none;
+  }
+}

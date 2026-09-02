@@ -1,0 +1,318 @@
+.event-gallery-new-section {
+  --egn-purple: #6C2DC7;
+  --egn-purple-hover: #5A24A6;
+  --egn-purple-light: rgba(108, 45, 199, 0.08);
+  --egn-ink: #1a1a2e;
+  --egn-muted: #5c5c7a;
+  --egn-faint: #8e8ea0;
+  --egn-bg: #ffffff;
+  --egn-panel: #f5f5f7;
+  --egn-border: #e8e8ef;
+  width: 100%;
+  background: var(--egn-bg);
+  padding: 64px 24px 88px;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+}
+
+/* ===== Header ===== */
+.event-gallery-new-header {
+  max-width: 760px;
+  margin: 0 auto 52px;
+}
+
+.event-gallery-new-eyebrow {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--egn-purple);
+  margin: 0 0 14px;
+  text-transform: uppercase;
+}
+
+.event-gallery-new-heading {
+  font-size: clamp(28px, 3.6vw, 38px);
+  font-weight: 800;
+  color: var(--egn-ink);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  margin: 0 0 16px;
+}
+
+.event-gallery-new-desc {
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--egn-muted);
+  margin: 0;
+  max-width: 560px;
+}
+
+/* ===== Timeline scaffold ===== */
+.event-gallery-new-timeline {
+  position: relative;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.event-gallery-new-line {
+  position: absolute;
+  top: 14px;
+  bottom: 14px;
+  left: 7px;
+  width: 2px;
+  background: var(--egn-border);
+}
+
+.event-gallery-new-row {
+  position: relative;
+  padding-left: 40px;
+  margin-bottom: 24px;
+}
+
+.event-gallery-new-row:last-child {
+  margin-bottom: 0;
+}
+
+.event-gallery-new-dot {
+  position: absolute;
+  top: 26px;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #fff;
+  border: 3px solid var(--egn-purple);
+  z-index: 1;
+}
+
+/* ===== Ticket card ===== */
+.event-gallery-new-ticket {
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+  background: var(--egn-panel);
+  border: 1px solid var(--egn-border);
+  border-radius: 14px;
+  overflow: hidden;
+  cursor: pointer;
+  text-align: left;
+  font-family: inherit;
+  padding: 0;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.event-gallery-new-ticket:hover {
+  border-color: var(--egn-purple);
+  box-shadow: 0 10px 28px rgba(108, 45, 199, 0.14);
+  transform: translateY(-2px);
+}
+
+/* Left stub — like a torn ticket corner */
+.event-gallery-new-stub {
+  flex: 0 0 92px;
+  background: var(--egn-ink);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  padding: 16px 8px;
+}
+
+.event-gallery-new-stub-month {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.event-gallery-new-stub-day {
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 1;
+  color: #fff;
+}
+
+.event-gallery-new-stub-year {
+  font-size: 11px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* Perforated divider — dashed "tear line" between stub and details */
+.event-gallery-new-perf {
+  flex: 0 0 0;
+  width: 0;
+  border-left: 2px dashed rgba(108, 45, 199, 0.35);
+  position: relative;
+}
+
+.event-gallery-new-perf::before,
+.event-gallery-new-perf::after {
+  content: "";
+  position: absolute;
+  left: -7px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--egn-bg);
+}
+
+.event-gallery-new-perf::before {
+  top: -1px;
+}
+
+.event-gallery-new-perf::after {
+  bottom: -1px;
+}
+
+/* Right body — photo + info */
+.event-gallery-new-body {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 14px 20px 14px 24px;
+  min-width: 0;
+}
+
+.event-gallery-new-photo {
+  position: relative;
+  flex: 0 0 110px;
+  width: 110px;
+  height: 78px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--egn-ink);
+}
+
+.event-gallery-new-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.event-gallery-new-tag {
+  position: absolute;
+  bottom: 6px;
+  left: 6px;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #fff;
+  background: rgba(108, 45, 199, 0.85);
+  padding: 2px 7px;
+  border-radius: 4px;
+}
+
+.event-gallery-new-info {
+  min-width: 0;
+  flex: 1;
+}
+
+.event-gallery-new-title {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--egn-ink);
+  margin: 0 0 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.event-gallery-new-venue {
+  font-size: 13px;
+  color: var(--egn-muted);
+  margin: 0 0 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.event-gallery-new-attendees {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--egn-purple);
+  margin: 0;
+}
+
+/* Expanded state — slightly emphasize the active ticket */
+.event-gallery-new-ticket--open {
+  border-color: var(--egn-purple);
+  box-shadow: 0 10px 28px rgba(108, 45, 199, 0.18);
+}
+
+.event-gallery-new-ticket--open .event-gallery-new-title {
+  white-space: normal;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 640px) {
+  .event-gallery-new-header {
+    margin-bottom: 36px;
+  }
+  .event-gallery-new-heading {
+    font-size: 24px;
+  }
+  .event-gallery-new-row {
+    padding-left: 30px;
+  }
+  .event-gallery-new-line {
+    left: 5px;
+  }
+  .event-gallery-new-dot {
+    width: 12px;
+    height: 12px;
+    top: 20px;
+  }
+  .event-gallery-new-ticket {
+    flex-direction: column;
+  }
+  .event-gallery-new-stub {
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 8px;
+    padding: 10px 14px;
+  }
+  .event-gallery-new-stub-day {
+    font-size: 20px;
+  }
+  .event-gallery-new-perf {
+    border-left: none;
+    border-top: 2px dashed rgba(108, 45, 199, 0.35);
+    width: 100%;
+  }
+  .event-gallery-new-perf::before,
+  .event-gallery-new-perf::after {
+    top: -7px;
+    left: auto;
+  }
+  .event-gallery-new-perf::before {
+    left: 14px;
+  }
+  .event-gallery-new-perf::after {
+    right: 14px;
+    left: auto;
+  }
+  .event-gallery-new-body {
+    padding: 14px;
+  }
+  .event-gallery-new-photo {
+    flex: 0 0 84px;
+    width: 84px;
+    height: 64px;
+  }
+  .event-gallery-new-title {
+    font-size: 14.5px;
+    white-space: normal;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .event-gallery-new-ticket {
+    transition: none !important;
+  }
+}

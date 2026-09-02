@@ -1,0 +1,898 @@
+/* .perform-pro {
+  background: #ffffff;
+  font-family: Arial, sans-serif;
+}
+
+.perform-pro__container {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 5px 40px;
+}
+
+.perform-pro__top {
+  display: flex;
+  align-items: flex-start;
+  gap: 28px;
+}
+
+.perform-pro__intro {
+  flex: 0 0 210px;
+  max-width: 210px;
+}
+
+.perform-pro__heading {
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 1.3;
+  color: #111111;
+  margin: 0 0 10px 0;
+  text-transform: uppercase;
+}
+
+.perform-pro__rule {
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: #f5a623;
+  margin-bottom: 14px;
+}
+
+.perform-pro__desc {
+  font-size: 13px;
+  line-height: 1.7;
+  color: #555555;
+  margin: 0;
+}
+
+.perform-pro__gallery {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  min-width: 0;
+}
+
+.perform-pro__gallery-item {
+  aspect-ratio: 4 / 4;
+  overflow: hidden;
+  border-radius: 2px;
+  background: #eeeeee;
+}
+
+.perform-pro__gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.perform-pro__gallery-item:hover img {
+  transform: scale(1.06);
+}
+
+.perform-pro__shift {
+  background: #0d0d0d;
+  padding: 26px 40px;
+}
+
+.perform-pro__shift-container {
+  max-width: 1500px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.perform-pro__shift-label {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #f5a623;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+
+.perform-pro__shift-label i {
+  font-size: 16px;
+}
+
+.perform-pro__shift-block {
+  flex: 1;
+  min-width: 0;
+}
+
+.perform-pro__shift-tag {
+  display: block;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  color: #9a9a9a;
+  margin-bottom: 14px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.perform-pro__shift-tag--after {
+  color: #f5a623;
+}
+
+.perform-pro__shift-items {
+  display: flex;
+  justify-content: center;
+  gap: 26px;
+  flex-wrap: wrap;
+}
+
+.perform-pro__shift-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #cccccc;
+  font-size: 12.5px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.perform-pro__shift-item i {
+  color: #777777;
+  font-size: 14px;
+}
+
+.perform-pro__shift-item--after {
+  color: #ffffff;
+}
+
+.perform-pro__shift-item--after i {
+  color: #f5a623;
+}
+
+.perform-pro__shift-arrow {
+  flex: 0 0 auto;
+  color: #f5a623;
+  font-size: 20px;
+}
+
+
+@media (max-width: 1200px) {
+  .perform-pro__gallery {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .perform-pro__container {
+    padding: 36px 28px;
+  }
+
+  .perform-pro__top {
+    flex-direction: column;
+    gap: 0px;
+  }
+
+  .perform-pro__intro {
+    max-width: 100%;
+    flex: 0 0 160px;
+  }
+
+  .perform-pro__gallery {
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .perform-pro__shift {
+    padding: 26px 28px;
+  }
+
+  .perform-pro__shift-container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 22px;
+  }
+
+  .perform-pro__shift-label {
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .perform-pro__shift-arrow {
+    transform: rotate(90deg);
+    align-self: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .perform-pro__container {
+    padding: 32px 20px;
+  }
+
+  .perform-pro__heading {
+    font-size: 18px;
+  }
+
+  .perform-pro__gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .perform-pro__shift-items {
+    gap: 16px;
+  }
+
+  .perform-pro__shift-item {
+    font-size: 11.5px;
+  }
+
+  .perform-pro__top {
+    gap: 0;
+  }
+}
+
+@media (max-width: 420px) {
+  .perform-pro__gallery {
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+  .perform-pro__shift-items {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+}
+
+
+
+
+
+@keyframes h5p-blurIn {
+  from { opacity: 0; filter: blur(6px); }
+  to   { opacity: 1; filter: blur(0); }
+}
+@keyframes h5p-scaleX {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
+}
+@keyframes h5p-clipReveal {
+  from { clip-path: inset(100% 0 0 0); }
+  to   { clip-path: inset(0 0 0 0); }
+}
+
+.perform-pro__intro         { opacity: 0; filter: blur(6px); }
+.perform-pro__rule          { transform: scaleX(0); transform-origin: left center; }
+.perform-pro__gallery-item  { clip-path: inset(100% 0 0 0); }
+
+.perform-pro__intro.revealed {
+  animation: h5p-blurIn 0.8s ease 0s forwards;
+}
+.perform-pro__intro.revealed .perform-pro__rule {
+  animation: h5p-scaleX 0.5s cubic-bezier(0.22, 1, 0.36, 1) 0.2s forwards;
+}
+
+.perform-pro__gallery-item.revealed {
+  animation: h5p-clipReveal 0.65s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation-delay: calc(var(--d, 0) * 0.08s + 0.15s);
+}
+
+.perform-pro__intro.hover-ready {
+  opacity: 1; filter: blur(0); animation: none;
+}
+.perform-pro__intro.hover-ready .perform-pro__rule {
+  transform: scaleX(1); animation: none;
+}
+.perform-pro__gallery-item.hover-ready {
+  clip-path: inset(0 0 0 0); animation: none;
+}
+
+
+.perform-pro__intro.hover-ready .perform-pro__rule {
+  transition: width 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.perform-pro__intro.hover-ready:hover .perform-pro__rule {
+  width: 60px;
+}
+
+.perform-pro__gallery-item.hover-ready {
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 0.45s ease;
+}
+.perform-pro__gallery-item.hover-ready:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.14);
+}
+
+.perform-pro__gallery-item.hover-ready img {
+  transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+              filter 0.4s ease;
+}
+.perform-pro__gallery-item.hover-ready:hover img {
+  transform: scale(1.1) rotate(-2deg);
+  filter: brightness(1.08);
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+  .perform-pro__intro {
+    animation: none !important;
+    opacity: 1 !important;
+    filter: none !important;
+  }
+  .perform-pro__rule {
+    animation: none !important;
+    transform: none !important;
+  }
+  .perform-pro__gallery-item {
+    animation: none !important;
+    clip-path: none !important;
+  }
+  .perform-pro__intro.hover-ready .perform-pro__rule,
+  .perform-pro__gallery-item.hover-ready,
+  .perform-pro__gallery-item.hover-ready img {
+    transition: none !important;
+  }
+  .perform-pro__gallery-item.hover-ready:hover img {
+    filter: none !important;
+  }
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+/* ═══════════════════════════════════════════════════
+   BASE STYLES
+   ═══════════════════════════════════════════════════ */
+
+.perform-pro {
+  background: #ffffff;
+  font-family: Arial, sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.perform-pro::before {
+  content: '';
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(245, 166, 35, 0.06) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.6s ease;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.perform-pro:hover::before {
+  opacity: 1;
+}
+
+.perform-pro__container {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 5px 40px;
+  position: relative;
+  z-index: 1;
+}
+
+.perform-pro__top {
+  display: flex;
+  align-items: flex-start;
+  gap: 28px;
+}
+
+.perform-pro__intro {
+  flex: 0 0 220px;
+  max-width: 220px;
+}
+
+.perform-pro__heading {
+  font-size: 25px;
+  font-weight: 800;
+  line-height: 1.1;
+  color: #111111;
+  margin: 0 0 10px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.perform-pro__rule {
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: #f5a623;
+  margin-bottom: 14px;
+}
+
+.perform-pro__desc {
+  font-size: 14px;
+  line-height: 1.3;
+  color: #555555;
+  margin: 0;
+}
+
+/* ── Gallery ── */
+.perform-pro__gallery {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  min-width: 0;
+}
+
+.perform-pro__gallery-item {
+  aspect-ratio: 4 / 4;
+  overflow: hidden;
+  border-radius: 2px;
+  background: #eeeeee;
+  position: relative;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+/* Subtle top-left spotlight — hidden until hover */
+.perform-pro__gallery-item::before {
+  content: '';
+  position: absolute;
+  top: -20%;
+  left: -20%;
+  width: 70%;
+  height: 70%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.25) 0%, transparent 65%);
+  opacity: 0;
+  z-index: 2;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+}
+
+/* Subtle corner bracket — bottom right */
+.perform-pro__gallery-item::after {
+  content: '';
+  position: absolute;
+  bottom: 6px;
+  right: 6px;
+  width: 14px;
+  height: 14px;
+  border-right: 2px solid rgba(245, 166, 35, 0);
+  border-bottom: 2px solid rgba(245, 166, 35, 0);
+  z-index: 3;
+  pointer-events: none;
+  transition: border-color 0.4s ease 0.1s;
+}
+
+/* Image: slightly desaturated by default — comes alive on hover */
+.perform-pro__gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: saturate(0.65) brightness(0.95);
+}
+
+
+/* ═══════════════════════════════════════════════════
+   KEYFRAMES
+   ═══════════════════════════════════════════════════ */
+
+@keyframes h5p_blurSlideUp {
+  from { opacity: 0; filter: blur(6px); transform: translateY(16px); }
+  to   { opacity: 1; filter: blur(0); transform: translateY(0); }
+}
+
+@keyframes h5p_scaleX {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
+}
+
+@keyframes h5p_clipReveal {
+  0%   { clip-path: inset(100% 0 0 0); transform: scale(1.03); }
+  70%  { clip-path: inset(0 0 0 0); transform: scale(1.03); }
+  100% { clip-path: inset(0 0 0 0); transform: scale(1); }
+}
+
+@keyframes h5p_ruleGlow {
+  0%, 100% { box-shadow: 0 0 3px rgba(245, 166, 35, 0); }
+  50%      { box-shadow: 0 0 10px rgba(245, 166, 35, 0.35); }
+}
+
+@keyframes h5p_shimmer {
+  0%   { background-position: -100% center; }
+  100% { background-position: 200% center; }
+}
+
+
+/* ═══════════════════════════════════════════════════
+   INITIAL HIDDEN STATES
+   ═══════════════════════════════════════════════════ */
+
+.perform-pro__intro         { opacity: 0; filter: blur(6px); transform: translateY(16px); }
+.perform-pro__rule          { transform: scaleX(0); transform-origin: left center; }
+.perform-pro__gallery-item  { clip-path: inset(100% 0 0 0); }
+
+
+/* ═══════════════════════════════════════════════════
+   REVEAL ANIMATIONS
+   ═══════════════════════════════════════════════════ */
+
+.perform-pro__intro.revealed {
+  animation: h5p_blurSlideUp 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0s forwards;
+}
+
+.perform-pro__intro.revealed .perform-pro__rule {
+  animation: h5p_scaleX 0.55s cubic-bezier(0.22, 1, 0.36, 1) 0.25s forwards;
+}
+
+.perform-pro__gallery-item.revealed {
+  animation: h5p_clipReveal 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation-delay: calc(var(--d, 0) * 0.09s + 0.15s);
+}
+
+
+/* ═══════════════════════════════════════════════════
+   HOVER-READY — lock values
+   ═══════════════════════════════════════════════════ */
+
+.perform-pro__intro.hover-ready {
+  opacity: 1; filter: blur(0); transform: translateY(0); animation: none;
+}
+
+.perform-pro__intro.hover-ready .perform-pro__rule {
+  transform: scaleX(1); animation: none;
+}
+
+.perform-pro__gallery-item.hover-ready {
+  clip-path: inset(0 0 0 0); transform: scale(1); animation: none;
+}
+
+
+/* ═══════════════════════════════════════════════════
+   CONTINUOUS — rule glow pulse
+   ═══════════════════════════════════════════════════ */
+
+.perform-pro__intro.hover-ready .perform-pro__rule {
+  animation: h5p_ruleGlow 3s ease-in-out infinite;
+}
+
+
+/* ═══════════════════════════════════════════════════
+   HOVER — GALLERY ITEMS (image related, clean)
+   ═══════════════════════════════════════════════════ */
+
+/* Item: lift + shadow + golden border */
+.perform-pro__gallery-item.hover-ready {
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 0.5s ease,
+              border-color 0.4s ease;
+}
+
+.perform-pro__gallery-item.hover-ready:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.18),
+              0 4px 12px rgba(0, 0, 0, 0.1);
+  border-color: rgba(245, 166, 35, 0.3);
+}
+
+/* Spotlight appears — like a camera flash / light source */
+.perform-pro__gallery-item.hover-ready:hover::before {
+  opacity: 1;
+}
+
+/* Corner bracket appears */
+.perform-pro__gallery-item.hover-ready:hover::after {
+  border-color: rgba(245, 166, 35, 0.7);
+}
+
+/* IMAGE: desaturated → vivid + zoom — like photo coming alive */
+.perform-pro__gallery-item.hover-ready img {
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+              filter 0.5s ease;
+}
+
+.perform-pro__gallery-item.hover-ready:hover img {
+  transform: scale(1.08);
+  filter: saturate(1.2) brightness(1.08) contrast(1.04);
+}
+
+
+/* ═══════════════════════════════════════════════════
+   HOVER — INTRO (line effect same)
+   ═══════════════════════════════════════════════════ */
+
+.perform-pro__intro.hover-ready .perform-pro__rule {
+  transition: width 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 0.45s ease;
+}
+
+.perform-pro__intro.hover-ready:hover .perform-pro__rule {
+  width: 65px;
+  box-shadow: 0 0 14px rgba(245, 166, 35, 0.5);
+  animation: none;
+}
+
+.perform-pro__heading {
+  transition: color 0.3s ease;
+}
+
+.perform-pro__intro.hover-ready:hover .perform-pro__heading {
+  background: linear-gradient(
+    90deg,
+    #111111 0%, #111111 35%,
+    #f5a623 50%,
+    #111111 65%, #111111 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: h5p_shimmer 2.5s linear infinite;
+}
+
+.perform-pro__desc {
+  transition: transform 0.4s ease, color 0.3s ease;
+}
+
+.perform-pro__intro.hover-ready:hover .perform-pro__desc {
+  transform: translateX(5px);
+  color: #333333;
+}
+
+
+/* ═══════════════════════════════════════════════════
+   SECTION HOVER — subtle collective lift
+   ═══════════════════════════════════════════════════ */
+
+.perform-pro:hover .perform-pro__gallery-item.hover-ready {
+  transform: translateY(-2px);
+}
+
+.perform-pro__gallery-item.hover-ready:hover {
+  transform: translateY(-5px) scale(1.02) !important;
+}
+
+.perform-pro:hover .perform-pro__gallery-item.hover-ready {
+  border-color: rgba(245, 166, 35, 0.1);
+}
+
+.perform-pro__gallery-item.hover-ready:hover {
+  border-color: rgba(245, 166, 35, 0.3) !important;
+}
+
+
+/* ═══════════════════════════════════════════════════
+   REDUCED MOTION
+   ═══════════════════════════════════════════════════ */
+
+@media (prefers-reduced-motion: reduce) {
+  .perform-pro,
+  .perform-pro::before,
+  .perform-pro__intro,
+  .perform-pro__rule,
+  .perform-pro__gallery-item,
+  .perform-pro__heading {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+    clip-path: none !important;
+  }
+  .perform-pro__gallery-item img {
+    filter: none !important;
+  }
+  .perform-pro__intro.hover-ready .perform-pro__rule,
+  .perform-pro__gallery-item.hover-ready,
+  .perform-pro__gallery-item.hover-ready img,
+  .perform-pro__gallery-item.hover-ready::before,
+  .perform-pro__gallery-item.hover-ready::after,
+  .perform-pro__heading,
+  .perform-pro__desc {
+    transition: none !important;
+  }
+}
+
+
+/* ═══════════════════════════════════════════════════
+   RESPONSIVE
+   ═══════════════════════════════════════════════════ */
+
+@media (max-width: 1200px) {
+  .perform-pro__gallery {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .perform-pro__container {
+    padding: 36px 28px;
+  }
+
+  .perform-pro__top {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .perform-pro__intro {
+    max-width: 100%;
+    flex: 0 0 160px;
+  }
+
+  .perform-pro__gallery {
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .perform-pro__container {
+    padding: 32px 20px;
+  }
+
+  .perform-pro__heading {
+    font-size: 18px;
+  }
+
+  .perform-pro__gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .perform-pro__top {
+    gap: 0;
+  }
+}
+
+@media (max-width: 420px) {
+  .perform-pro__gallery {
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+}
+
+
+
+
+
+/* ═══════════════════════════════════════════════════
+   PERFORMANCE SHIFT BAR (kept as-is)
+   ═══════════════════════════════════════════════════ */
+
+.perform-pro__shift {
+  background: #0d0d0d;
+  padding: 26px 40px;
+}
+
+.perform-pro__shift-container {
+  max-width: 1500px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.perform-pro__shift-label {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #f5a623;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+
+.perform-pro__shift-label i {
+  font-size: 16px;
+}
+
+.perform-pro__shift-block {
+  flex: 1;
+  min-width: 0;
+}
+
+.perform-pro__shift-tag {
+  display: block;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  color: #9a9a9a;
+  margin-bottom: 14px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.perform-pro__shift-tag--after {
+  color: #f5a623;
+}
+
+.perform-pro__shift-items {
+  display: flex;
+  justify-content: center;
+  gap: 26px;
+  flex-wrap: wrap;
+}
+
+.perform-pro__shift-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #cccccc;
+  font-size: 12.5px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.perform-pro__shift-item i {
+  color: #777777;
+  font-size: 14px;
+}
+
+.perform-pro__shift-item--after {
+  color: #ffffff;
+}
+
+.perform-pro__shift-item--after i {
+  color: #f5a623;
+}
+
+.perform-pro__shift-arrow {
+  flex: 0 0 auto;
+  color: #f5a623;
+  font-size: 20px;
+}
+
+@media (max-width: 900px) {
+  .perform-pro__shift {
+    padding: 26px 28px;
+  }
+
+  .perform-pro__shift-container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 22px;
+  }
+
+  .perform-pro__shift-label {
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .perform-pro__shift-arrow {
+    transform: rotate(90deg);
+    align-self: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .perform-pro__shift-items {
+    gap: 16px;
+  }
+
+  .perform-pro__shift-item {
+    font-size: 11.5px;
+  }
+}
+
+@media (max-width: 420px) {
+  .perform-pro__shift-items {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+}

@@ -1,0 +1,302 @@
+.newfullachive-section {
+  --nfa-purple: #6C2DC7;
+  --nfa-purple-hover: #5A24A6;
+  --nfa-purple-light: rgba(108, 45, 199, 0.08);
+  --nfa-ink: #1a1a2e;
+  --nfa-muted: #5c5c7a;
+  --nfa-faint: #8e8ea0;
+  --nfa-bg: #ffffff;
+  --nfa-panel: #f8f7fb;
+  --nfa-border: #e8e8ef;
+  --nfa-gold: #b8902f;
+  width: 100%;
+  background: var(--nfa-bg);
+  padding: 64px 24px 88px;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+}
+
+/* ===== Header ===== */
+.newfullachive-header {
+  max-width: 760px;
+  margin: 0 auto 44px;
+}
+
+.newfullachive-eyebrow {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--nfa-purple);
+  margin: 0 0 14px;
+  text-transform: uppercase;
+}
+
+.newfullachive-heading {
+  font-size: clamp(28px, 3.6vw, 38px);
+  font-weight: 800;
+  color: var(--nfa-ink);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  margin: 0 0 16px;
+}
+
+.newfullachive-desc {
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--nfa-muted);
+  margin: 0;
+  max-width: 560px;
+}
+
+/* ===== Certificate wall ===== */
+.newfullachive-wall {
+  max-width: 1020px;
+  margin: 0 auto 64px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.newfullachive-cert {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-family: inherit;
+  height: 230px;
+  perspective: 1200px;
+}
+
+.newfullachive-cert-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.55s cubic-bezier(0.4, 0.2, 0.2, 1);
+  transform-style: preserve-3d;
+}
+
+.newfullachive-cert--flipped .newfullachive-cert-inner {
+  transform: rotateY(180deg);
+}
+
+.newfullachive-cert-face {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  border: 1px solid var(--nfa-border);
+  background: var(--nfa-panel);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 22px 18px;
+  box-shadow: 0 6px 18px rgba(20, 20, 43, 0.06);
+}
+
+.newfullachive-cert-face--back {
+  transform: rotateY(180deg);
+  background: var(--nfa-ink);
+  justify-content: space-between;
+  text-align: center;
+}
+
+/* Decorative corner ticks — like an embossed certificate frame */
+.newfullachive-cert-corner {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 16px;
+  height: 16px;
+  border-top: 2px solid var(--nfa-gold);
+  border-left: 2px solid var(--nfa-gold);
+  opacity: 0.6;
+}
+
+.newfullachive-cert-corner--br {
+  top: auto;
+  left: auto;
+  bottom: 10px;
+  right: 10px;
+  border-top: none;
+  border-left: none;
+  border-bottom: 2px solid var(--nfa-gold);
+  border-right: 2px solid var(--nfa-gold);
+}
+
+.newfullachive-cert-seal {
+  font-size: 38px;
+  margin-bottom: 14px;
+}
+
+.newfullachive-cert-title {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--nfa-ink);
+  text-align: center;
+  margin: 0 0 12px;
+  line-height: 1.3;
+}
+
+.newfullachive-cert-rule {
+  width: 36px;
+  height: 2px;
+  background: var(--nfa-gold);
+  margin-bottom: 12px;
+}
+
+.newfullachive-cert-issued {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--nfa-faint);
+  margin: 0;
+}
+
+.newfullachive-cert-note {
+  font-family: Georgia, "Times New Roman", serif;
+  font-style: italic;
+  font-size: 14px;
+  line-height: 1.55;
+  color: #fff;
+  margin: 0;
+}
+
+.newfullachive-cert-flip-hint {
+  font-size: 10.5px;
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* ===== Milestone ladder ===== */
+.newfullachive-ladder-wrap {
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+.newfullachive-ladder-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.newfullachive-ladder-title {
+  font-size: 19px;
+  font-weight: 800;
+  color: var(--nfa-ink);
+  margin: 0;
+}
+
+.newfullachive-ladder-progress {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--nfa-purple);
+  background: var(--nfa-purple-light);
+  padding: 6px 14px;
+  border-radius: 999px;
+}
+
+.newfullachive-ladder {
+  position: relative;
+  padding-left: 36px;
+}
+
+.newfullachive-ladder-track {
+  position: absolute;
+  top: 6px;
+  bottom: 6px;
+  left: 13px;
+  width: 2px;
+  background: var(--nfa-border);
+}
+
+.newfullachive-ladder-track-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--nfa-purple);
+  transition: height 0.6s ease;
+}
+
+.newfullachive-step {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 0;
+}
+
+.newfullachive-step-node {
+  position: absolute;
+  left: -36px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid var(--nfa-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--nfa-faint);
+  z-index: 1;
+}
+
+.newfullachive-step--reached .newfullachive-step-node {
+  background: var(--nfa-purple);
+  border-color: var(--nfa-purple);
+  color: #fff;
+}
+
+.newfullachive-step-label {
+  font-size: 14.5px;
+  font-weight: 600;
+  color: var(--nfa-faint);
+}
+
+.newfullachive-step--reached .newfullachive-step-label {
+  color: var(--nfa-ink);
+  font-weight: 700;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 900px) {
+  .newfullachive-wall {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .newfullachive-header {
+    margin-bottom: 32px;
+  }
+  .newfullachive-heading {
+    font-size: 24px;
+  }
+  .newfullachive-wall {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    margin-bottom: 48px;
+  }
+  .newfullachive-cert {
+    height: 200px;
+  }
+  .newfullachive-ladder-wrap {
+    max-width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .newfullachive-cert-inner,
+  .newfullachive-ladder-track-fill {
+    transition: none !important;
+  }
+}

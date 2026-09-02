@@ -1,0 +1,198 @@
+/* Pages/RocketAnimation/RocketAnimation.css */
+
+.planet-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 9999;
+  overflow: hidden;
+}
+
+/* ---- MAIN PLANET ---- */
+.planet {
+  position: absolute;
+  top: -80px;
+  right: -80px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 35% 30%,
+    #ff8c42,
+    #e63946 40%,
+    #9b2226 75%,
+    #3d0c11 100%
+  );
+  box-shadow:
+    0 0 30px rgba(230, 57, 70, 0.5),
+    0 0 60px rgba(230, 57, 70, 0.3),
+    0 0 100px rgba(230, 57, 70, 0.15),
+    inset -8px -8px 20px rgba(0, 0, 0, 0.6),
+    inset 5px 5px 15px rgba(255, 200, 150, 0.2);
+  animation: planetFall 7s ease-in forwards;
+  z-index: 10;
+}
+
+/* Surface texture bands */
+.planet-surface {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: 
+    linear-gradient(
+      170deg,
+      transparent 20%,
+      rgba(0,0,0,0.15) 22%,
+      transparent 24%,
+      transparent 45%,
+      rgba(0,0,0,0.1) 47%,
+      transparent 49%,
+      transparent 65%,
+      rgba(0,0,0,0.12) 67%,
+      transparent 69%
+    );
+  overflow: hidden;
+}
+
+/* Top-left highlight - 3D feel */
+.planet-highlight {
+  position: absolute;
+  top: 8px;
+  left: 12px;
+  width: 20px;
+  height: 14px;
+  border-radius: 50%;
+  background: radial-gradient(
+    ellipse,
+    rgba(255, 255, 255, 0.45),
+    transparent
+  );
+  filter: blur(3px);
+}
+
+/* Dark shadow on bottom-right */
+.planet-shadow-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 70% 75%,
+    rgba(0, 0, 0, 0.5),
+    transparent 60%
+  );
+}
+
+/* ---- DIAGONAL FALL ---- */
+@keyframes planetFall {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+  3% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 0.9;
+  }
+  100% {
+    transform: translate(-110vw, 115vh);
+    opacity: 0;
+  }
+}
+
+/* ---- TRAILING SHADOWS ---- */
+.trail {
+  position: absolute;
+  top: -80px;
+  right: -80px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 35% 30%,
+    rgba(230, 57, 70, 0.3),
+    rgba(155, 34, 38, 0.15) 50%,
+    transparent 70%
+  );
+  filter: blur(8px);
+  z-index: 5;
+}
+
+.trail-1 {
+  animation: trailFall1 7s ease-in forwards;
+  opacity: 0.4;
+  width: 60px;
+  height: 60px;
+}
+
+.trail-2 {
+  animation: trailFall2 7s ease-in forwards;
+  opacity: 0.25;
+  width: 50px;
+  height: 50px;
+  filter: blur(12px);
+}
+
+.trail-3 {
+  animation: trailFall3 7s ease-in forwards;
+  opacity: 0.15;
+  width: 40px;
+  height: 40px;
+  filter: blur(16px);
+}
+
+.trail-4 {
+  animation: trailFall4 7s ease-in forwards;
+  opacity: 0.08;
+  width: 30px;
+  height: 30px;
+  filter: blur(20px);
+}
+
+.trail-5 {
+  animation: trailFall5 7s ease-in forwards;
+  opacity: 0.04;
+  width: 22px;
+  height: 22px;
+  filter: blur(25px);
+}
+
+/* Each trail follows with slight delay effect via different start positions */
+@keyframes trailFall1 {
+  0% { transform: translate(0, 0); opacity: 0; }
+  5% { opacity: 0.4; }
+  100% { transform: translate(-110vw, 115vh); opacity: 0; }
+}
+
+@keyframes trailFall2 {
+  0% { transform: translate(20px, -20px); opacity: 0; }
+  8% { opacity: 0.25; }
+  100% { transform: translate(-110vw, 115vh); opacity: 0; }
+}
+
+@keyframes trailFall3 {
+  0% { transform: translate(45px, -40px); opacity: 0; }
+  11% { opacity: 0.15; }
+  100% { transform: translate(-110vw, 115vh); opacity: 0; }
+}
+
+@keyframes trailFall4 {
+  0% { transform: translate(70px, -60px); opacity: 0; }
+  14% { opacity: 0.08; }
+  100% { transform: translate(-110vw, 115vh); opacity: 0; }
+}
+
+@keyframes trailFall5 {
+  0% { transform: translate(95px, -80px); opacity: 0; }
+  17% { opacity: 0.04; }
+  100% { transform: translate(-110vw, 115vh); opacity: 0; }
+}

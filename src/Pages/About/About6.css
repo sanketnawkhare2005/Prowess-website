@@ -1,0 +1,1004 @@
+/* 
+
+.promises-pro-section {
+  background-color: #ffffff;
+  padding: 32px 30px;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.promises-pro-container {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.promises-pro-row {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.promises-pro-heading-block {
+  flex: 0 0 220px;
+  padding-right: 18px;
+}
+
+.promises-pro-title {
+  color: #0a0a0a;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin: 0 0 12px 0;
+}
+
+.promises-pro-quote {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.promises-pro-quote-icon {
+  color: #f5b301;
+  font-size: 26px;
+  font-weight: 900;
+  line-height: 1;
+  font-family: Georgia, serif;
+}
+
+.promises-pro-quote-text {
+  margin: 0;
+  color: #0a0a0a;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.promises-pro-accent {
+  color: #f5b301;
+}
+
+.promises-pro-item-wrap {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  min-width: 0;
+}
+
+.promises-pro-divider {
+  flex: 0 0 1px;
+  width: 1px;
+  height: 56px;
+  background-color: #e2e2e2;
+  margin-right: 14px;
+}
+
+.promises-pro-item {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding-right: 14px;
+}
+
+.promises-pro-icon {
+  flex: 0 0 26px;
+  width: 26px;
+  height: 26px;
+  margin-top: 2px;
+}
+
+.promises-pro-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.promises-pro-item-text {
+  min-width: 0;
+}
+
+.promises-pro-item-title {
+  margin: 0 0 4px 0;
+  color: #0a0a0a;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.promises-pro-item-desc {
+  margin: 0;
+  color: #6b6b6b;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+.promises-pro-card {
+  flex: 0 0 280px;
+  background-color: #0a0a0a;
+  border-radius: 8px;
+  padding: 18px 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 14px;
+  align-self: stretch;
+}
+
+.promises-pro-card-text {
+  margin: 0;
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12.5px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.promises-pro-card-btn-row {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.promises-pro-card-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #f5b301;
+  color: #0a0a0a;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  white-space: nowrap;
+}
+
+.promises-pro-card-btn:hover {
+  background-color: #ffc61a;
+}
+
+.promises-pro-btn-icon {
+  width: 14px;
+  height: 14px;
+}
+
+
+@media (max-width: 1350px) {
+  .promises-pro-heading-block {
+    flex-basis: 220px;
+  }
+
+  .promises-pro-card {
+    flex-basis: 240px;
+  }
+
+  .promises-pro-item-title {
+    font-size: 11px;
+    white-space: normal;
+  }
+
+  .promises-pro-item-desc {
+    font-size: 10.5px;
+  }
+}
+
+@media (max-width: 1180px) {
+  .promises-pro-row {
+    flex-wrap: wrap;
+    row-gap: 18px;
+  }
+
+  .promises-pro-heading-block {
+    flex: 1 1 100%;
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 1024px) {
+  .promises-pro-item-wrap {
+    flex: 1 1 45%;
+  }
+
+  .promises-pro-divider {
+    display: none;
+  }
+
+  .promises-pro-card {
+    flex-basis: 100%;
+  }
+
+  .promises-pro-card-btn-row {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 700px) {
+  .promises-pro-section {
+    padding: 26px 20px;
+  }
+
+  .promises-pro-item-wrap {
+    flex: 1 1 100%;
+  }
+}
+
+@media (max-width: 520px) {
+  .promises-pro-section {
+    padding: 22px 16px;
+  }
+
+  .promises-pro-title {
+    font-size: 16px;
+  }
+
+  .promises-pro-quote-text {
+    font-size: 12px;
+  }
+
+  .promises-pro-card-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .promises-pro-card-btn-row {
+    justify-content: center;
+  }
+}
+
+
+
+
+
+
+
+
+
+@keyframes ap6_slideLeft {
+  from { opacity: 0; transform: translateX(-30px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes ap6_wipeDown {
+  from { clip-path: inset(0 0 100% 0); }
+  to   { clip-path: inset(0 0 0 0); }
+}
+@keyframes ap6_growH {
+  from { transform: scaleY(0); }
+  to   { transform: scaleY(1); }
+}
+@keyframes ap6_slideRight {
+  from { opacity: 0; transform: translateX(40px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+.promises-pro-heading-block { opacity: 0; transform: translateX(-30px); }
+.promises-pro-item-wrap    { clip-path: inset(0 0 100% 0); }
+.promises-pro-divider      { transform: scaleY(0); transform-origin: center; }
+.promises-pro-card         { opacity: 0; transform: translateX(40px); }
+
+.promises-pro-heading-block.revealed {
+  animation: ap6_slideLeft 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0s forwards;
+}
+
+.promises-pro-item-wrap.revealed {
+  animation: ap6_wipeDown 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation-delay: calc(var(--d, 0) * 0.12s + 0.2s);
+}
+
+.promises-pro-item-wrap.revealed .promises-pro-divider {
+  animation: ap6_growH 0.4s ease forwards;
+  animation-delay: calc(var(--d, 0) * 0.12s + 0.35s);
+}
+
+.promises-pro-card.revealed {
+  animation: ap6_slideRight 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.75s forwards;
+}
+
+.promises-pro-heading-block.hover-ready { opacity: 1; transform: translateX(0); animation: none; }
+.promises-pro-item-wrap.hover-ready    { clip-path: inset(0 0 0 0); animation: none; }
+.promises-pro-divider.hover-ready      { transform: scaleY(1); animation: none; }
+.promises-pro-card.hover-ready         { opacity: 1; transform: translateX(0); animation: none; }
+
+
+.promises-pro-item-wrap.hover-ready {
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  position: relative;
+}
+.promises-pro-item-wrap.hover-ready::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #f5b301;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.promises-pro-item-wrap.hover-ready:hover::after {
+  transform: scaleX(1);
+}
+.promises-pro-item-wrap.hover-ready:hover {
+  transform: translateY(-3px);
+}
+
+.promises-pro-icon {
+  transition: transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1),
+              filter 0.4s ease;
+}
+.promises-pro-item-wrap.hover-ready:hover .promises-pro-icon {
+  transform: scale(1.2) rotate(-6deg);
+  filter: drop-shadow(0 0 5px rgba(245, 179, 1, 0.5));
+}
+
+.promises-pro-item-title {
+  transition: color 0.3s ease;
+}
+.promises-pro-item-wrap.hover-ready:hover .promises-pro-item-title {
+  color: #c48f00;
+}
+
+.promises-pro-card.hover-ready {
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 0.4s ease;
+}
+.promises-pro-card.hover-ready:hover {
+  transform: translateX(0) translateY(-3px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.promises-pro-card-btn {
+  transition: background-color 0.2s ease,
+              transform 0.3s ease,
+              box-shadow 0.3s ease;
+}
+.promises-pro-card.hover-ready:hover .promises-pro-card-btn {
+  background-color: #ffc61a;
+  transform: translateX(3px);
+  box-shadow: 0 4px 12px rgba(245, 179, 1, 0.3);
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+  .promises-pro-heading-block,
+  .promises-pro-item-wrap,
+  .promises-pro-divider,
+  .promises-pro-card {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+    clip-path: none !important;
+  }
+  .promises-pro-item-wrap.hover-ready,
+  .promises-pro-item-wrap.hover-ready::after,
+  .promises-pro-icon,
+  .promises-pro-item-title,
+  .promises-pro-card.hover-ready,
+  .promises-pro-card-btn {
+    transition: none !important;
+  }
+  .promises-pro-card.hover-ready:hover {
+    box-shadow: none !important;
+    transform: none !important;
+  }
+  .promises-pro-item-wrap.hover-ready:hover .promises-pro-icon {
+    filter: none !important;
+    transform: none !important;
+  }
+  .promises-pro-card.hover-ready:hover .promises-pro-card-btn {
+    box-shadow: none !important;
+    transform: none !important;
+  }
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   5. OUR PROMISE — promises-pro-*
+   ========================================================================== */
+
+.promises-pro-section {
+  background-color: #ffffff;
+  padding: 32px 30px;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.promises-pro-container {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+/* ---------- Everything in ONE row ---------- */
+.promises-pro-row {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+/* ---------- Heading + quote ---------- */
+.promises-pro-heading-block {
+  /* flex: 0 0 260px; */
+  flex: 0 0 220px;
+  padding-right: 18px;
+}
+
+.promises-pro-title {
+  color: #0a0a0a;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin: 0 0 12px 0;
+}
+
+.promises-pro-quote {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.promises-pro-quote-icon {
+  color: #f5b301;
+  font-size: 26px;
+  font-weight: 900;
+  line-height: 1;
+  font-family: Georgia, serif;
+}
+
+.promises-pro-quote-text {
+  margin: 0;
+  color: #0a0a0a;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.promises-pro-accent {
+  color: #f5b301;
+}
+
+/* ---------- 4 promise items with short vertical line ---------- */
+.promises-pro-item-wrap {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  min-width: 0;
+}
+
+.promises-pro-divider {
+  flex: 0 0 1px;
+  width: 1px;
+  height: 56px;
+  background-color: #e2e2e2;
+  margin-right: 14px;
+}
+
+.promises-pro-item {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding-right: 14px;
+}
+
+.promises-pro-icon {
+  position: relative;
+  flex: 0 0 30px;
+  width: 30px;
+  height: 30px;
+  margin-top: 2px;
+}
+
+.promises-pro-icon svg {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.promises-pro-item-text {
+  min-width: 0;
+}
+
+.promises-pro-item-title {
+  margin: 0 0 4px 0;
+  color: #0a0a0a;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.promises-pro-item-desc {
+  margin: 0;
+  color: #6b6b6b;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+/* ---------- Card: text top, button bottom-right ---------- */
+.promises-pro-card {
+  position: relative;
+  flex: 0 0 310px;
+  background-color: #0a0a0a;
+  border-radius: 8px;
+  padding: 18px 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 14px;
+  align-self: stretch;
+  overflow: hidden;
+}
+
+.promises-pro-card-text {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12.5px;
+  font-weight: 600;
+  line-height: 1.5;
+  padding: 0px 10px;
+}
+
+.promises-pro-card-btn-row {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  /* justify-content: flex-end; */
+  justify-content: center;
+}
+
+.promises-pro-card-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #f5b301;
+  color: #0a0a0a;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  white-space: nowrap;
+}
+
+.promises-pro-card-btn:hover {
+  background-color: #ffc61a;
+}
+
+.promises-pro-btn-icon {
+  width: 12px;
+  height: 12px;
+}
+
+/* ==========================================================================
+   RESPONSIVE
+   ========================================================================== */
+
+/* Laptop / small desktop */
+@media (max-width: 1350px) {
+  .promises-pro-heading-block {
+    flex-basis: 220px;
+  }
+
+  .promises-pro-card {
+    flex-basis: 240px;
+  }
+
+  .promises-pro-item-title {
+    font-size: 11px;
+    white-space: normal;
+  }
+
+  .promises-pro-item-desc {
+    font-size: 10.5px;
+  }
+}
+
+/* Small laptop */
+@media (max-width: 1180px) {
+  .promises-pro-row {
+    flex-wrap: wrap;
+    row-gap: 18px;
+  }
+
+  .promises-pro-heading-block {
+    flex: 1 1 100%;
+    padding-right: 0;
+  }
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .promises-pro-item-wrap {
+    flex: 1 1 45%;
+  }
+
+  .promises-pro-divider {
+    display: none;
+  }
+
+  .promises-pro-card {
+    flex-basis: 100%;
+  }
+
+  .promises-pro-card-btn-row {
+    justify-content: flex-start;
+  }
+}
+
+/* Small tablet — 2 items per row */
+@media (max-width: 700px) {
+  .promises-pro-section {
+    padding: 26px 20px;
+  }
+
+  .promises-pro-item-wrap {
+    flex: 1 1 50%;
+    padding-bottom: 14px;
+  }
+
+  .promises-pro-item {
+    padding-right: 10px;
+  }
+
+  .promises-pro-item-title {
+    font-size: 11px;
+    white-space: normal;
+  }
+
+  .promises-pro-item-desc {
+    font-size: 10.5px;
+  }
+}
+
+/* Mobile — still 2 items per row, just tighter */
+@media (max-width: 520px) {
+  .promises-pro-section {
+    padding: 22px 16px;
+  }
+
+  .promises-pro-title {
+    font-size: 16px;
+  }
+
+  .promises-pro-quote-text {
+    font-size: 12px;
+  }
+
+  .promises-pro-item-wrap {
+    flex: 1 1 50%;
+    padding-bottom: 12px;
+  }
+
+  .promises-pro-item {
+    gap: 8px;
+    padding-right: 6px;
+  }
+
+  .promises-pro-icon {
+    flex-basis: 22px;
+    width: 22px;
+    height: 22px;
+  }
+
+  .promises-pro-item-title {
+    font-size: 10.5px;
+    margin-bottom: 3px;
+  }
+
+  .promises-pro-item-desc {
+    font-size: 10px;
+    line-height: 1.35;
+  }
+
+  .promises-pro-card-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .promises-pro-card-btn-row {
+    justify-content: center;
+  }
+}
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   ABOUT6 ANIMATION EFFECTS — Paste below existing CSS
+   ========================================================================== */
+
+/* --- Keyframes --- */
+@keyframes ap6_slideLeft {
+  from { opacity: 0; transform: translateX(-30px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes ap6_wipeDown {
+  from { clip-path: inset(0 0 100% 0); }
+  to   { clip-path: inset(0 0 0 0); }
+}
+@keyframes ap6_growH {
+  from { transform: scaleY(0); }
+  to   { transform: scaleY(1); }
+}
+@keyframes ap6_slideRight {
+  from { opacity: 0; transform: translateX(40px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+/* --- NEW: continuous ambient keyframes --- */
+@keyframes ap6_glowBreathe {
+  0%, 100% { transform: scale(0.7); opacity: 0.22; }
+  50%      { transform: scale(1);   opacity: 0.55; }
+}
+@keyframes ap6_auroraDrift {
+  0%   { transform: translate(-6%, -6%) scale(1); }
+  50%  { transform: translate(4%, 6%) scale(1.12); }
+  100% { transform: translate(-6%, -6%) scale(1); }
+}
+@keyframes ap6_cardFloat {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-4px); }
+}
+
+@keyframes ap6_iconFloat {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  30%      { transform: translateY(-2.5px) rotate(2deg); }
+  70%      { transform: translateY(1px) rotate(-1.5deg); }
+}
+
+
+
+/* --- Initial hidden states (no layout shift) --- */
+.promises-pro-heading-block { opacity: 0; transform: translateX(-30px); }
+.promises-pro-item-wrap    { clip-path: inset(0 0 100% 0); }
+.promises-pro-divider      { transform: scaleY(0); transform-origin: center; }
+.promises-pro-card         { opacity: 0; transform: translateX(40px); }
+
+/* --- Reveal animations with stagger via --d --- */
+.promises-pro-heading-block.revealed {
+  animation: ap6_slideLeft 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0s forwards;
+}
+
+.promises-pro-item-wrap.revealed {
+  animation: ap6_wipeDown 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation-delay: calc(var(--d, 0) * 0.12s + 0.2s);
+}
+
+.promises-pro-item-wrap.revealed .promises-pro-divider {
+  animation: ap6_growH 0.4s ease forwards;
+  animation-delay: calc(var(--d, 0) * 0.12s + 0.35s);
+}
+
+.promises-pro-card.revealed {
+  animation: ap6_slideRight 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.75s forwards;
+}
+
+/* --- Post-reveal: lock final values, kill one-shot animation --- */
+.promises-pro-heading-block.hover-ready { opacity: 1; transform: translateX(0); animation: none; }
+.promises-pro-item-wrap.hover-ready    { clip-path: inset(0 0 0 0); animation: none; }
+.promises-pro-divider.hover-ready      { transform: scaleY(1); animation: none; }
+.promises-pro-card.hover-ready         {
+  opacity: 1;
+  transform: translateX(0);
+  animation: ap6_cardFloat 3.6s ease-in-out infinite;
+  animation-delay: 0.9s;
+}
+
+
+
+/* --- NEW: ambient glow ring behind each icon (continuous, starts once revealed) --- */
+.promises-pro-icon::before {
+  content: "";
+  position: absolute;
+  inset: -8px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(245, 179, 1, 0.22) 0%, rgba(245, 179, 1, 0) 70%);
+  z-index: 0;
+  opacity: 0;
+  transform: scale(0.7);
+  pointer-events: none;
+}
+.promises-pro-item-wrap.hover-ready .promises-pro-icon::before {
+  animation: ap6_glowBreathe 3.2s ease-in-out infinite;
+  animation-delay: calc(var(--d, 0) * 0.3s);
+}
+
+/* continuous gentle float on each icon SVG */
+.promises-pro-item-wrap.hover-ready .promises-pro-icon svg {
+  animation: ap6_iconFloat 1.8s ease-in-out infinite;
+  animation-delay: calc(var(--d, 0) * 0.3s);
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
+              filter 0.4s ease;
+}
+
+/* ==========================================================================
+   HOVER EFFECTS
+   ========================================================================== */
+
+/* --- Item Wrap: Lift + center-out gradient underline --- */
+.promises-pro-item-wrap.hover-ready {
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  position: relative;
+}
+.promises-pro-item-wrap.hover-ready::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #f5b301, transparent);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.promises-pro-item-wrap.hover-ready:hover::after {
+  transform: scaleX(1);
+}
+.promises-pro-item-wrap.hover-ready:hover {
+  transform: translateY(-3px);
+}
+
+/* --- Icon: Scale + Glow (pauses ambient breathing, snaps to bright glow) --- */
+.promises-pro-icon {
+  transition: transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1),
+              filter 0.4s ease;
+}
+/* .promises-pro-item-wrap.hover-ready:hover .promises-pro-icon {
+  transform: scale(1.2) rotate(8deg);
+  filter: drop-shadow(0 0 6px rgba(245, 179, 1, 0.55));
+} */
+
+
+.promises-pro-item-wrap.hover-ready:hover .promises-pro-icon svg {
+  animation: none;
+  transform: scale(1.2) rotate(8deg);
+  filter: drop-shadow(0 0 6px rgba(245, 179, 1, 0.55));
+}
+
+.promises-pro-item-wrap.hover-ready:hover .promises-pro-icon::before {
+  animation: none;
+  transform: scale(1.2);
+  opacity: 0.85;
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.3s ease;
+}
+
+/* --- Title Color Shift + subtle letter-spacing pop --- */
+.promises-pro-item-title {
+  transition: color 0.3s ease, letter-spacing 0.3s ease;
+}
+.promises-pro-item-wrap.hover-ready:hover .promises-pro-item-title {
+  color: #c48f00;
+  letter-spacing: 0.5px;
+}
+
+/* --- Card: ambient aurora glow drift (continuous) --- */
+.promises-pro-card::before {
+  content: "";
+  position: absolute;
+  inset: -50%;
+  background: radial-gradient(circle at 30% 30%, rgba(245, 179, 1, 0.16), transparent 60%);
+  z-index: 0;
+  pointer-events: none;
+}
+.promises-pro-card.hover-ready::before {
+  animation: ap6_auroraDrift 7s ease-in-out infinite;
+}
+
+/* --- Card: Shadow + Lift (pauses ambient float on hover, hands off to transition) --- */
+.promises-pro-card.hover-ready {
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 0.4s ease;
+}
+.promises-pro-card.hover-ready:hover {
+  animation: none;
+  transform: translateX(0) translateY(-6px);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.18);
+}
+.promises-pro-card.hover-ready:hover::before {
+  animation-play-state: paused;
+}
+
+/* --- Button: Arrow Nudge + Shadow --- */
+.promises-pro-card-btn {
+  transition: background-color 0.2s ease,
+              transform 0.3s ease,
+              box-shadow 0.3s ease;
+}
+.promises-pro-card.hover-ready:hover .promises-pro-card-btn {
+  background-color: #ffc61a;
+  transform: translateX(3px);
+  box-shadow: 0 4px 12px rgba(245, 179, 1, 0.3);
+}
+
+/* ==========================================================================
+   REDUCED MOTION
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  .promises-pro-heading-block,
+  .promises-pro-item-wrap,
+  .promises-pro-divider,
+  .promises-pro-card,
+  .promises-pro-icon::before,
+  .promises-pro-card::before {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+    clip-path: none !important;
+  }
+  .promises-pro-item-wrap.hover-ready,
+  .promises-pro-item-wrap.hover-ready::after,
+  .promises-pro-icon,
+  .promises-pro-item-title,
+  .promises-pro-card.hover-ready,
+  .promises-pro-card-btn {
+    transition: none !important;
+  }
+  .promises-pro-card.hover-ready:hover {
+    box-shadow: none !important;
+    transform: none !important;
+  }
+  .promises-pro-item-wrap.hover-ready:hover .promises-pro-icon {
+    filter: none !important;
+    transform: none !important;
+  }
+  .promises-pro-item-wrap.hover-ready:hover .promises-pro-icon::before {
+    opacity: 0.3 !important;
+  }
+  .promises-pro-card.hover-ready:hover .promises-pro-card-btn {
+    box-shadow: none !important;
+    transform: none !important;
+  }
+
+    .promises-pro-icon svg {
+    animation: none !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}

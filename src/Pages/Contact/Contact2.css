@@ -1,0 +1,560 @@
+/* .connect-peop-prow-section {
+  background-color: #ffffff;
+  padding: 34px 30px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.connect-peop-prow-container {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.connect-peop-prow-heading {
+  color: #0a0a0a;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  margin: 0 0 10px 0;
+}
+
+.connect-peop-prow-underline {
+  display: block;
+  width: 30px;
+  height: 3px;
+  background-color: #f5b301;
+  border-radius: 2px;
+  margin-bottom: 22px;
+}
+
+.connect-peop-prow-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.connect-peop-prow-card {
+  background-color: #ffffff;
+  border: 1px solid #ececec;
+  border-radius: 10px;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.connect-peop-prow-icon-circle {
+  flex: 0 0 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #0a0a0a;
+}
+
+.connect-peop-prow-icon-circle svg {
+  width: 24px;
+  height: 24px;
+}
+
+.connect-peop-prow-card-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.connect-peop-prow-card-title {
+  margin: 0 0 10px 0;
+  color: #0a0a0a;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.connect-peop-prow-card-border {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: #f5b301;
+  border-radius: 2px;
+  margin-bottom: 10px;
+}
+
+.connect-peop-prow-card-desc {
+  margin: 0;
+  color: #6b6b6b;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+
+@media (max-width: 1280px) {
+  .connect-peop-prow-row {
+    gap: 14px;
+  }
+
+  .connect-peop-prow-card {
+    padding: 16px;
+  }
+
+  .connect-peop-prow-card-title {
+    font-size: 12px;
+  }
+
+  .connect-peop-prow-card-desc {
+    font-size: 11.5px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .connect-peop-prow-row {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 16px;
+  }
+}
+
+@media (max-width: 700px) {
+  .connect-peop-prow-section {
+    padding: 26px 20px;
+  }
+
+  .connect-peop-prow-heading {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 520px) {
+  .connect-peop-prow-section {
+    padding: 22px 16px;
+  }
+
+  .connect-peop-prow-row {
+    grid-template-columns: 1fr;
+  }
+
+  .connect-peop-prow-icon-circle {
+    width: 42px;
+    height: 42px;
+  }
+
+  .connect-peop-prow-icon-circle svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .connect-peop-prow-card-title {
+    font-size: 12.5px;
+  }
+
+  .connect-peop-prow-card-desc {
+    font-size: 12px;
+  }
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   WHY PEOPLE CONNECT WITH PROWESS — connect-peop-prow-*
+   ========================================================================== */
+
+.connect-peop-prow-section {
+  background-color: #ffffff;
+  padding: 34px 30px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.connect-peop-prow-container {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+/* ---------- Heading ---------- */
+.connect-peop-prow-heading {
+  color: #0a0a0a;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  margin: 0 0 10px 0;
+}
+
+.connect-peop-prow-underline {
+  position: relative;
+  display: block;
+  width: 30px;
+  height: 3px;
+  background-color: #f5b301;
+  border-radius: 2px;
+  margin-bottom: 22px;
+  transform-origin: left center;
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 0.4s ease;
+}
+.connect-peop-prow-section:hover .connect-peop-prow-underline {
+  transform: scaleX(1.6);
+  box-shadow: 0 0 10px rgba(245, 179, 1, 0.65);
+}
+
+/* ---------- Row of 4 cards ---------- */
+.connect-peop-prow-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.connect-peop-prow-card {
+  position: relative;
+  overflow: hidden;
+  background: transparent;
+  border: none;
+  border-radius: 10px;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+              filter 0.4s ease;
+}
+
+/* Rotating gradient border — CONTINUOUS */
+.connect-peop-prow-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 10px;
+  background: conic-gradient(
+    from 0deg,
+    #f5b301 0%,
+    rgba(245, 179, 1, 0.45) 8%,
+    rgba(245, 179, 1, 0.12) 18%,
+    transparent 28%,
+    transparent 72%,
+    rgba(245, 179, 1, 0.12) 82%,
+    rgba(245, 179, 1, 0.45) 92%,
+    #f5b301 100%
+  );
+  z-index: 0;
+  animation: cp2-cardBorderSpin 3s linear infinite;
+  pointer-events: none;
+}
+
+/* Stagger border rotation per card */
+.connect-peop-prow-row .connect-peop-prow-card:nth-child(2).aos-animate::before {
+  animation-delay: -0.75s;
+}
+.connect-peop-prow-row .connect-peop-prow-card:nth-child(3).aos-animate::before {
+  animation-delay: -1.5s;
+}
+.connect-peop-prow-row .connect-peop-prow-card:nth-child(4).aos-animate::before {
+  animation-delay: -2.25s;
+}
+
+/* Inner fill so content is readable */
+.connect-peop-prow-card::after {
+  content: "";
+  position: absolute;
+  inset: 1.5px;
+  border-radius: 8.5px;
+  background-color: #ffffff;
+  z-index: 1;
+  transition: background-color 0.4s ease;
+  pointer-events: none;
+}
+
+/* Diagonal shine sweep on hover */
+.connect-peop-prow-card:hover {
+  transform: translateY(-6px);
+  filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.08)) drop-shadow(0 0 16px rgba(245, 179, 1, 0.15));
+}
+.connect-peop-prow-card:hover::after {
+  background-color: rgba(245, 179, 1, 0.03);
+}
+
+.connect-peop-prow-icon-circle {
+  position: relative;
+  flex: 0 0 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #0a0a0a;
+  z-index: 2;
+  transition: transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1),
+              box-shadow 0.4s ease;
+}
+
+.connect-peop-prow-icon-circle svg {
+  width: 24px;
+  height: 24px;
+  position: relative;
+  z-index: 3;
+}
+
+/* "Connection ping" — continuous expanding rings from the icon circle */
+.connect-peop-prow-icon-circle::before,
+.connect-peop-prow-icon-circle::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 1.5px solid rgba(245, 179, 1, 0.55);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.connect-peop-prow-card.aos-animate .connect-peop-prow-icon-circle::before {
+  animation: cp2-ping 2.6s ease-out infinite;
+}
+.connect-peop-prow-card.aos-animate .connect-peop-prow-icon-circle::after {
+  animation: cp2-ping 2.6s ease-out infinite;
+  animation-delay: 1.3s;
+}
+
+/* Stagger the ping rings across the 4 cards */
+.connect-peop-prow-row .connect-peop-prow-card:nth-child(2).aos-animate .connect-peop-prow-icon-circle::before,
+.connect-peop-prow-row .connect-peop-prow-card:nth-child(2).aos-animate .connect-peop-prow-icon-circle::after {
+  animation-delay: 0.4s;
+}
+.connect-peop-prow-row .connect-peop-prow-card:nth-child(2).aos-animate .connect-peop-prow-icon-circle::after {
+  animation-delay: 1.7s;
+}
+.connect-peop-prow-row .connect-peop-prow-card:nth-child(3).aos-animate .connect-peop-prow-icon-circle::before,
+.connect-peop-prow-row .connect-peop-prow-card:nth-child(3).aos-animate .connect-peop-prow-icon-circle::after {
+  animation-delay: 0.8s;
+}
+.connect-peop-prow-row .connect-peop-prow-card:nth-child(3).aos-animate .connect-peop-prow-icon-circle::after {
+  animation-delay: 2.1s;
+}
+.connect-peop-prow-row .connect-peop-prow-card:nth-child(4).aos-animate .connect-peop-prow-icon-circle::before,
+.connect-peop-prow-row .connect-peop-prow-card:nth-child(4).aos-animate .connect-peop-prow-icon-circle::after {
+  animation-delay: 1.2s;
+}
+.connect-peop-prow-row .connect-peop-prow-card:nth-child(4).aos-animate .connect-peop-prow-icon-circle::after {
+  animation-delay: 2.5s;
+}
+
+/* Continuous subtle glow pulse on each icon */
+.connect-peop-prow-card.aos-animate .connect-peop-prow-icon-circle {
+  animation: cp2-iconGlow 3.2s ease-in-out infinite;
+}
+.connect-peop-prow-row .connect-peop-prow-card:nth-child(2).aos-animate .connect-peop-prow-icon-circle {
+  animation-delay: 0.8s;
+}
+.connect-peop-prow-row .connect-peop-prow-card:nth-child(3).aos-animate .connect-peop-prow-icon-circle {
+  animation-delay: 1.6s;
+}
+.connect-peop-prow-row .connect-peop-prow-card:nth-child(4).aos-animate .connect-peop-prow-icon-circle {
+  animation-delay: 2.4s;
+}
+
+@keyframes cp2-ping {
+  0%   { transform: scale(1);    opacity: 0.55; }
+  100% { transform: scale(1.7); opacity: 0; }
+}
+
+@keyframes cp2-iconGlow {
+  0%, 100% { box-shadow: 0 0 0 rgba(245, 179, 1, 0); }
+  50%      { box-shadow: 0 0 14px rgba(245, 179, 1, 0.3); }
+}
+
+@keyframes cp2-cardBorderSpin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* Hover: icon pops, ping rings + glow pause */
+.connect-peop-prow-card:hover .connect-peop-prow-icon-circle {
+  animation: none;
+  transform: scale(1.12) rotate(-6deg);
+  box-shadow: 0 0 18px rgba(245, 179, 1, 0.5);
+}
+.connect-peop-prow-card:hover .connect-peop-prow-icon-circle::before,
+.connect-peop-prow-card:hover .connect-peop-prow-icon-circle::after {
+  animation-play-state: paused;
+  opacity: 0;
+}
+
+.connect-peop-prow-card-text {
+  position: relative;
+  z-index: 2;
+  flex: 1;
+  min-width: 0;
+}
+
+.connect-peop-prow-card-title {
+  margin: 0 0 10px 0;
+  color: #0a0a0a;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14.5px;
+  font-weight: 800;
+  line-height: 1.4;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+.connect-peop-prow-card:hover .connect-peop-prow-card-title {
+  color: #c48f00;
+}
+
+/* The little accent bar under the title shimmers continuously */
+.connect-peop-prow-card-border {
+  display: block;
+  width: 24px;
+  height: 2px;
+  border-radius: 2px;
+  margin-bottom: 10px;
+  background: linear-gradient(90deg, #f5b301 0%, #ffdb80 50%, #f5b301 100%);
+  background-size: 220% 100%;
+  transition: width 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.connect-peop-prow-card.aos-animate .connect-peop-prow-card-border {
+  animation: cp2-shimmerBar 2.6s linear infinite;
+}
+.connect-peop-prow-card:hover .connect-peop-prow-card-border {
+  width: 34px;
+}
+
+@keyframes cp2-shimmerBar {
+  0%   { background-position: 0% 0; }
+  100% { background-position: -220% 0; }
+}
+
+.connect-peop-prow-card-desc {
+  margin: 0;
+  color: #6b6b6b;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+/* ==========================================================================
+   RESPONSIVE
+   ========================================================================== */
+
+/* Laptop / small desktop */
+@media (max-width: 1280px) {
+  .connect-peop-prow-row {
+    gap: 14px;
+  }
+
+  .connect-peop-prow-card {
+    padding: 16px;
+  }
+
+  .connect-peop-prow-card-title {
+    font-size: 12.5px;
+  }
+
+  .connect-peop-prow-card-desc {
+    font-size: 12px;
+  }
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .connect-peop-prow-row {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 16px;
+  }
+}
+
+/* Small tablet */
+@media (max-width: 700px) {
+  .connect-peop-prow-section {
+    padding: 26px 20px;
+  }
+
+  .connect-peop-prow-heading {
+    font-size: 20px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 520px) {
+  .connect-peop-prow-section {
+    padding: 22px 16px;
+  }
+
+  .connect-peop-prow-row {
+    grid-template-columns: 1fr;
+  }
+
+  .connect-peop-prow-icon-circle {
+    width: 42px;
+    height: 42px;
+  }
+
+  .connect-peop-prow-icon-circle svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .connect-peop-prow-card-title {
+    font-size: 15px;
+  }
+
+  .connect-peop-prow-card-desc {
+    font-size: 13.5px;
+  }
+}
+
+/* ==========================================================================
+   REDUCED MOTION
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  .connect-peop-prow-card,
+  .connect-peop-prow-icon-circle,
+  .connect-peop-prow-icon-circle::before,
+  .connect-peop-prow-icon-circle::after,
+  .connect-peop-prow-card-border,
+  .connect-peop-prow-card-title,
+  .connect-peop-prow-card::before,
+  .connect-peop-prow-card::after {
+    animation: none !important;
+    transition: none !important;
+  }
+  .connect-peop-prow-icon-circle::before,
+  .connect-peop-prow-icon-circle::after {
+    opacity: 0 !important;
+  }
+  .connect-peop-prow-card::after {
+    background-color: #ffffff !important;
+  }
+  .connect-peop-prow-card {
+    border: 1px solid #ececec !important;
+    background-color: #ffffff !important;
+  }
+  .connect-peop-prow-underline {
+    transition: none !important;
+  }
+  .connect-peop-prow-card:hover {
+    transform: none !important;
+    filter: none !important;
+  }
+  .connect-peop-prow-card:hover .connect-peop-prow-icon-circle {
+    transform: none !important;
+    box-shadow: none !important;
+  }
+}

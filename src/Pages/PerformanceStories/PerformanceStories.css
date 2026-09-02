@@ -1,0 +1,360 @@
+.apple-container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 50px 24px 0 24px;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+}
+
+.apple-tagline-section {
+  background: #000000;
+  padding: 72px 24px;
+  text-align: center;
+  margin: 0 -24px;
+  margin-top: 0;
+}
+
+.apple-tagline-main {
+  font-size: 36px;
+  font-weight: 800;
+  color: #FFFFFF;
+  margin: 0 0 16px 0;
+  line-height: 1.3;
+  letter-spacing: -0.5px;
+}
+
+.apple-tagline-sub {
+  font-size: 20px;
+  font-weight: 600;
+  color: #D4AF37;
+  margin: 0;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.apple-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 10px;
+}
+
+/* Left logo block */
+.apple-logo-block {
+  flex: 0 0 auto;
+  text-align: left;
+}
+@media (max-width: 480px) {
+  .apple-nav-logo-img {
+    width: 150px;
+    height: 38px;
+  }
+}
+.apple-nav-logo-img {
+  width: 220px;
+  height: 70px;
+  display: block;
+}
+/* Center heading block */
+.apple-heading-block {
+  flex: 1 1 auto;
+  text-align: center;
+}
+
+.apple-heading-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.apple-heading {
+  font-size: 44px;
+  font-weight: 800;
+  color: #000000;
+  letter-spacing: -1px;
+  margin: 0;
+  line-height: 1.1;
+}
+
+.apple-subheading {
+  font-size: 16px;
+  font-weight: 400;
+  color: #555555;
+  max-width: 560px;
+  margin: 12px auto 0 auto;
+  line-height: 1.6;
+}
+
+.apple-subheading strong {
+  color: #000000;
+  font-weight: 700;
+}
+
+/* Right gold script tagline */
+.apple-tagline-block {
+  flex: 0 0 auto;
+  text-align: right;
+}
+
+/* ── Instagram Zimil-Zimil (Shimmer) Effect ── */
+.apple-tagline-block p {
+  font-family: 'Brush Script MT', 'Segoe Script', cursive;
+  font-size: 22px;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.3;
+  transform: skewX(-6deg);
+  background: linear-gradient(
+    90deg,
+    #D4AF37 0%,
+    #FFF1BA 20%,
+    #D4AF37 40%,
+    #FFF1BA 60%,
+    #D4AF37 80%,
+    #FFF1BA 100%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: apple-zimil-zimil 2.5s linear infinite;
+}
+
+@keyframes apple-zimil-zimil {
+  0% { background-position: 100% 0; }
+  100% { background-position: -100% 0; }
+}
+
+.apple-tagline-last {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 6px;
+}
+
+.apple-underline-swoosh {
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 10px;
+}
+
+/* ══════════════════════════════════════
+   ARROWS — Exact Home6 Effect
+   ══════════════════════════════════════ */
+.apple-static-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 24px;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.apple-static-arrow svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Mirrors the right arrow to point left */
+.apple-arrow-mirrored {
+  transform: scaleX(-1);
+}
+
+/* ── Glow ring behind arrow ── */
+.apple-static-arrow::after {
+  content: '';
+  position: absolute;
+  inset: -14px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(245, 179, 1, 0.18) 0%, transparent 70%);
+  opacity: 0;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* ══════════════════════════════════════
+   ARROW KEYFRAMES — Same as Home6
+   ══════════════════════════════════════ */
+
+/* Reveal: pop in with bounce */
+@keyframes apple_arrow_popIn {
+  from { opacity: 0; transform: scale(0.4); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+/* Continuous: bounce left-right + glow */
+@keyframes apple_arrow_bounce {
+  0%, 100% {
+    transform: translateX(0);
+    filter: drop-shadow(0 0 4px rgba(245, 179, 1, 0.25));
+  }
+  50% {
+    transform: translateX(7px);
+    filter: drop-shadow(0 0 12px rgba(245, 179, 1, 0.55));
+  }
+}
+
+/* Continuous: glow ring pulse */
+@keyframes apple_arrow_glowPulse {
+  0%, 100% { opacity: 0.15; transform: scale(0.8); }
+  50%      { opacity: 0.55; transform: scale(1.2); }
+}
+
+/* ══════════════════════════════════════
+   ARROW INITIAL HIDDEN
+   ══════════════════════════════════════ */
+.apple-static-arrow {
+  opacity: 0;
+  transform: scale(0.4);
+}
+
+/* Fix mirrored arrow initial state */
+.apple-arrow-mirrored {
+  opacity: 0;
+  transform: scaleX(-1) scale(0.4);
+}
+
+/* ══════════════════════════════════════
+   ARROW REVEAL TRIGGER
+   ══════════════════════════════════════ */
+.apple-static-arrow.revealed {
+  animation: apple_arrow_popIn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) 0.2s forwards;
+}
+
+/* ══════════════════════════════════════
+   ARROW HOVER-READY — Lock reveal + Start continuous
+   ══════════════════════════════════════ */
+.apple-static-arrow.hover-ready {
+  opacity: 1;
+  transform: scale(1);
+  animation: none;
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.apple-arrow-mirrored.hover-ready {
+  opacity: 1;
+  transform: scaleX(-1) scale(1);
+  animation: none;
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* SVG bounce (left arrow moves right, right arrow mirrored so moves left) */
+.apple-static-arrow.hover-ready svg {
+  display: inline-block;
+  animation: apple_arrow_bounce 1.8s ease-in-out infinite;
+}
+
+/* Glow ring pulse */
+.apple-static-arrow.hover-ready::after {
+  animation: apple_arrow_glowPulse 2.5s ease-in-out infinite;
+}
+
+/* ══════════════════════════════════════
+   ARROW HOVER — Extra scale + speed up
+   ══════════════════════════════════════ */
+.apple-static-arrow.hover-ready:hover {
+  transform: scale(1.15);
+  filter: drop-shadow(0 0 10px rgba(245, 179, 1, 0.6));
+}
+
+.apple-arrow-mirrored.hover-ready:hover {
+  transform: scaleX(-1) scale(1.15);
+  filter: drop-shadow(0 0 10px rgba(245, 179, 1, 0.6));
+}
+
+/* Speed up bounce on hover */
+.apple-static-arrow.hover-ready:hover svg {
+  animation-duration: 1s;
+}
+
+/* ══════════════════════════════════════
+   HEADER HOVER — Speed up all arrows
+   ══════════════════════════════════════ */
+.apple-header:hover .apple-static-arrow.hover-ready {
+  transform: scale(1.08);
+}
+
+.apple-header:hover .apple-arrow-mirrored.hover-ready {
+  transform: scaleX(-1) scale(1.08);
+}
+
+.apple-header:hover .apple-static-arrow.hover-ready svg {
+  animation-duration: 1s;
+}
+
+.apple-header:hover .apple-static-arrow.hover-ready::after {
+  animation-duration: 1.5s;
+}
+
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .apple-container {
+    padding: 48px 16px 0 16px;
+  }
+
+  .apple-tagline-main {
+    font-size: 24px;
+  }
+
+  .apple-tagline-sub {
+    font-size: 16px;
+  }
+
+  .apple-tagline-section {
+    margin: 0 -16px;
+    padding: 48px 16px;
+  }
+
+  .apple-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .apple-logo-block,
+  .apple-tagline-block {
+    text-align: center;
+  }
+
+  .apple-tagline-block p {
+    transform: skewX(0deg);
+  }
+
+  .apple-heading {
+    font-size: 30px;
+  }
+
+  .apple-heading-row {
+    gap: 10px;
+  }
+
+  .apple-static-arrow {
+    width: 45px;
+    height: 18px;
+  }
+}
+
+/* ── Reduced Motion ── */
+@media (prefers-reduced-motion: reduce) {
+  .apple-static-arrow,
+  .apple-static-arrow svg,
+  .apple-static-arrow::after {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: scale(1) !important;
+  }
+  .apple-arrow-mirrored {
+    transform: scaleX(-1) scale(1) !important;
+    opacity: 1 !important;
+  }
+  .apple-static-arrow.hover-ready,
+  .apple-arrow-mirrored.hover-ready {
+    transition: none !important;
+  }
+}

@@ -1,0 +1,241 @@
+.traing-place-new-section {
+  --tpn-purple: #6C2DC7;
+  --tpn-purple-hover: #5A24A6;
+  --tpn-purple-light: rgba(108, 45, 199, 0.08);
+  --tpn-ink: #1a1a2e;
+  --tpn-muted: #5c5c7a;
+  --tpn-faint: #8e8ea0;
+  --tpn-bg: #ffffff;
+  --tpn-panel: #f5f5f7;
+  --tpn-border: #e8e8ef;
+  width: 100%;
+  background: var(--tpn-bg);
+  padding: 64px 24px 80px;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+}
+
+/* ===== Header ===== */
+.traing-place-new-header {
+  max-width: 760px;
+  margin: 0 auto 40px;
+}
+
+.traing-place-new-eyebrow {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--tpn-purple);
+  margin: 0 0 14px;
+  text-transform: uppercase;
+}
+
+.traing-place-new-heading {
+  font-size: clamp(28px, 3.6vw, 38px);
+  font-weight: 800;
+  color: var(--tpn-ink);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  margin: 0 0 16px;
+}
+
+.traing-place-new-desc {
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--tpn-muted);
+  margin: 0 0 28px;
+  max-width: 560px;
+}
+
+/* ===== Filter chips ===== */
+.traing-place-new-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.traing-place-new-filter {
+  font-family: inherit;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--tpn-muted);
+  background: var(--tpn-panel);
+  border: 1px solid transparent;
+  padding: 9px 18px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: color 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+  white-space: nowrap;
+}
+
+.traing-place-new-filter:hover {
+  color: var(--tpn-ink);
+  background: #ececef;
+}
+
+.traing-place-new-filter--active {
+  color: #fff;
+  background: var(--tpn-purple);
+}
+
+.traing-place-new-filter--active:hover {
+  background: var(--tpn-purple-hover);
+  color: #fff;
+}
+
+/* ===== Masonry-style grid (contact sheet) ===== */
+.traing-place-new-grid {
+  max-width: 1180px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 180px;
+  gap: 14px;
+}
+
+.traing-place-new-frame {
+  position: relative;
+  margin: 0;
+  border-radius: 6px;
+  overflow: hidden;
+  background: var(--tpn-ink);
+  grid-row: span 1;
+  border: 1px solid var(--tpn-border);
+}
+
+.traing-place-new-frame--tall {
+  grid-row: span 2;
+}
+
+.traing-place-new-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: grayscale(15%) contrast(1.03);
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), filter 0.4s ease;
+}
+
+.traing-place-new-frame:hover img {
+  transform: scale(1.06);
+  filter: grayscale(0%) contrast(1.05);
+}
+
+/* Frame number — film-negative style corner tag */
+.traing-place-new-frame-number {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 2;
+  font-family: "Courier New", monospace;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: #fff;
+  background: rgba(20, 20, 43, 0.55);
+  backdrop-filter: blur(3px);
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+/* Frame info strip — slides up on hover, like a contact sheet label */
+.traing-place-new-frame-info {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 12px;
+  background: linear-gradient(
+    to top,
+    rgba(20, 20, 43, 0.92) 0%,
+    rgba(20, 20, 43, 0.55) 60%,
+    rgba(20, 20, 43, 0) 100%
+  );
+  transform: translateY(100%);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  margin: 0;
+}
+
+.traing-place-new-frame:hover .traing-place-new-frame-info {
+  transform: translateY(0);
+}
+
+.traing-place-new-frame-location {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.traing-place-new-frame-date {
+  font-size: 11px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.7);
+  font-family: "Courier New", monospace;
+}
+
+.traing-place-new-empty {
+  text-align: center;
+  color: var(--tpn-faint);
+  font-size: 14px;
+  margin: 48px 0 0;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 980px) {
+  .traing-place-new-grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 160px;
+  }
+}
+
+@media (max-width: 700px) {
+  .traing-place-new-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 150px;
+    gap: 10px;
+  }
+  .traing-place-new-header {
+    margin-bottom: 28px;
+  }
+  .traing-place-new-heading {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 460px) {
+  .traing-place-new-section {
+    padding: 48px 16px 60px;
+  }
+  .traing-place-new-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 130px;
+    gap: 8px;
+  }
+  .traing-place-new-frame-number {
+    font-size: 9px;
+    padding: 2px 6px;
+  }
+  .traing-place-new-frame-location {
+    font-size: 11px;
+  }
+  .traing-place-new-frame-date {
+    font-size: 9.5px;
+  }
+  .traing-place-new-filters {
+    gap: 6px;
+  }
+  .traing-place-new-filter {
+    font-size: 12.5px;
+    padding: 7px 14px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .traing-place-new-frame img,
+  .traing-place-new-frame-info {
+    transition: none !important;
+  }
+}

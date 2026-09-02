@@ -1,0 +1,1563 @@
+/* .coach-grid-prow-section {
+  background-color: #ffffff;
+  padding: 36px 30px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.coach-grid-prow-container {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.coach-grid-prow-heading {
+  text-align: center;
+  color: #0a0a0a;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin: 0 0 10px 0;
+}
+
+.coach-grid-prow-heading-accent {
+  color: #f5b301;
+}
+
+.coach-grid-prow-underline {
+  display: block;
+  width: 40px;
+  height: 3px;
+  background-color: #f5b301;
+  border-radius: 2px;
+  margin: 0 auto 30px auto;
+}
+
+.coach-grid-prow-row {
+  display: flex;
+  align-items: stretch;
+  gap: 20px;
+}
+
+.coach-grid-prow-cards {
+  flex: 1 1 70%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.coach-grid-prow-card {
+  background-color: #ffffff;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+}
+
+.coach-grid-prow-image-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+}
+
+.coach-grid-prow-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.coach-grid-prow-linkedin {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 26px;
+  height: 26px;
+  background-color: #f5b301;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.coach-grid-prow-linkedin svg {
+  width: 15px;
+  height: 15px;
+}
+
+.coach-grid-prow-name {
+  margin: 14px 14px 2px 14px;
+  color: #0a0a0a;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.coach-grid-prow-position {
+  margin: 0 14px 12px 14px;
+  color: #f5b301;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.coach-grid-prow-card-divider {
+  display: block;
+  height: 2.5px;
+  width: 30%;
+  background-color: #f5b301;
+  margin: 0 auto 12px; 
+}
+
+.coach-grid-prow-desc {
+  margin: 0 14px 16px 14px;
+  color: #6b6b6b;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11.5px;
+  line-height: 1.55;
+  flex: 1;
+}
+
+.coach-grid-prow-vs-box {
+  flex: 1 1 30%;
+  background-color: #f7f7f7;
+  border: 1px solid #ececec;
+  border-radius: 10px;
+  padding: 18px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.coach-grid-prow-vs-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.coach-grid-prow-vs-header-left {
+  color: #0a0a0a;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11.5px;
+  font-weight: 800;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.coach-grid-prow-vs-badge {
+  flex: 0 0 auto;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 1px solid #0a0a0a;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 9px;
+  font-weight: 800;
+  color: #0a0a0a;
+}
+
+.coach-grid-prow-vs-header-right {
+  color: #f5b301;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11.5px;
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 1.3;
+}
+
+.coach-grid-prow-vs-body {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.coach-grid-prow-vs-list {
+  flex: 1;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.coach-grid-prow-vs-list-right {
+  background-color: rgba(245, 179, 1, 0.08);
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.coach-grid-prow-vs-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #333333;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10.5px;
+  font-weight: 600;
+}
+
+.coach-grid-prow-cross-icon {
+  flex: 0 0 16px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #9a9a9a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.coach-grid-prow-cross-icon svg {
+  width: 9px;
+  height: 9px;
+}
+
+.coach-grid-prow-check-icon {
+  flex: 0 0 16px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #f5b301;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.coach-grid-prow-check-icon svg {
+  width: 10px;
+  height: 10px;
+}
+
+.coach-grid-prow-vs-center {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.coach-grid-prow-vs-dotted {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 1.5px dashed #d8d8d8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.coach-grid-prow-vs-circle {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #0a0a0a;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.coach-grid-prow-vs-circle-half {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background-color: #0a0a0a;
+}
+
+.coach-grid-prow-vs-text {
+  position: relative;
+  z-index: 1;
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.coach-grid-prow-quote {
+  margin-top: auto;
+  background-color: #0a0a0a;
+  border-radius: 8px;
+  padding: 14px 16px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.coach-grid-prow-quote-icon {
+  color: #f5b301;
+  font-size: 22px;
+  font-weight: 900;
+  line-height: 1;
+  font-family: Georgia, serif;
+}
+
+.coach-grid-prow-quote-text {
+  margin: 0;
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11.5px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.coach-grid-prow-bottom-bar {
+  margin-top: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.coach-grid-prow-bottom-icon {
+  flex: 0 0 34px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background-color: #0a0a0a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.coach-grid-prow-bottom-icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+.coach-grid-prow-bottom-text {
+  margin: 0;
+  color: #0a0a0a;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  text-align: center;
+}
+
+
+@media (max-width: 1350px) {
+  .coach-grid-prow-vs-header-left,
+  .coach-grid-prow-vs-header-right {
+    font-size: 10.5px;
+  }
+
+  .coach-grid-prow-vs-item {
+    font-size: 10px;
+  }
+
+  .coach-grid-prow-vs-dotted {
+    width: 60px;
+    height: 60px;
+  }
+
+  .coach-grid-prow-vs-circle {
+    width: 42px;
+    height: 42px;
+  }
+}
+
+@media (max-width: 1180px) {
+  .coach-grid-prow-row {
+    flex-direction: column;
+  }
+
+  .coach-grid-prow-cards {
+    width: 100%;
+  }
+
+  .coach-grid-prow-vs-box {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .coach-grid-prow-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .coach-grid-prow-vs-body {
+    flex-wrap: wrap;
+    row-gap: 16px;
+  }
+
+  .coach-grid-prow-vs-list,
+  .coach-grid-prow-vs-list-right {
+    flex: 1 1 100%;
+  }
+
+  .coach-grid-prow-vs-center {
+    flex: 1 1 100%;
+    order: -1;
+  }
+}
+
+@media (max-width: 700px) {
+  .coach-grid-prow-section {
+    padding: 28px 20px;
+  }
+
+  .coach-grid-prow-heading {
+    font-size: 19px;
+  }
+
+  .coach-grid-prow-bottom-text {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 520px) {
+  .coach-grid-prow-section {
+    padding: 22px 16px;
+  }
+
+  .coach-grid-prow-heading {
+    font-size: 17px;
+  }
+
+  .coach-grid-prow-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .coach-grid-prow-bottom-bar {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+
+
+@keyframes cg2_fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes cg2_scaleX {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
+}
+@keyframes cg2_slideRight {
+  from { opacity: 0; transform: translateX(30px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes cg2_popIn {
+  from { opacity: 0; transform: scale(0) rotate(-90deg); }
+  to   { opacity: 1; transform: scale(1) rotate(0deg); }
+}
+@keyframes cg2_fadeItem {
+  from { opacity: 0; transform: translateX(8px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes cg2_pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(245, 166, 35, 0); }
+  50%      { box-shadow: 0 0 0 6px rgba(245, 166, 35, 0.5); }
+}
+
+.coach-grid-prow-heading       { opacity: 0; transform: translateY(20px); }
+.coach-grid-prow-underline     { transform: scaleX(0); transform-origin: center; }
+.coach-grid-prow-card         { opacity: 0; transform: scaleX(0); transform-origin: left center; }
+.coach-grid-prow-vs-box       { opacity: 0; transform: translateX(30px); }
+.coach-grid-prow-vs-header     { opacity: 0; transform: translateY(15px); }
+.coach-grid-prow-vs-body       { opacity: 0; transform: translateY(15px); }
+.coach-grid-prow-vs-center    { opacity: 0; transform: scale(0) rotate(-90deg); }
+.coach-grid-prow-quote       { opacity: 0; transform: translateY(15px); }
+.coach-grid-prow-bottom-bar    { opacity: 0; transform: translateY(15px); }
+
+.coach-grid-prow-heading.revealed {
+  animation: cg2_fadeUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0s forwards;
+}
+.coach-grid-prow-heading.revealed .coach-grid-prow-underline {
+  animation: cg2_scaleX 0.5s cubic-bezier(0.22, 1, 0.36, 1) 0.15s forwards;
+}
+
+.coach-grid-prow-card.revealed {
+  animation: cg2_scaleX 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation-delay: calc(var(--d, 0) * 0.1s + 0.2s);
+}
+
+.coach-grid-prow-vs-box.revealed {
+  animation: cg2_slideRight 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.5s forwards;
+}
+.coach-grid-prow-vs-box.revealed .coach-grid-prow-vs-header {
+  animation: cg2_fadeUp 0.5s ease 0.65s forwards;
+}
+.coach-grid-prow-vs-box.revealed .coach-grid-prow-vs-body {
+  animation: cg2_fadeUp 0.5s ease 0.8s forwards;
+}
+
+.coach-grid-prow-vs-center.revealed {
+  animation: cg2_popIn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) 0.95s forwards;
+}
+
+.coach-grid-prow-quote.revealed {
+  animation: cg2_fadeUp 0.5s ease 1.1s forwards;
+}
+
+.coach-grid-prow-bottom-bar.revealed {
+  animation: cg2_fadeUp 0.5s ease 1.25s forwards;
+}
+
+.coach-grid-prow-vs-item.revealed {
+  animation: cg2_fadeItem 0.4s ease forwards;
+  animation-delay: calc(var(--d, 0) * 0.06s + 1s);
+}
+
+.coach-grid-prow-heading.hover-ready       { opacity: 1; transform: translateY(0); animation: none; }
+.coach-grid-prow-heading.hover-ready .coach-grid-prow-underline { transform: scaleX(1); animation: none; }
+.coach-grid-prow-card.hover-ready         { opacity: 1; transform: scaleX(1); animation: none; }
+.coach-grid-prow-vs-box.hover-ready       { opacity: 1; transform: translateX(0); animation: none; }
+.coach-grid-prow-vs-header.hover-ready     { opacity: 1; transform: translateY(0); animation: none; }
+.coach-grid-prow-vs-body.hover-ready      { opacity: 1; transform: translateY(0); animation: none; }
+.coach-grid-prow-vs-center.hover-ready    { opacity: 1; transform: scale(1) rotate(0deg); animation: none; }
+.coach-grid-prow-quote.hover-ready       { opacity: 1; transform: translateY(0); animation: none; }
+.coach-grid-prow-bottom-bar.hover-ready    { opacity: 1; transform: translateY(0); animation: none; }
+.coach-grid-prow-vs-item.hover-ready      { opacity: 1; transform: translateX(0); animation: none; }
+
+
+.coach-grid-prow-card.hover-ready {
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+              border-color 0.4s ease,
+              box-shadow 0.4s ease;
+}
+.coach-grid-prow-card.hover-ready:hover {
+  transform: scaleX(1.03) translateY(-4px);
+  border-color: #f5b301;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.coach-grid-prow-image {
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.coach-grid-prow-card.hover-ready:hover .coach-grid-prow-image {
+  transform: scale(1.08);
+}
+
+.coach-grid-prow-linkedin {
+  transition: transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1),
+              box-shadow 0.3s ease;
+}
+.coach-grid-prow-card.hover-ready:hover .coach-grid-prow-linkedin {
+  transform: scale(1.2) rotate(-8deg);
+  box-shadow: 0 4px 12px rgba(245, 166, 35, 0.4);
+}
+
+.coach-grid-prow-vs-list .coach-grid-prow-vs-item.hover-ready {
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+              color 0.3s ease;
+}
+.coach-grid-prow-vs-list .coach-grid-prow-vs-item.hover-ready:hover {
+  transform: translateX(6px);
+  color: #e02020;
+}
+
+.coach-grid-prow-cross-icon {
+  transition: background-color 0.3s ease,
+              box-shadow 0.3s ease;
+}
+.coach-grid-prow-vs-list .coach-grid-prow-vs-item.hover-ready:hover .coach-grid-prow-cross-icon {
+  background-color: #e02020;
+  box-shadow: 0 0 10px rgba(224, 32, 32, 0.4);
+}
+
+.coach-grid-prow-vs-list-right .coach-grid-prow-vs-item.hover-ready {
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+              color 0.3s ease;
+}
+.coach-grid-prow-vs-list-right .coach-grid-prow-vs-item.hover-ready:hover {
+  transform: translateX(-6px);
+  color: #0a8a0a;
+}
+
+.coach-grid-prow-check-icon {
+  transition: background-color 0.3s ease,
+              box-shadow 0.3s ease;
+}
+.coach-grid-prow-vs-list-right .coach-grid-prow-vs-item.hover-ready:hover .coach-grid-prow-check-icon {
+  background-color: #ffc61a;
+  box-shadow: 0 0 10px rgba(245, 166, 35, 0.5);
+}
+
+.coach-grid-prow-vs-circle.hover-ready {
+  transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1),
+              box-shadow 0.4s ease;
+}
+.coach-grid-prow-vs-box.hover-ready:hover .coach-grid-prow-vs-circle {
+  transform: scale(1.1) rotate(15deg);
+  box-shadow: 0 0 18px rgba(0, 0, 0, 0.3);
+}
+
+.coach-grid-prow-quote.hover-ready {
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.coach-grid-prow-quote.hover-ready:hover {
+  transform: translateY(-3px);
+}
+
+.coach-grid-prow-bottom-icon.hover-ready {
+  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1),
+              box-shadow 0.4s ease;
+}
+.coach-grid-prow-bottom-bar.hover-ready:hover .coach-grid-prow-bottom-icon {
+  transform: scale(1.15) rotate(-8deg);
+  box-shadow: 0 0 12px rgba(245, 166, 35, 0.5);
+}
+
+.coach-grid-prow-heading-accent {
+  transition: text-shadow 0.3s ease;
+}
+.coach-grid-prow-bottom-text.hover-ready:hover .coach-grid-prow-heading-accent {
+  text-shadow: 0 0 8px rgba(245, 166, 35, 0.3);
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+  .coach-grid-prow-heading,
+  .coach-grid-prow-underline,
+  .coach-grid-prow-card,
+  .coach-prow-vs-box,
+  .coach-grid-prow-vs-header,
+  .coach-prow-vs-body,
+  .coach-prow-vs-center,
+  .coach-prow-quote,
+  .coach-prow-bottom-bar,
+  .coach-grid-prow-vs-item {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+    rotate: none !important;
+    scaleX: none !important;
+  }
+  .coach-grid-prow-card.hover-ready,
+  .coach-grid-prow-image,
+  .coach-grid-prow-linkedin,
+  .coach-prow-cross-icon,
+  .coach-prow-check-icon,
+  .coach-grid-prow-vs-circle,
+  .coach-prow-quote,
+  .coach-prow-bottom-icon {
+    transition: none !important;
+  }
+  .coach-prow-card.hover-ready:hover {
+    box-shadow: none !important;
+    transform: none !important;
+  }
+  .coach-prow-card.hover-ready:hover .coach-grid-prow-image {
+    transform: none !important;
+  }
+  .coach-prow-card.hover-ready:hover .coach-grid-prow-linkedin {
+    box-shadow: none !important;
+    transform: none !important;
+  }
+  .coach-grid-prow-vs-list .coach-grid-prow-vs-item.hover-ready:hover .coach-prow-cross-icon,
+  .coach-grid-prow-vs-list-right .coach-grid-prow-vs-item.hover-ready:hover .coach-prow-check-icon {
+    box-shadow: none !important;
+    transform: none !important;
+  }
+  .coach-prow-vs-box.hover-ready:hover .coach-prow-vs-circle {
+    box-shadow: none !important;
+    transform: none !important;
+  }
+  .coach-prow-quote.hover-ready:hover {
+    transform: none !important;
+  }
+  .coach-prow-bottom-bar.hover-ready:hover .coach-prow-bottom-icon {
+    box-shadow: none !important;
+    transform: none !important;
+  }
+  .coach-prow-bottom-text.hover-ready:hover .coach-prow-heading-accent {
+    text-shadow: none !important;
+  }
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Dyanamic Code hai Loading Issue solve and animation creative add karne ke bad wala code */
+/* ==========================================================================
+   MEET OUR PERFORMANCE COACHES + LEARNING COMPARISON — coach-grid-prow-*
+   ========================================================================== */
+
+.coach-grid-prow-section {
+  background-color: #ffffff;
+  padding: 36px 30px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.coach-grid-prow-container {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+/* ---------- Loading state ---------- */
+.coach-grid-prow-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 90px 20px;
+}
+
+.coach-grid-prow-spinner {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 3px solid rgba(245, 179, 1, 0.22);
+  border-top-color: #f5b301;
+  animation: cg2_spin 0.8s linear infinite;
+}
+
+@keyframes cg2_spin {
+  to { transform: rotate(360deg); }
+}
+
+.coach-grid-prow-loading-text {
+  margin: 0;
+  color: #6b6b6b;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* ---------- Center heading ---------- */
+.coach-grid-prow-heading {
+  text-align: center;
+  color: #0a0a0a;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 26px;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin: 0 0 10px 0;
+}
+
+.coach-grid-prow-heading-accent {
+  color: #f5b301;
+}
+
+.coach-grid-prow-underline {
+  display: block;
+  width: 40px;
+  height: 3px;
+  background-color: #f5b301;
+  border-radius: 2px;
+  margin: 0 auto 30px auto;
+}
+
+/* ---------- Row: cards + vs box ----------
+   align-items changed from "stretch" to "flex-start" so the VS box keeps
+   its own natural/fixed height and does NOT stretch taller just because
+   more coach cards get added on the left (which wraps into more rows). */
+.coach-grid-prow-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+/* ---------- 4 coach cards ---------- */
+.coach-grid-prow-cards {
+  flex: 1 1 70%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.coach-grid-prow-card {
+  background-color: #ffffff;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+}
+
+/* Image height: slightly shorter than a full square on desktop/laptop,
+   and a bit more reduced again on mobile. Name/position/description
+   font sizes are untouched. */
+.coach-grid-prow-image-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3.6;
+}
+
+.coach-grid-prow-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.coach-grid-prow-linkedin {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 26px;
+  height: 26px;
+  background-color: #f5b301;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.coach-grid-prow-linkedin svg {
+  width: 15px;
+  height: 15px;
+}
+
+.coach-grid-prow-name {
+  margin: 14px 14px 2px 14px;
+  color: #0a0a0a;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14.5px;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.coach-grid-prow-position {
+  margin: 0 14px 12px 14px;
+  color: #f5b301;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12.5px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.coach-grid-prow-card-divider {
+  display: block;
+  height: 2.5px;
+  width: 30%;
+  background-color: #f5b301;
+  /* margin: 0 14px 12px 14px; */
+  margin: 0 auto 12px; /* center me aa jayegi */
+}
+
+.coach-grid-prow-desc {
+  margin: 0 14px 16px 14px;
+  color: #6b6b6b;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 1.55;
+  flex: 1;
+}
+
+/* ---------- VS comparison box ---------- */
+.coach-grid-prow-vs-box {
+  flex: 1 1 30%;
+  background-color: #f7f7f7;
+  border: 1px solid #ececec;
+  border-radius: 10px;
+  padding: 18px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.coach-grid-prow-vs-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.coach-grid-prow-vs-header-left {
+  color: #0a0a0a;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11.5px;
+  font-weight: 800;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.coach-grid-prow-vs-badge {
+  flex: 0 0 auto;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 1px solid #0a0a0a;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 9px;
+  font-weight: 800;
+  color: #0a0a0a;
+}
+
+.coach-grid-prow-vs-header-right {
+  color: #f5b301;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11.5px;
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 1.3;
+}
+
+/* ---------- Body: two lists + center vs circle ---------- */
+.coach-grid-prow-vs-body {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.coach-grid-prow-vs-list {
+  flex: 1;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.coach-grid-prow-vs-list-right {
+  background-color: rgba(245, 179, 1, 0.08);
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.coach-grid-prow-vs-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #333333;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10.5px;
+  font-weight: 600;
+}
+
+.coach-grid-prow-cross-icon {
+  flex: 0 0 16px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #9a9a9a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.coach-grid-prow-cross-icon svg {
+  width: 9px;
+  height: 9px;
+}
+
+.coach-grid-prow-check-icon {
+  flex: 0 0 16px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #f5b301;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.coach-grid-prow-check-icon svg {
+  width: 10px;
+  height: 10px;
+}
+
+/* ---------- Center VS badge (dotted circle + half-split circle) ---------- */
+.coach-grid-prow-vs-center {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.coach-grid-prow-vs-dotted {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 1.5px dashed #d8d8d8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.coach-grid-prow-vs-circle {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #0a0a0a;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.coach-grid-prow-vs-circle-half {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  /* background-color: #f5b301; */
+  background-color: #0a0a0a;
+}
+
+.coach-grid-prow-vs-text {
+  position: relative;
+  z-index: 1;
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+/* ---------- Quote ---------- */
+.coach-grid-prow-quote {
+  margin-top: auto;
+  background-color: #0a0a0a;
+  border-radius: 8px;
+  padding: 14px 16px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.coach-grid-prow-quote-icon {
+  color: #f5b301;
+  font-size: 22px;
+  font-weight: 900;
+  line-height: 1;
+  font-family: Georgia, serif;
+}
+
+.coach-grid-prow-quote-text {
+  margin: 0;
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11.5px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+/* ---------- Bottom bar: icon + description ---------- */
+.coach-grid-prow-bottom-bar {
+  margin-top: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.coach-grid-prow-bottom-icon {
+  flex: 0 0 34px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background-color: #0a0a0a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.coach-grid-prow-bottom-icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+.coach-grid-prow-bottom-text {
+  margin: 0;
+  color: #0a0a0a;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* ==========================================================================
+   RESPONSIVE
+   ========================================================================== */
+
+/* Laptop / small desktop */
+@media (max-width: 1350px) {
+  .coach-grid-prow-vs-header-left,
+  .coach-grid-prow-vs-header-right {
+    font-size: 10.5px;
+  }
+
+  .coach-grid-prow-vs-item {
+    font-size: 10px;
+  }
+
+  .coach-grid-prow-vs-dotted {
+    width: 60px;
+    height: 60px;
+  }
+
+  .coach-grid-prow-vs-circle {
+    width: 42px;
+    height: 42px;
+  }
+}
+
+/* Small laptop / large tablet */
+@media (max-width: 1180px) {
+  .coach-grid-prow-row {
+    flex-direction: column;
+  }
+
+  .coach-grid-prow-cards {
+    width: 100%;
+  }
+
+  .coach-grid-prow-vs-box {
+    width: 100%;
+  }
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+
+  .coach-grid-prow-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .coach-grid-prow-vs-body {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 8px;
+  }
+
+  .coach-grid-prow-vs-list,
+  .coach-grid-prow-vs-list-right {
+    flex: 1;
+  }
+
+  .coach-grid-prow-vs-center {
+    flex: 0 0 55px;
+    order: 0;
+  }
+
+  .coach-grid-prow-vs-dotted {
+    width: 55px;
+    height: 55px;
+  }
+
+  .coach-grid-prow-vs-circle {
+    width: 38px;
+    height: 38px;
+  }
+
+  .coach-grid-prow-vs-text {
+    font-size: 14px;
+  }
+}
+
+
+
+/* Small tablet */
+@media (max-width: 700px) {
+  .coach-grid-prow-section {
+    padding: 28px 20px;
+  }
+
+  .coach-grid-prow-heading {
+    font-size: 22px;
+  }
+
+  .coach-grid-prow-bottom-text {
+    font-size: 12px;
+  }
+  .coach-grid-prow-image{
+    height: 300px;
+  }
+}
+
+/* Mobile — image gets a bit shorter again */
+@media (max-width: 520px) {
+
+   .coach-grid-prow-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .coach-grid-prow-card {
+    width: 92%;
+    max-width: 340px;
+    margin: 0 auto;
+  }
+
+  .coach-grid-prow-heading {
+    font-size: 22px;
+  }
+
+  .coach-grid-prow-name{
+    font-size: 18px;
+  }
+
+  .coach-grid-prow-position{
+    font-size: 14.5px;
+  }
+
+  .coach-grid-prow-desc {
+    font-size: 15px;
+  }
+
+  .coach-grid-prow-vs-body{
+    display: flex;
+    flex-wrap: nowrap;      /* wrap mat hone do */
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .coach-grid-prow-vs-list,
+  .coach-grid-prow-vs-list-right{
+    flex: 1;
+    min-width: 0;
+  }
+
+  .coach-grid-prow-vs-item {
+    font-size: 11px !important;
+  }
+
+  .coach-grid-prow-vs-center{
+    flex: 0 0 48px;
+    order: 0;
+  }
+
+  .coach-grid-prow-vs-dotted{
+    width: 48px;
+    height: 48px;
+  }
+
+  .coach-grid-prow-vs-circle{
+    width: 34px;
+    height: 34px;
+  }
+
+  .coach-grid-prow-vs-text{
+    font-size: 12px;
+  }
+
+  .coach-grid-prow-vs-item{
+    font-size: 9px;
+    line-height: 1.4;
+    word-break: break-word;   /* text next line me aa jayega */
+  }
+
+  .coach-grid-prow-vs-header{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .coach-grid-prow-vs-header-left,
+  .coach-grid-prow-vs-header-right{
+    flex: 1;
+    white-space: normal;      /* line break allow */
+    text-align: center;
+    font-size: 13px;
+    line-height: 1.3;
+  }
+
+  .coach-grid-prow-vs-badge{
+    flex-shrink: 0;
+  }
+}
+
+
+
+
+/* ==========================================================================
+   COACHES2 ANIMATION EFFECTS — Paste below existing CSS
+   ========================================================================== */
+
+/* --- Keyframes --- */
+@keyframes cg2_fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes cg2_scaleX {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
+}
+@keyframes cg2_slideRight {
+  from { opacity: 0; transform: translateX(30px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes cg2_popIn {
+  from { opacity: 0; transform: scale(0) rotate(-90deg); }
+  to   { opacity: 1; transform: scale(1) rotate(0deg); }
+}
+@keyframes cg2_fadeItem {
+  from { opacity: 0; transform: translateX(8px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes cg2_pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(245, 166, 35, 0); }
+  50%      { box-shadow: 0 0 0 6px rgba(245, 166, 35, 0.5); }
+}
+/* NEW: bottom-to-top fade for the left-side coach cards (AOS-style
+   fade-up), replacing the previous horizontal scaleX wipe-in */
+@keyframes cg2_fadeUpCard {
+  from { opacity: 0; transform: translateY(45px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* --- Initial hidden states (no layout shift) --- */
+.coach-grid-prow-heading       { opacity: 0; transform: translateY(20px); }
+.coach-grid-prow-underline     { transform: scaleX(0); transform-origin: center; }
+.coach-grid-prow-card         { opacity: 0; transform: translateY(45px); }
+.coach-grid-prow-vs-box       { opacity: 0; transform: translateX(30px); }
+.coach-grid-prow-vs-header     { opacity: 0; transform: translateY(15px); }
+.coach-grid-prow-vs-body       { opacity: 0; transform: translateY(15px); }
+.coach-grid-prow-vs-center    { opacity: 0; transform: scale(0) rotate(-90deg); }
+.coach-grid-prow-quote       { opacity: 0; transform: translateY(15px); }
+.coach-grid-prow-bottom-bar    { opacity: 0; transform: translateY(15px); }
+
+/* --- Reveal animations --- */
+.coach-grid-prow-heading.revealed {
+  animation: cg2_fadeUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0s forwards;
+}
+.coach-grid-prow-heading.revealed .coach-grid-prow-underline {
+  animation: cg2_scaleX 0.5s cubic-bezier(0.22, 1, 0.36, 1) 0.15s forwards;
+}
+
+.coach-grid-prow-card.revealed {
+  animation: cg2_fadeUpCard 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation-delay: calc(var(--d, 0) * 0.1s + 0.2s);
+}
+
+.coach-grid-prow-vs-box.revealed {
+  animation: cg2_slideRight 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.5s forwards;
+}
+.coach-grid-prow-vs-box.revealed .coach-grid-prow-vs-header {
+  animation: cg2_fadeUp 0.5s ease 0.65s forwards;
+}
+.coach-grid-prow-vs-box.revealed .coach-grid-prow-vs-body {
+  animation: cg2_fadeUp 0.5s ease 0.8s forwards;
+}
+
+.coach-grid-prow-vs-center.revealed {
+  animation: cg2_popIn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) 0.95s forwards;
+}
+
+.coach-grid-prow-quote.revealed {
+  animation: cg2_fadeUp 0.5s ease 1.1s forwards;
+}
+
+.coach-grid-prow-bottom-bar.revealed {
+  animation: cg2_fadeUp 0.5s ease 1.25s forwards;
+}
+
+/* --- VS list items: internal stagger via --d --- */
+.coach-grid-prow-vs-item.revealed {
+  animation: cg2_fadeItem 0.4s ease forwards;
+  animation-delay: calc(var(--d, 0) * 0.06s + 1s);
+}
+
+/* --- Post-reveal: lock final values, kill animation for hover --- */
+.coach-grid-prow-heading.hover-ready       { opacity: 1; transform: translateY(0); animation: none; }
+.coach-grid-prow-heading.hover-ready .coach-grid-prow-underline { transform: scaleX(1); animation: none; }
+.coach-grid-prow-card.hover-ready         { opacity: 1; transform: translateY(0); animation: none; }
+.coach-grid-prow-vs-box.hover-ready       { opacity: 1; transform: translateX(0); animation: none; }
+.coach-grid-prow-vs-header.hover-ready     { opacity: 1; transform: translateY(0); animation: none; }
+.coach-grid-prow-vs-body.hover-ready      { opacity: 1; transform: translateY(0); animation: none; }
+.coach-grid-prow-vs-center.hover-ready    { opacity: 1; transform: scale(1) rotate(0deg); animation: none; }
+.coach-grid-prow-quote.hover-ready       { opacity: 1; transform: translateY(0); animation: none; }
+.coach-grid-prow-bottom-bar.hover-ready    { opacity: 1; transform: translateY(0); animation: none; }
+.coach-grid-prow-vs-item.hover-ready      { opacity: 1; transform: translateX(0); animation: none; }
+
+/* ==========================================================================
+   HOVER EFFECTS
+   ========================================================================== */
+
+/* --- Card: Lift + Gold Border Glow --- */
+.coach-grid-prow-card.hover-ready {
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+              border-color 0.4s ease,
+              box-shadow 0.4s ease;
+}
+.coach-grid-prow-card.hover-ready:hover {
+  transform: translateY(-6px);
+  border-color: #f5b301;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* --- Card Image Zoom --- */
+.coach-grid-prow-image {
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.coach-grid-prow-card.hover-ready:hover .coach-grid-prow-image {
+  transform: scale(1.08);
+}
+
+/* --- LinkedIn Bounce --- */
+.coach-grid-prow-linkedin {
+  transition: transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1),
+              box-shadow 0.3s ease;
+}
+.coach-grid-prow-card.hover-ready:hover .coach-grid-prow-linkedin {
+  transform: scale(1.2) rotate(-8deg);
+  box-shadow: 0 4px 12px rgba(245, 166, 35, 0.4);
+}
+
+/* --- VS Wrong Item: Push Right --- */
+.coach-grid-prow-vs-list .coach-grid-prow-vs-item.hover-ready {
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+              color 0.3s ease;
+}
+.coach-grid-prow-vs-list .coach-grid-prow-vs-item.hover-ready:hover {
+  transform: translateX(6px);
+  color: #e02020;
+}
+
+/* --- VS Wrong Icon: Red Pulse --- */
+.coach-grid-prow-cross-icon {
+  transition: background-color 0.3s ease,
+              box-shadow 0.3s ease;
+}
+.coach-grid-prow-vs-list .coach-grid-prow-vs-item.hover-ready:hover .coach-grid-prow-cross-icon {
+  background-color: #e02020;
+  box-shadow: 0 0 10px rgba(224, 32, 32, 0.4);
+}
+
+/* --- VS Right Item: Pull Left --- */
+.coach-grid-prow-vs-list-right .coach-grid-prow-vs-item.hover-ready {
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+              color 0.3s ease;
+}
+.coach-grid-prow-vs-list-right .coach-grid-prow-vs-item.hover-ready:hover {
+  transform: translateX(-6px);
+  color: #0a8a0a;
+}
+
+/* --- VS Check Icon: Gold Pulse --- */
+.coach-grid-prow-check-icon {
+  transition: background-color 0.3s ease,
+              box-shadow 0.3s ease;
+}
+.coach-grid-prow-vs-list-right .coach-grid-prow-vs-item.hover-ready:hover .coach-grid-prow-check-icon {
+  background-color: #ffc61a;
+  box-shadow: 0 0 10px rgba(245, 166, 35, 0.5);
+}
+
+/* --- VS Center Circle: Rotate + Glow --- */
+.coach-grid-prow-vs-circle.hover-ready {
+  transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1),
+              box-shadow 0.4s ease;
+}
+.coach-grid-prow-vs-box.hover-ready:hover .coach-grid-prow-vs-circle {
+  transform: scale(1.1) rotate(15deg);
+  box-shadow: 0 0 18px rgba(0, 0, 0, 0.3);
+}
+
+/* --- Quote Lift --- */
+.coach-grid-prow-quote.hover-ready {
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.coach-grid-prow-quote.hover-ready:hover {
+  transform: translateY(-3px);
+}
+
+/* --- Bottom Bar Icon Glow --- */
+.coach-grid-prow-bottom-icon.hover-ready {
+  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1),
+              box-shadow 0.4s ease;
+}
+.coach-grid-prow-bottom-bar.hover-ready:hover .coach-grid-prow-bottom-icon {
+  transform: scale(1.15) rotate(-8deg);
+  box-shadow: 0 0 12px rgba(245, 166, 35, 0.5);
+}
+
+/* --- Bottom Text Accent Hover --- */
+.coach-grid-prow-heading-accent {
+  transition: text-shadow 0.3s ease;
+}
+.coach-grid-prow-bottom-text.hover-ready:hover .coach-grid-prow-heading-accent {
+  text-shadow: 0 0 8px rgba(245, 166, 35, 0.3);
+}
+
+/* ==========================================================================
+   REDUCED MOTION
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  .coach-grid-prow-heading,
+  .coach-grid-prow-underline,
+  .coach-grid-prow-card,
+  .coach-grid-prow-vs-box,
+  .coach-grid-prow-vs-header,
+  .coach-grid-prow-vs-body,
+  .coach-grid-prow-vs-center,
+  .coach-grid-prow-quote,
+  .coach-grid-prow-bottom-bar,
+  .coach-grid-prow-vs-item {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .coach-grid-prow-card.hover-ready,
+  .coach-grid-prow-image,
+  .coach-grid-prow-linkedin,
+  .coach-grid-prow-cross-icon,
+  .coach-grid-prow-check-icon,
+  .coach-grid-prow-vs-circle,
+  .coach-grid-prow-quote,
+  .coach-grid-prow-bottom-icon {
+    transition: none !important;
+  }
+  .coach-grid-prow-card.hover-ready:hover {
+    box-shadow: none !important;
+    transform: none !important;
+  }
+  .coach-grid-prow-card.hover-ready:hover .coach-grid-prow-image {
+    transform: none !important;
+  }
+  .coach-grid-prow-card.hover-ready:hover .coach-grid-prow-linkedin {
+    box-shadow: none !important;
+    transform: none !important;
+  }
+  .coach-grid-prow-vs-list .coach-grid-prow-vs-item.hover-ready:hover .coach-grid-prow-cross-icon,
+  .coach-grid-prow-vs-list-right .coach-grid-prow-vs-item.hover-ready:hover .coach-grid-prow-check-icon {
+    box-shadow: none !important;
+    transform: none !important;
+  }
+  .coach-grid-prow-vs-box.hover-ready:hover .coach-grid-prow-vs-circle {
+    box-shadow: none !important;
+    transform: none !important;
+  }
+  .coach-grid-prow-quote.hover-ready:hover {
+    transform: none !important;
+  }
+  .coach-grid-prow-bottom-bar.hover-ready:hover .coach-grid-prow-bottom-icon {
+    box-shadow: none !important;
+    transform: none !important;
+  }
+  .coach-grid-prow-bottom-text.hover-ready:hover .coach-grid-prow-heading-accent {
+    text-shadow: none !important;
+  }
+}

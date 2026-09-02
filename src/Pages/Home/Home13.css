@@ -1,0 +1,186 @@
+
+        .stories-india-section {
+          --si-ink: #0f1222;
+          --si-muted: #6b7280;
+          --si-accent: #7c3aed;
+          --si-border: #e5e7eb;
+          --si-bg: #ffffff;
+          width: 100%;
+          background: var(--si-bg);
+          padding: 56px 24px 48px;
+          box-sizing: border-box;
+          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, sans-serif;
+        }
+
+        .stories-india-heading {
+          text-align: center;
+          font-size: clamp(30px, 4vw, 42px);
+          font-weight: 800;
+          color: var(--si-ink);
+          letter-spacing: -0.01em;
+          margin: 0 0 32px;
+        }
+
+        .stories-india-track {
+          max-width: 1100px;
+          margin: 0 auto;
+          display: flex;
+          gap: 24px;
+          overflow-x: auto;
+          scroll-snap-type: x mandatory;
+          -webkit-overflow-scrolling: touch;
+          padding: 4px 4px 12px;
+          cursor: grab;
+          scrollbar-width: none;
+        }
+
+        .stories-india-track::-webkit-scrollbar {
+          display: none;
+        }
+
+        .stories-india-track.stories-india-dragging {
+          cursor: grabbing;
+          scroll-snap-type: none;
+        }
+
+        .stories-india-card {
+          flex: 0 0 calc((100% - 48px) / 3);
+          scroll-snap-align: start;
+          border: 1px solid var(--si-border);
+          border-radius: 12px;
+          overflow: hidden;
+          background: #fff;
+          display: flex;
+          flex-direction: column;
+          user-select: none;
+        }
+
+        .stories-india-card-img {
+          width: 100%;
+          height: 240px;
+          object-fit: cover;
+          display: block;
+          pointer-events: none;
+        }
+
+        .stories-india-card-body {
+          padding: 20px 20px 22px;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+        }
+
+        .stories-india-quote {
+          font-size: 16px;
+          font-weight: 800;
+          line-height: 1.35;
+          color: var(--si-ink);
+          margin: 0;
+        }
+
+        .stories-india-desc {
+          font-size: 13.5px;
+          line-height: 1.55;
+          color: #4b5563;
+          margin: 0;
+        }
+
+        .stories-india-readmore {
+          color: var(--si-accent);
+          font-weight: 700;
+          font-size: 13.5px;
+          text-decoration: none;
+          background: none;
+          border: none;
+          padding: 0;
+          cursor: pointer;
+          text-align: left;
+        }
+
+        .stories-india-readmore:hover {
+          text-decoration: underline;
+        }
+
+        .stories-india-name {
+          font-size: 14px;
+          font-weight: 800;
+          color: var(--si-ink);
+          margin: 6px 0 0;
+        }
+
+        .stories-india-profession {
+          font-size: 12.5px;
+          color: #4b5563;
+          margin: 0;
+        }
+
+        .stories-india-location {
+          font-size: 12.5px;
+          color: var(--si-muted);
+          margin: 0;
+        }
+
+        .stories-india-dots {
+          display: flex;
+          justify-content: center;
+          gap: 8px;
+          margin: 24px 0 28px;
+        }
+
+        .stories-india-dot {
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          background: #d1d5db;
+          border: none;
+          padding: 0;
+          cursor: pointer;
+          transition: background 0.2s ease, transform 0.2s ease;
+        }
+
+        .stories-india-dot:hover {
+          background: #b9bdc6;
+        }
+
+        .stories-india-dot.is-active {
+          background: var(--si-accent);
+          transform: scale(1.15);
+        }
+
+        .stories-india-browse {
+          display: block;
+          text-align: center;
+          color: var(--si-accent);
+          font-weight: 700;
+          font-size: 15px;
+          text-decoration: none;
+        }
+
+        .stories-india-browse:hover {
+          text-decoration: underline;
+        }
+
+        @media (max-width: 900px) {
+          .stories-india-card {
+            flex: 0 0 calc((100% - 24px) / 2);
+          }
+        }
+
+        @media (max-width: 640px) {
+          .stories-india-card {
+            flex: 0 0 85%;
+          }
+          .stories-india-card-img {
+            height: 200px;
+          }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+          .stories-india-track {
+            scroll-behavior: auto;
+          }
+          .stories-india-dot {
+            transition: none !important;
+          }
+        }
+     

@@ -1,0 +1,334 @@
+.faq-prow-section {
+  background-color: #ffffff;
+  padding: 22px 30px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.faq-prow-container {
+  max-width: 1600px;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+.faq-prow-heading {
+  flex: 0 0 100px;
+  color: #000;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 0.4px;
+  margin: 0;
+  padding-top: 10px;
+}
+
+/* ---------- Row of FAQ boxes ---------- */
+.faq-prow-row {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 14px;
+  align-items: start;
+}
+
+
+
+.faq-prow-item {
+  background-color: #151515;
+  border: 1px solid #2b2b2b;
+  border-radius: 6px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+
+
+
+
+/* ---------- Question row ---------- */
+.faq-prow-question {
+  flex: 1;
+  width: 100%;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 10px 12px;
+  height: 42px;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.faq-prow-question-text {
+  /* color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.3; */
+
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.3;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;    /* max 2 lines, phir ... */
+  -webkit-box-orient: vertical;
+}
+
+/* ---------- Plus / cross icon ---------- */
+.faq-prow-icon {
+  position: relative;
+  flex: 0 0 16px;
+  width: 16px;
+  height: 16px;
+}
+
+.faq-prow-icon-line {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: #f5b301;
+  transform: translate(-50%, -50%);
+  transition: transform 0.2s ease;
+}
+
+.faq-prow-icon-h {
+  width: 12px;
+  height: 2px;
+}
+
+.faq-prow-icon-v {
+  width: 2px;
+  height: 12px;
+}
+
+.faq-prow-item-open .faq-prow-icon-v {
+  transform: translate(-50%, -50%) rotate(90deg);
+  opacity: 0;
+}
+
+/* ---------- Answer (collapsible) ---------- */
+.faq-prow-answer-wrap {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.25s ease;
+}
+
+.faq-prow-item-open .faq-prow-answer-wrap {
+  max-height: 220px;
+}
+
+.faq-prow-answer {
+  margin: 0;
+  padding: 0 12px 12px 12px;
+  color: #a8a8a8;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+/* ==========================================================================
+   RESPONSIVE
+   ========================================================================== */
+
+/* Laptop / small desktop */
+@media (max-width: 1280px) {
+  .faq-prow-row {
+    gap: 10px;
+  }
+
+  .faq-prow-question-text {
+    font-size: 11.5px;
+  }
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .faq-prow-container {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .faq-prow-heading {
+    padding-top: 0;
+    flex: 0 0 30px;
+  }
+
+  .faq-prow-row {
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+  }
+}
+
+/* Small tablet */
+@media (max-width: 700px) {
+  .faq-prow-section {
+    padding: 20px 20px;
+  }
+
+  .faq-prow-question-text {
+    font-size: 12.5px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 520px) {
+  .faq-prow-section {
+    padding: 18px 16px;
+  }
+
+  .faq-prow-row {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .faq-prow-question {
+    min-height: 46px;
+    padding: 12px 14px;
+  }
+
+  .faq-prow-answer {
+    font-size: 12px;
+    padding: 0 14px 14px 14px;
+  }
+}
+
+
+
+/* Animation Effect */
+/* ==========================================================================
+   HOME9 ANIMATION EFFECTS — Paste below existing CSS
+   ========================================================================== */
+
+/* --- Keyframes --- */
+@keyframes h9p-slideLeft {
+  from { opacity: 0; transform: translateX(-20px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes h9p-flipIn {
+  from { opacity: 0; transform: perspective(800px) rotateY(15deg) translateX(30px); }
+  to   { opacity: 1; transform: perspective(800px) rotateY(0) translateX(0); }
+}
+
+/* --- Initial hidden states (no layout shift) --- */
+.faq-prow-heading { opacity: 0; transform: translateX(-20px); }
+.faq-prow-item    { opacity: 0; transform: perspective(800px) rotateY(15deg) translateX(30px); }
+
+/* --- Reveal animations with stagger via --d --- */
+.faq-prow-heading.revealed {
+  animation: h9p-slideLeft 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0s forwards;
+}
+
+.faq-prow-item.revealed {
+  animation: h9p-flipIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation-delay: calc(var(--d, 0) * 0.1s + 0.1s);
+}
+
+/* --- Post-reveal: lock final values, kill animation for hover --- */
+.faq-prow-heading.hover-ready {
+  opacity: 1; transform: translateX(0); animation: none;
+}
+.faq-prow-item.hover-ready {
+  opacity: 1; transform: perspective(800px) rotateY(0) translateX(0); animation: none;
+}
+
+/* ==========================================================================
+   HOVER EFFECTS
+   ========================================================================== */
+
+/* --- Card: border glow + subtle lift (no scale to avoid clipping overflow issues) --- */
+.faq-prow-item.hover-ready {
+  transition: border-color 0.3s ease,
+              transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.faq-prow-item.hover-ready:hover {
+  border-color: #f5b301;
+  transform: translateY(-3px);
+}
+
+/* --- Question text: color shift on hover --- */
+.faq-prow-question-text {
+  transition: color 0.3s ease;
+}
+.faq-prow-item.hover-ready:hover .faq-prow-question-text {
+  color: #f5b301;
+}
+
+/* --- Plus icon: subtle pre-rotation on hover --- */
+.faq-prow-icon {
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.faq-prow-item.hover-ready:hover .faq-prow-icon {
+  transform: rotate(90deg);
+}
+/* Reset rotation when item is opened */
+.faq-prow-item-open.hover-ready:hover .faq-prow-icon {
+  transform: rotate(0deg);
+}
+
+/* ==========================================================================
+   REDUCED MOTION
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  .faq-prow-heading,
+  .faq-prow-item {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .faq-prow-item.hover-ready,
+  .faq-prow-question-text,
+  .faq-prow-icon {
+    transition: none !important;
+  }
+}
+
+
+
+/* ==========================================================================
+   LOADING SKELETON
+   ========================================================================== */
+.faq-prow-skeleton-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 12px;
+  height: 42px;
+  cursor: default;
+}
+
+.faq-prow-skeleton-line,
+.faq-prow-skeleton-circle {
+  background: linear-gradient(90deg, #2b2b2b 25%, #3a3a3a 50%, #2b2b2b 75%);
+  background-size: 200% 100%;
+  border-radius: 4px;
+  animation: h9p-shimmer 1.5s infinite;
+  display: block;
+}
+
+.faq-prow-skeleton-circle {
+  border-radius: 50%;
+}
+
+@keyframes h9p-shimmer {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* ==========================================================================
+   ERROR / EMPTY STATE
+   ========================================================================== */
+.faq-prow-error {
+  color: #666;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  padding: 14px 0;
+  margin: 0;
+}

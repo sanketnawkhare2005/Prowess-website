@@ -1,0 +1,893 @@
+/* .gettouch-prow-section {
+  background-color: #f5f5f5;
+  padding: 20px 30px;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.gettouch-prow-row {
+  max-width: 1600px;
+  margin: 0 auto;
+  display: flex;
+  align-items: stretch;
+  gap: 20px;
+}
+
+.gettouch-prow-left-card {
+  flex: 1 1 65%;
+  min-width: 0;
+  background-color: #ffffff;
+  border: 1px solid #ececec;
+  border-radius: 10px;
+  padding: 22px 26px;
+  box-sizing: border-box;
+}
+
+.gettouch-prow-heading {
+  margin: 0 0 10px 0;
+  color: #0a0a0a;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+}
+
+.gettouch-prow-heading-accent {
+  color: #f5b301;
+}
+
+.gettouch-prow-underline {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background-color: #f5b301;
+  border-radius: 2px;
+  margin-bottom: 20px;
+}
+
+.gettouch-prow-items-row {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.gettouch-prow-item-wrap {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  min-width: 0;
+}
+
+.gettouch-prow-item-divider {
+  flex: 0 0 1px;
+  width: 1px;
+  height: 46px;
+  background-color: #e6e6e6;
+  margin-right: 16px;
+}
+
+.gettouch-prow-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  min-width: 0;
+  padding-right: 16px;
+}
+
+.gettouch-prow-icon-circle {
+  flex: 0 0 34px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid rgba(245, 179, 1, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gettouch-prow-icon-circle svg {
+  width: 17px;
+  height: 17px;
+}
+
+.gettouch-prow-item-text {
+  min-width: 0;
+}
+
+.gettouch-prow-item-title {
+  margin: 0 0 4px 0;
+  color: #0a0a0a;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11.5px;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+}
+
+.gettouch-prow-item-line {
+  margin: 0;
+  color: #6b6b6b;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.gettouch-prow-item-line p {
+  margin: 0;
+  padding: 0;
+  line-height: 1.55;
+}
+
+.gettouch-prow-item-line br {
+  display: block;
+  content: "";
+  margin-top: 0;
+}
+
+.gettouch-prow-map-card {
+  position: relative;
+  flex: 1 1 35%;
+  min-width: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #ececec;
+}
+
+.gettouch-prow-map-img {
+  width: 100%;
+  height: 100%;
+  min-height: 190px;
+  object-fit: cover;
+  display: block;
+}
+
+.gettouch-prow-map-overlay {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background-color: #0a0a0a;
+  border-radius: 8px;
+  padding: 16px 18px;
+  max-width: 220px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+}
+
+.gettouch-prow-map-icon {
+  display: flex;
+  width: 22px;
+  height: 22px;
+  margin-bottom: 8px;
+}
+
+.gettouch-prow-map-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.gettouch-prow-map-title {
+  margin: 0 0 8px 0;
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.gettouch-prow-map-desc {
+  margin: 0 0 12px 0;
+  color: #c7c7c7;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10.5px;
+  line-height: 1.5;
+}
+
+.gettouch-prow-map-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: #f5b301;
+  color: #0a0a0a;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10.5px;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.gettouch-prow-map-btn:hover {
+  background-color: #ffc61a;
+}
+
+.gettouch-prow-map-btn-icon {
+  width: 12px;
+  height: 12px;
+}
+
+
+@media (max-width: 1280px) {
+  .gettouch-prow-item-title {
+    font-size: 11px;
+  }
+
+  .gettouch-prow-item-line {
+    font-size: 10.5px;
+  }
+}
+
+@media (max-width: 1180px) {
+  .gettouch-prow-items-row {
+    flex-wrap: wrap;
+    row-gap: 16px;
+  }
+
+  .gettouch-prow-item-wrap {
+    flex: 1 1 45%;
+  }
+
+  .gettouch-prow-item-divider {
+    display: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  .gettouch-prow-row {
+    flex-direction: column;
+  }
+
+  .gettouch-prow-left-card,
+  .gettouch-prow-map-card {
+    flex-basis: auto;
+    width: 100%;
+  }
+
+  .gettouch-prow-map-img {
+    min-height: 220px;
+  }
+}
+
+@media (max-width: 700px) {
+  .gettouch-prow-section {
+    padding: 20px;
+  }
+
+  .gettouch-prow-left-card {
+    padding: 18px 20px;
+  }
+
+  .gettouch-prow-item-wrap {
+    flex: 1 1 100%;
+  }
+}
+
+@media (max-width: 520px) {
+  .gettouch-prow-section {
+    padding: 16px;
+  }
+
+  .gettouch-prow-heading {
+    font-size: 15px;
+  }
+
+  .gettouch-prow-left-card {
+    padding: 16px;
+  }
+
+  .gettouch-prow-map-overlay {
+    max-width: 180px;
+    padding: 12px 14px;
+  }
+
+  .gettouch-prow-map-title {
+    font-size: 11px;
+  }
+
+  .gettouch-prow-map-desc {
+    font-size: 10px;
+  }
+}
+
+
+
+
+
+
+.gettouch-prow-left-card {
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.gettouch-prow-left-card:hover {
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+  transform: translateY(-3px);
+}
+
+.gettouch-prow-item-hover {
+  transition: transform 0.25s ease;
+  border-radius: 8px;
+  padding: 4px;
+  margin: -4px;
+}
+
+.gettouch-prow-item-hover:hover {
+  transform: translateY(-2px);
+}
+
+.gettouch-prow-item-hover:hover .gettouch-prow-icon-circle {
+  background-color: #f5b301;
+  border-color: #f5b301;
+  transform: rotate(360deg);
+}
+
+.gettouch-prow-icon-circle {
+  transition: background-color 0.35s ease, border-color 0.35s ease,
+    transform 0.5s ease;
+}
+
+.gettouch-prow-item-hover:hover .gettouch-prow-icon-circle svg path,
+.gettouch-prow-item-hover:hover .gettouch-prow-icon-circle svg circle {
+  stroke: #0a0a0a;
+}
+
+.gettouch-prow-item-hover:hover .gettouch-prow-item-title {
+  color: #f5b301;
+}
+
+.gettouch-prow-item-title {
+  transition: color 0.25s ease;
+}
+
+.gettouch-prow-map-card-hover {
+  transition: box-shadow 0.3s ease;
+}
+
+.gettouch-prow-map-card-hover:hover {
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+}
+
+.gettouch-prow-map-card-hover .gettouch-prow-map-img {
+  transition: transform 0.5s ease;
+}
+
+.gettouch-prow-map-card-hover:hover .gettouch-prow-map-img {
+  transform: scale(1.06);
+}
+
+.gettouch-prow-map-overlay {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gettouch-prow-map-card-hover:hover .gettouch-prow-map-overlay {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.35);
+}
+
+.gettouch-prow-map-btn {
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.gettouch-prow-map-btn:hover {
+  transform: scale(1.04);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-aos],
+  .gettouch-prow-left-card,
+  .gettouch-prow-item-hover,
+  .gettouch-prow-icon-circle,
+  .gettouch-prow-map-card-hover .gettouch-prow-map-img,
+  .gettouch-prow-map-overlay,
+  .gettouch-prow-map-btn {
+    transition: none !important;
+    transform: none !important;
+  }
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   GET IN TOUCH — gettouch-prow-*
+   ========================================================================== */
+
+.gettouch-prow-section {
+  background-color: #f5f5f5;
+  padding: 20px 30px;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* ---------- Row: 2 boxes, one row ---------- */
+.gettouch-prow-row {
+  max-width: 1600px;
+  margin: 0 auto;
+  display: flex;
+  align-items: stretch;
+  gap: 20px;
+}
+
+/* ---------- Left card ---------- */
+.gettouch-prow-left-card {
+  flex: 1 1 65%;
+  min-width: 0;
+  background-color: #ffffff;
+  border: 1px solid #ececec;
+  border-radius: 10px;
+  padding: 22px 20px;
+  box-sizing: border-box;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.gettouch-prow-heading {
+  margin: 0 0 10px 0;
+  color: #0a0a0a;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+}
+
+.gettouch-prow-heading-accent {
+  color: #f5b301;
+}
+
+.gettouch-prow-underline {
+  position: relative;
+  display: block;
+  width: 28px;
+  height: 3px;
+  background-color: #f5b301;
+  border-radius: 2px;
+  margin-bottom: 20px;
+  transform-origin: left center;
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 0.4s ease;
+}
+.gettouch-prow-section:hover .gettouch-prow-underline {
+  transform: scaleX(1.6);
+  box-shadow: 0 0 10px rgba(245, 179, 1, 0.65);
+}
+
+/* ---------- Items row (4 items, one row) ---------- */
+.gettouch-prow-items-row {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.gettouch-prow-item-wrap {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  min-width: 0;
+}
+
+.gettouch-prow-item-divider {
+  flex: 0 0 1px;
+  width: 1px;
+  height: 46px;
+  background-color: #e6e6e6;
+  margin-right: 10px;
+}
+
+.gettouch-prow-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  min-width: 0;
+  padding-right: 16px;
+}
+
+.gettouch-prow-icon-circle {
+  position: relative;
+  flex: 0 0 34px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid rgba(245, 179, 1, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.35s ease, border-color 0.35s ease,
+    transform 0.5s ease;
+}
+
+/* Continuous rotating gradient ring on icon circles */
+.gettouch-prow-icon-circle::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: 50%;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0%,
+    transparent 55%,
+    rgba(245, 179, 1, 0.1) 65%,
+    rgba(245, 179, 1, 0.5) 78%,
+    #f5b301 85%,
+    rgba(245, 179, 1, 0.5) 92%,
+    rgba(245, 179, 1, 0.1) 100%
+  );
+  -webkit-mask: radial-gradient(circle, transparent 82%, black 84%, black 97%, transparent 99%);
+  mask: radial-gradient(circle, transparent 82%, black 84%, black 97%, transparent 99%);
+  animation: gt3-iconSpin 2.5s linear infinite;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Continuous subtle glow pulse */
+.gettouch-prow-icon-circle::after {
+  content: "";
+  position: absolute;
+  inset: -5px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(245, 179, 1, 0.18) 0%, rgba(245, 179, 1, 0) 70%);
+  z-index: 0;
+  opacity: 0;
+  pointer-events: none;
+  animation: gt3-iconGlow 3.2s ease-in-out infinite;
+}
+
+@keyframes gt3-iconSpin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+@keyframes gt3-iconGlow {
+  0%, 100% { opacity: 0.15; transform: scale(0.8); }
+  50%      { opacity: 0.6; transform: scale(1); }
+}
+
+.gettouch-prow-icon-circle svg {
+  width: 17px;
+  height: 17px;
+  position: relative;
+  z-index: 1;
+}
+
+.gettouch-prow-item-text {
+  min-width: 0;
+}
+
+.gettouch-prow-item-title {
+  margin: 0 0 4px 0;
+  color: #0a0a0a;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12.5px;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+  transition: color 0.25s ease;
+}
+
+.gettouch-prow-item-line {
+  margin: 0;
+  color: #6b6b6b;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11.5px;
+  line-height: 1.5;
+}
+
+.gettouch-prow-item-line p {
+  margin: 0;
+  padding: 0;
+  line-height: 1.55;
+}
+
+.gettouch-prow-item-line br {
+  display: block;
+  content: "";
+  margin-top: 0;
+}
+
+/* ---------- Right: Map card ---------- */
+.gettouch-prow-map-card {
+  position: relative;
+  flex: 1 1 35%;
+  min-width: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #ececec;
+  transition: box-shadow 0.3s ease;
+}
+
+.gettouch-prow-map-img {
+  width: 100%;
+  height: 100%;
+  min-height: 190px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.gettouch-prow-map-overlay {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background-color: #0a0a0a;
+  border-radius: 8px;
+  padding: 5px 18px;
+  max-width: 220px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gettouch-prow-map-icon {
+  display: flex;
+  width: 22px;
+  height: 22px;
+  margin-bottom: 8px;
+}
+
+.gettouch-prow-map-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.gettouch-prow-map-title {
+  margin: 0 0 8px 0;
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.gettouch-prow-map-desc {
+  margin: 0 0 12px 0;
+  color: #c7c7c7;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10.5px;
+  line-height: 1.5;
+}
+
+.gettouch-prow-map-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: #f5b301;
+  color: #0a0a0a;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10.5px;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.gettouch-prow-map-btn:hover {
+  background-color: #ffc61a;
+  transform: scale(1.04);
+}
+
+.gettouch-prow-map-btn-icon {
+  width: 12px;
+  height: 12px;
+}
+
+/* ==========================================================================
+   RESPONSIVE
+   ========================================================================== */
+
+/* Laptop / small desktop */
+@media (max-width: 1280px) {
+  .gettouch-prow-item-title {
+    font-size: 11px;
+  }
+
+  .gettouch-prow-item-line {
+    font-size: 10.5px;
+  }
+}
+
+/* Small laptop — still ONE ROW, just wraps at very small */
+@media (max-width: 1180px) {
+  .gettouch-prow-items-row {
+    flex-wrap: wrap;
+    row-gap: 16px;
+  }
+
+  .gettouch-prow-item-wrap {
+    flex: 1 1 45%;
+    min-width: 200px;
+  }
+
+  .gettouch-prow-item-divider {
+    display: none;
+  }
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .gettouch-prow-row {
+    flex-direction: column;
+  }
+
+  .gettouch-prow-left-card,
+  .gettouch-prow-map-card {
+    flex-basis: auto;
+    width: 100%;
+  }
+
+  .gettouch-prow-map-img {
+    min-height: 220px;
+  }
+}
+
+/* Small tablet — 2 items per row */
+@media (max-width: 700px) {
+  .gettouch-prow-section {
+    padding: 20px;
+  }
+
+  .gettouch-prow-left-card {
+    padding: 18px 20px;
+  }
+
+  .gettouch-prow-item-wrap {
+    flex: 1 1 45%;
+    min-width: 140px;
+  }
+}
+
+/* Mobile — still 2 per row, just tighter */
+@media (max-width: 520px) {
+  .gettouch-prow-section {
+    padding: 16px;
+  }
+
+  .gettouch-prow-heading {
+    font-size: 20px;
+  }
+
+  .gettouch-prow-left-card {
+    padding: 16px;
+  }
+
+  .gettouch-prow-item-wrap {
+    flex: 1 1 45%;
+    min-width: 120px;
+  }
+
+  .gettouch-prow-item {
+    padding-right: 10px;
+    gap: 8px;
+  }
+
+  .gettouch-prow-icon-circle {
+    flex: 0 0 30px;
+    width: 30px;
+    height: 30px;
+  }
+
+  .gettouch-prow-icon-circle svg {
+    width: 15px;
+    height: 15px;
+  }
+
+  .gettouch-prow-item-title {
+    font-size: 12px;
+  }
+
+  .gettouch-prow-item-line {
+    font-size: 11px;
+  }
+
+  .gettouch-prow-map-overlay {
+    max-width: 180px;
+    padding: 12px 14px;
+  }
+
+  .gettouch-prow-map-title {
+    font-size: 11.5px;
+  }
+
+  .gettouch-prow-map-desc {
+    font-size: 10.5px;
+  }
+}
+
+/* ==========================================================================
+   HOVER EFFECTS
+   ========================================================================== */
+
+/* ---------- Left card: subtle lift on hover ---------- */
+.gettouch-prow-left-card:hover {
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+  transform: translateY(-3px);
+}
+
+/* ---------- Each contact item: icon + text on hover ---------- */
+.gettouch-prow-item-hover {
+  transition: transform 0.25s ease;
+  border-radius: 8px;
+  padding: 4px;
+  margin: -4px;
+}
+
+.gettouch-prow-item-hover:hover {
+  transform: translateY(-2px);
+}
+
+.gettouch-prow-item-hover:hover .gettouch-prow-icon-circle {
+  background-color: #f5b301;
+  border-color: #f5b301;
+  transform: rotate(360deg);
+  box-shadow: 0 0 12px rgba(245, 179, 1, 0.4);
+}
+
+.gettouch-prow-item-hover:hover .gettouch-prow-icon-circle::before {
+  animation: none;
+  opacity: 0;
+}
+
+.gettouch-prow-item-hover:hover .gettouch-prow-icon-circle::after {
+  animation: none;
+  opacity: 0;
+}
+
+.gettouch-prow-item-hover:hover .gettouch-prow-icon-circle svg path,
+.gettouch-prow-item-hover:hover .gettouch-prow-icon-circle svg circle,
+.gettouch-prow-item-hover:hover .gettouch-prow-icon-circle svg rect {
+  stroke: #0a0a0a;
+}
+
+.gettouch-prow-item-hover:hover .gettouch-prow-item-title {
+  color: #f5b301;
+}
+
+/* ---------- Map card: zoom-in effect on hover ---------- */
+.gettouch-prow-map-card-hover:hover {
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+}
+
+.gettouch-prow-map-card-hover:hover .gettouch-prow-map-img {
+  transform: scale(1.06);
+}
+
+/* ---------- Map overlay: gentle rise on hover ---------- */
+.gettouch-prow-map-card-hover:hover .gettouch-prow-map-overlay {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.35);
+}
+
+/* ==========================================================================
+   REDUCED MOTION
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  [data-aos],
+  .gettouch-prow-left-card,
+  .gettouch-prow-item-hover,
+  .gettouch-prow-icon-circle,
+  .gettouch-prow-icon-circle::before,
+  .gettouch-prow-icon-circle::after,
+  .gettouch-prow-map-card-hover .gettouch-prow-map-img,
+  .gettouch-prow-map-overlay,
+  .gettouch-prow-map-btn,
+  .gettouch-prow-underline {
+    transition: none !important;
+    animation: none !important;
+    transform: none !important;
+  }
+  .gettouch-prow-icon-circle::before,
+  .gettouch-prow-icon-circle::after {
+    opacity: 0 !important;
+  }
+  .gettouch-prow-icon-circle {
+    border-color: rgba(245, 179, 1, 0.4) !important;
+  }
+}

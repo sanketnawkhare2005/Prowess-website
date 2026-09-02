@@ -1,0 +1,183 @@
+.footer {
+  background: #0d0d0d;
+  color: #ffffff;
+  padding: 50px 40px 0 40px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-between;
+  padding-bottom: 35px;
+}
+
+.footer-col {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-col.brand {
+  flex: 1.4;
+  min-width: 260px;
+}
+
+.profoot-logo-img{
+  width: 200px;
+  height: 50px;
+  display: block;
+}
+
+/* ---------- Logo (shared style with navbar) ---------- */
+.footer .logo-text {
+  display: flex;
+  align-items: center;
+  font-weight: 800;
+  font-size: 22px;
+  letter-spacing: 1px;
+}
+
+.footer .logo-pro {
+  background: #ffffff;
+  color: #000000;
+  padding: 2px 8px;
+}
+
+.footer .logo-wess {
+  color: #ffffff;
+  padding: 2px 8px;
+  border: 1px solid #ffffff;
+}
+
+.footer-logo-tagline {
+  color: #f5a623;
+  font-size: 9px;
+  letter-spacing: 3px;
+  margin-top: 4px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.footer-desc {
+  color: #b3b3b3;
+  font-size: 13px;
+  line-height: 1.7;
+  margin-top: 16px;
+  max-width: 320px;
+}
+
+/* ---------- Headings ---------- */
+.footer-heading {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  margin-bottom: 18px;
+  text-transform: uppercase;
+}
+
+/* ---------- Quick Links ---------- */
+.footer-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 12px;
+}
+
+.footer-links a {
+  color: #b3b3b3;
+  text-decoration: none;
+  font-size: 13px;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: #f5a623;
+}
+
+/* ---------- Social Icons ---------- */
+.social-icons {
+  display: flex;
+  gap: 14px;
+}
+
+.social-icons a {
+  width: 36px;
+  height: 36px;
+  border: 1px solid #444444;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.social-icons a:hover {
+  background: #f5a623;
+  border-color: #f5a623;
+  color: #000000;
+}
+
+/* ---------- Contact List ---------- */
+.contact-list {
+  list-style: none;
+  font-size: 13px;
+  color: #b3b3b3;
+  margin: 0;
+  padding: 0;
+}
+
+.contact-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.contact-list i {
+  color: #f5a623;
+  margin-top: 2px;
+  width: 14px;
+}
+
+/* ---------- Bottom Bar ---------- */
+.footer-bottom {
+  border-top: 1px solid #2a2a2a;
+  padding: 18px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: 12px;
+  color: #b3b3b3;
+}
+
+.footer-bottom .legal-links {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-bottom a {
+  color: #b3b3b3;
+  text-decoration: none;
+}
+
+.footer-bottom a:hover {
+  color: #f5a623;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 640px) {
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+}

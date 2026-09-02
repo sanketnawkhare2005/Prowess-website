@@ -1,0 +1,609 @@
+/* .elderberry-section {
+  display: flex;
+  align-items: stretch;
+  gap: 32px;
+  margin-bottom: 56px;
+  flex-wrap: wrap;
+}
+
+.elderberry-compare-wrap {
+  display: flex;
+  align-items: stretch;
+  flex: 1 1 520px;
+  min-width: 0;
+  position: relative;
+  gap: 0;
+}
+
+.elderberry-card {
+  flex: 1 1 0;
+  min-width: 0;
+  background: #FFFFFF;
+  border: 1px solid #E5E5E5;
+  border-radius: 10px;
+  padding: 18px 20px 22px 20px;
+  box-sizing: border-box;
+}
+
+.elderberry-badge {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #FFFFFF;
+  padding: 6px 16px;
+  border-radius: 5px;
+  margin-bottom: 16px;
+}
+
+.elderberry-badge-before {
+  background: #E53935;
+}
+
+.elderberry-badge-after {
+  background: #2E7D32;
+}
+
+.elderberry-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.elderberry-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.elderberry-list li svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.elderberry-list li span {
+  font-size: 13.5px;
+  font-weight: 500;
+  color: #222222;
+  line-height: 1.5;
+}
+
+.elderberry-connector {
+  flex: 0 0 auto;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: center;
+  margin: 0 -22px;
+  z-index: 2;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  flex-shrink: 0;
+}
+
+.elderberry-quote-wrap {
+  position: relative;
+  flex: 1 1 420px;
+  min-width: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding: 32px 36px;
+  box-sizing: border-box;
+}
+
+.elderberry-quote-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, #FFFFFF 0%, rgba(255,255,255,0.75) 45%, rgba(255,255,255,0.25) 100%),
+    url('https://picsum.photos/seed/prowess-team/600/400.jpg') center/cover no-repeat;
+  z-index: 0;
+}
+
+.elderberry-quote-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+
+.elderberry-quote-heading {
+  font-size: 26px;
+  font-weight: 800;
+  color: #000000;
+  line-height: 1.35;
+  letter-spacing: -0.5px;
+  margin: 0 0 20px 0;
+  position: relative;
+}
+
+.elderberry-quote-mark {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-weight: 700;
+  color: #000000;
+  font-size: 34px;
+  line-height: 0;
+}
+
+.elderberry-quote-mark-open {
+  margin-right: 6px;
+  vertical-align: -6px;
+}
+
+.elderberry-quote-mark-close {
+  margin-left: 4px;
+  vertical-align: -18px;
+}
+
+.elderberry-tagline-strip {
+  position: relative;
+  display: inline-block;
+  background: #000000;
+  padding: 10px 24px;
+  clip-path: polygon(
+    1% 15%, 4% 5%, 20% 10%, 40% 2%, 60% 8%,
+    80% 3%, 96% 12%, 99% 30%, 97% 55%,
+    99% 80%, 95% 95%, 75% 100%, 55% 92%,
+    35% 98%, 15% 90%, 2% 96%, 0% 60%
+  );
+}
+
+.elderberry-tagline-text {
+  font-family: 'Brush Script MT', 'Segoe Script', cursive;
+  font-size: 26px;
+  font-weight: 600;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.elderberry-tag-white {
+  color: #FFFFFF;
+}
+
+.elderberry-tag-gold {
+  color: #D4AF37;
+}
+
+@media (max-width: 900px) {
+  .elderberry-section {
+    flex-direction: column;
+  }
+
+  .elderberry-quote-wrap {
+    min-width: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .elderberry-compare-wrap {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .elderberry-connector {
+    margin: -22px auto;
+    transform: rotate(90deg);
+  }
+
+  .elderberry-quote-heading {
+    font-size: 20px;
+  }
+
+  .elderberry-tagline-text {
+    font-size: 20px;
+  }
+} */
+
+
+
+
+
+
+
+
+/* ══════════════════════════════════════
+   ONE ROW
+   ══════════════════════════════════════ */
+.elderberry-section {
+  display: flex;
+  align-items: stretch;
+  gap: 28px;
+  margin-bottom: 56px;
+  
+}
+
+/* ── Cards container ── */
+.elderberry-compare-wrap {
+  position: relative;
+  display: flex;
+  gap: 48px;
+}
+
+/* ── Each card ── */
+.elderberry-card {
+  width: 350px;
+  /* height: 250px; */
+  flex-shrink: 0;
+  background: #FFFFFF;
+  border: 1px solid #E5E5E5;
+  border-radius: 10px;
+  padding: 18px 20px 22px 20px;
+  box-sizing: border-box;
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+              border-color 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Card hover — upar uth jayega + shadow + border color */
+.elderberry-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+  border-color: #BBBBBB;
+}
+
+/* Card ke andar ek subtle glow on hover */
+.elderberry-card::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at center, rgba(0,0,0,0.03) 0%, transparent 60%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+.elderberry-card:hover::after {
+  opacity: 1;
+}
+
+/* ── Circle connector ── */
+/* .elderberry-connector {
+  position: absolute;
+  left: calc(350px + 24px);
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
+              box-shadow 0.3s ease;
+} */
+
+/* Circle hover — thoda bada + glow */
+/* .elderberry-connector:hover {
+  transform: translate(-50%, -50%) scale(1.15);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.5);
+} */
+
+/* Circle ke andar arrow subtle pulse */
+/* .elderberry-connector svg {
+  animation: elderberry-arrow-pulse 2s ease-in-out infinite;
+} */
+
+/* @keyframes elderberry-arrow-pulse {
+  0%, 100% { transform: translateX(0); opacity: 1; }
+  50% { transform: translateX(3px); opacity: 0.7; }
+} */
+
+/* ── Circle connector ── */
+.elderberry-connector {
+  position: absolute;
+  left: calc(350px + 24px);
+  top: 50%;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+  /* Centering + Slide animation */
+  transform: translate(-50%, -50%);
+  animation: elderberry-circle-slide 2.5s ease-in-out infinite;
+  transition: box-shadow 0.3s ease;
+}
+
+/* Left + Top slide movement */
+@keyframes elderberry-circle-slide {
+  0%, 100% { transform: translate(-50%, -50%); }
+  25%      { transform: translate(calc(-50% - 5px), calc(-50% - 4px)); }
+  50%      { transform: translate(-50%, -50%); }
+  75%      { transform: translate(calc(-50% + 3px), calc(-50% + 2px)); }
+}
+
+/* Hover par animation ruk jayega + bada hoga */
+.elderberry-connector:hover {
+  animation-play-state: paused;
+  transform: translate(-50%, -50%) scale(1.15);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.5);
+}
+
+/* Arrow andar pulse — ye bhi rakhna */
+.elderberry-connector svg {
+  animation: elderberry-arrow-pulse 2s ease-in-out infinite;
+}
+
+@keyframes elderberry-arrow-pulse {
+  0%, 100% { transform: translateX(0); opacity: 1; }
+  50%      { transform: translateX(3px); opacity: 0.7; }
+}
+
+/* ── Badges ── */
+.elderberry-badge {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #FFFFFF;
+  padding: 6px 16px;
+  border-radius: 5px;
+  margin-bottom: 16px;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
+              box-shadow 0.3s ease;
+}
+.elderberry-badge-before { background: #E53935; }
+.elderberry-badge-after  { background: #2E7D32; }
+
+/* Badge hover — thoda bada */
+.elderberry-card:hover .elderberry-badge {
+  transform: scale(1.06);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* ── List ── */
+.elderberry-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.elderberry-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+.elderberry-list li svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.elderberry-list li span {
+  font-size: 13.5px;
+  font-weight: 500;
+  color: #222222;
+  line-height: 1.5;
+}
+
+/* List item hover — right slide + icon bounce */
+.elderberry-list li:hover {
+  transform: translateX(6px);
+}
+.elderberry-list li:hover svg {
+  transform: scale(1.25);
+}
+
+/* ══════════════════════════════════════
+   QUOTE BOX
+   ══════════════════════════════════════ */
+.elderberry-quote-wrap {
+  position: relative;
+  flex: 1 1 0;
+  min-width: 320px;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding: 20px 40px;
+  box-sizing: border-box;
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 0.4s ease;
+  /* Continuous subtle float */
+  animation: elderberry-float 4s ease-in-out infinite;
+}
+
+/* Quote hover — stop float + uth jayega + shadow */
+.elderberry-quote-wrap:hover {
+  animation-play-state: paused;
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Gentle float up-down */
+@keyframes elderberry-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+/* Background image */
+.elderberry-quote-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, #FFFFFF 0%, rgba(255,255,255,0.7) 50%, rgba(255,255,255,0.2) 100%),
+    url('https://picsum.photos/seed/prowess-team/700/500.jpg') center/cover no-repeat;
+  z-index: 0;
+  transition: transform 0.6s ease;
+}
+
+/* Hover par background thoda zoom in */
+.elderberry-quote-wrap:hover .elderberry-quote-bg {
+  transform: scale(1.05);
+}
+
+/* Shine/glare sweep effect */
+.elderberry-quote-shine {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(
+    105deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.4) 45%,
+    rgba(255, 255, 255, 0.6) 50%,
+    rgba(255, 255, 255, 0.4) 55%,
+    transparent 70%
+  );
+  z-index: 2;
+  pointer-events: none;
+  transition: none;
+}
+
+/* Hover par shine left se right chale */
+.elderberry-quote-wrap:hover .elderberry-quote-shine {
+  animation: elderberry-shine-sweep 0.8s ease-out forwards;
+}
+
+@keyframes elderberry-shine-sweep {
+  0%   { left: -100%; }
+  100% { left: 150%; }
+}
+
+.elderberry-quote-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+
+.elderberry-quote-heading {
+  font-size: 28px;
+  font-weight: 800;
+  color: #000000;
+  line-height: 1.35;
+  letter-spacing: -0.5px;
+  margin: 0 0 24px 0;
+  transition: transform 0.3s ease;
+}
+
+/* Quote text hover — thoda scale */
+.elderberry-quote-wrap:hover .elderberry-quote-heading {
+  transform: scale(1.02);
+}
+
+.elderberry-quote-mark {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-weight: 700;
+  color: #000000;
+  font-size: 36px;
+  line-height: 0;
+  display: inline-block;
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1),
+              color 0.3s ease;
+}
+.elderberry-quote-mark-open {
+  margin-right: 6px;
+  vertical-align: -6px;
+}
+.elderberry-quote-mark-close {
+  margin-left: 4px;
+  vertical-align: -18px;
+}
+
+/* Quote marks hover — bounce + gold color */
+.elderberry-quote-wrap:hover .elderberry-quote-mark-open {
+  transform: rotate(-10deg) scale(1.15);
+  color: #D4AF37;
+}
+.elderberry-quote-wrap:hover .elderberry-quote-mark-close {
+  transform: rotate(10deg) scale(1.15);
+  color: #D4AF37;
+}
+
+/* Black brush-stroke tagline strip */
+.elderberry-tagline-strip {
+  position: relative;
+  display: inline-block;
+  background: #000000;
+  padding: 10px 26px;
+  clip-path: polygon(
+    1% 15%, 4% 5%, 20% 10%, 40% 2%, 60% 8%,
+    80% 3%, 96% 12%, 99% 30%, 97% 55%,
+    99% 80%, 95% 95%, 75% 100%, 55% 92%,
+    35% 98%, 15% 90%, 2% 96%, 0% 60%
+  );
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Tagline hover — bounce scale */
+.elderberry-quote-wrap:hover .elderberry-tagline-strip {
+  transform: scale(1.08);
+}
+
+.elderberry-tagline-text {
+  font-family: 'Brush Script MT', 'Segoe Script', cursive;
+  font-size: 26px;
+  font-weight: 600;
+  margin: 0;
+  white-space: nowrap;
+}
+.elderberry-tag-white { color: #FFFFFF; }
+.elderberry-tag-gold  { color: #D4AF37; }
+
+/* Gold text thoda glow on hover */
+.elderberry-quote-wrap:hover .elderberry-tag-gold {
+  text-shadow: 0 0 12px rgba(212, 175, 55, 0.6);
+}
+
+/* ══════════════════════════════════════
+   RESPONSIVE
+   ══════════════════════════════════════ */
+@media (max-width: 1100px) {
+  .elderberry-quote-heading { font-size: 24px; }
+  .elderberry-tagline-text  { font-size: 22px; }
+}
+
+@media (max-width: 900px) {
+  .elderberry-section {
+    flex-direction: column;
+    gap: 24px;
+  }
+  .elderberry-quote-wrap {
+    min-width: 0;
+    padding: 30px 28px;
+  }
+  .elderberry-quote-heading { font-size: 24px; }
+}
+
+@media (max-width: 600px) {
+  .elderberry-compare-wrap {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .elderberry-card {
+    width: 100%;
+  }
+  .elderberry-connector {
+    left: 50%;
+    top: calc(350px + 20px);
+    transform: translate(-50%, -50%) rotate(90deg);
+  }
+  .elderberry-connector:hover {
+    transform: translate(-50%, -50%) rotate(90deg) scale(1.15);
+  }
+  .elderberry-quote-heading { font-size: 20px; }
+  .elderberry-tagline-text  { font-size: 20px; }
+  .elderberry-tagline-strip { padding: 8px 20px; }
+}

@@ -1,0 +1,513 @@
+.fig-section {
+  margin-bottom: 80px;
+  padding: 0;
+}
+
+/* Title row — line-badge-line pattern */
+.fig-title-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 14px;
+}
+
+.fig-title-line {
+  flex: 1 1 auto;
+  height: 1px;
+  background: #000000;
+}
+
+.fig-title-badge {
+  flex: 0 0 auto;
+  background: #000000;
+  color: #FFFFFF;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 10px 24px;
+  border-radius: 6px;
+  white-space: nowrap;
+}
+
+.fig-description {
+  font-size: 15px;
+  font-weight: 400;
+  color: #666666;
+  margin: 0 0 32px 0;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* Card: soft warm cream, not flat white */
+.fig-form {
+  position: relative;
+  background: linear-gradient(180deg, #FBF9F3 0%, #F6F2E8 100%);
+  border: 1px solid #EAE2CB;
+  border-radius: 20px;
+  padding: 0;
+  box-shadow: 0 24px 60px rgba(30, 25, 10, 0.08);
+  overflow: hidden;
+}
+
+.fig-form::before {
+  content: '';
+  display: block;
+  height: 6px;
+  background: linear-gradient(90deg, #1B1B1F 0%, #8A6D2F 35%, #D4AF37 65%, #1B1B1F 100%);
+}
+
+.fig-form-inner {
+  padding: 44px 44px 40px 44px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* Numbered field-groups */
+.fig-group {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding-bottom: 26px;
+  border-bottom: 1px dashed #DCD2AE;
+}
+
+.fig-group:last-of-type {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.fig-group-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.fig-group-num {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #1B1B1F;
+  color: #D4AF37;
+  font-size: 13px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.fig-group-title {
+  font-size: 15px;
+  font-weight: 800;
+  color: #1B1B1F;
+  letter-spacing: 0.3px;
+  margin: 0;
+}
+
+.fig-group-optional {
+  font-size: 12px;
+  font-weight: 500;
+  color: #A88B3F;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.fig-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.fig-field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  min-width: 0;
+}
+
+.fig-field-full {
+  width: 100%;
+}
+
+.fig-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #3A3630;
+}
+
+.fig-required {
+  color: #B23A3A;
+}
+
+.fig-input,
+.fig-select,
+.fig-textarea {
+  width: 100%;
+  padding: 12px 15px;
+  font-size: 14px;
+  color: #1B1B1F;
+  background: #FFFFFF;
+  border: 1.5px solid #E3DAC0;
+  border-radius: 9px;
+  outline: none;
+  font-family: inherit;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.fig-input::placeholder,
+.fig-textarea::placeholder {
+  color: #B4AC97;
+}
+
+.fig-input:focus,
+.fig-select:focus,
+.fig-textarea:focus {
+  border-color: #8A6D2F;
+  box-shadow: 0 0 0 4px rgba(138, 109, 47, 0.12);
+}
+
+.fig-select {
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L6 6L11 1' stroke='%238A6D2F' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  padding-right: 38px;
+}
+
+.fig-textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.fig-star-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.fig-stars-interactive {
+  display: flex;
+  gap: 4px;
+}
+
+.fig-star-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.15s ease;
+}
+
+.fig-star-btn:hover {
+  transform: scale(1.15);
+}
+
+.fig-rating-text {
+  font-size: 14px;
+  font-weight: 700;
+  color: #8A6D2F;
+}
+
+.fig-file-input {
+  display: none;
+}
+
+.fig-file-wrapper {
+  width: 100%;
+}
+
+.fig-file-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 11px 16px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #6B5F3E;
+  background: #FFFFFF;
+  border: 1.5px dashed #D3C79E;
+  border-radius: 9px;
+  cursor: pointer;
+  font-family: inherit;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease;
+}
+
+.fig-file-btn:hover {
+  border-color: #8A6D2F;
+  color: #8A6D2F;
+  background: #FBF6E9;
+}
+
+/* Video mode toggle */
+.fig-video-toggle {
+  display: flex;
+  background: #EFE7CE;
+  border-radius: 8px;
+  padding: 3px;
+  gap: 3px;
+  margin-bottom: 2px;
+}
+
+.fig-toggle-btn {
+  flex: 1 1 0;
+  padding: 7px 10px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #7A6F4C;
+  background: transparent;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.fig-toggle-active {
+  background: #1B1B1F;
+  color: #D4AF37;
+}
+
+.fig-error {
+  font-size: 12px;
+  font-weight: 500;
+  color: #B23A3A;
+  margin: 4px 0 0 0;
+}
+
+.fig-hint {
+  font-size: 11.5px;
+  font-weight: 400;
+  color: #A79C7C;
+  margin: 4px 0 0 0;
+}
+
+.fig-consent-wrapper {
+  padding-top: 4px;
+}
+
+.fig-consent-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.fig-checkbox {
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+  flex-shrink: 0;
+  accent-color: #8A6D2F;
+  cursor: pointer;
+}
+
+.fig-consent-text {
+  font-size: 13px;
+  font-weight: 400;
+  color: #5C5642;
+  line-height: 1.6;
+}
+
+.fig-submit-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 15px 24px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #FFFFFF;
+  background: linear-gradient(135deg, #1B1B1F 0%, #3A3630 100%);
+  border: 1.5px solid #8A6D2F;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  font-family: inherit;
+  letter-spacing: 0.4px;
+  margin-top: 4px;
+}
+
+.fig-submit-btn:hover:not(.fig-submit-disabled) {
+  background: linear-gradient(135deg, #8A6D2F 0%, #D4AF37 100%);
+  color: #1B1B1F;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(138, 109, 47, 0.28);
+}
+
+.fig-submit-btn:active:not(.fig-submit-disabled) {
+  transform: translateY(0);
+}
+
+.fig-submit-disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+  border-color: #E5E5E5;
+}
+
+/* Success State */
+.fig-success-box {
+  background: linear-gradient(180deg, #FBF9F3 0%, #F6F2E8 100%);
+  border: 1.5px solid #EAE2CB;
+  border-radius: 20px;
+  padding: 60px 32px;
+  text-align: center;
+  box-shadow: 0 24px 60px rgba(30, 25, 10, 0.08);
+}
+
+.fig-success-icon {
+  margin-bottom: 20px;
+}
+
+.fig-success-heading {
+  font-size: 26px;
+  font-weight: 800;
+  color: #1B1B1F;
+  margin: 0 0 12px 0;
+}
+
+.fig-success-text {
+  font-size: 15px;
+  font-weight: 400;
+  color: #6B5F3E;
+  margin: 0 auto;
+  line-height: 1.6;
+  max-width: 520px;
+}
+
+@media (max-width: 768px) {
+  .fig-form-inner {
+    padding: 28px 20px;
+  }
+
+  .fig-row {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .fig-title-badge {
+    font-size: 12px;
+    padding: 9px 18px;
+  }
+
+  .fig-section {
+    margin-bottom: 48px;
+  }
+
+  .fig-success-box {
+    padding: 40px 20px;
+  }
+}
+
+
+
+
+
+.fig-submit-error {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #fdf0ef;
+  border: 1px solid #e6b3ae;
+  color: #c0392b;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.fig-spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: fig-spin 0.6s linear infinite;
+}
+
+@keyframes fig-spin {
+  to { transform: rotate(360deg); }
+}
+
+
+
+
+
+
+
+/* File selected state — shows name + remove button */
+.fig-file-selected {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  border: 1px solid #D4AF37;
+  border-radius: 8px;
+  background: rgba(212, 175, 55, 0.05);
+}
+
+.fig-file-name {
+  font-size: 13px;
+  color: #1a1a1a;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: calc(100% - 30px);
+}
+
+.fig-file-remove {
+  background: none;
+  border: none;
+  color: #c0392b;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 2px 4px;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.fig-file-remove:hover {
+  color: #e74c3c;
+}
+
+/* Submit error */
+.fig-submit-error {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #fdf0ef;
+  border: 1px solid #e6b3ae;
+  color: #c0392b;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+/* Spinner */
+.fig-spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: fig-spin 0.6s linear infinite;
+  display: inline-block;
+}
+
+@keyframes fig-spin {
+  to { transform: rotate(360deg); }
+}

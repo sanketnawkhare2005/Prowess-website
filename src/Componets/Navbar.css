@@ -1,0 +1,344 @@
+/* .navbar {
+  background: #0d0d0d;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 40px;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+
+.navbar-logo {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.navbar-image-wh{
+  width: 200px;
+  height: 50px;
+}
+
+.logo-text {
+  display: flex;
+  align-items: center;
+  font-weight: 800;
+  font-size: 22px;
+  letter-spacing: 1px;
+  font-family: Arial, sans-serif;
+}
+
+.logo-pro {
+  background: #ffffff;
+  color: #000000;
+  padding: 2px 8px;
+}
+
+.logo-wess {
+  color: #ffffff;
+  padding: 2px 8px;
+  border: 1px solid #ffffff;
+}
+
+.logo-tagline {
+  color: #f5a623;
+  font-size: 9px;
+  letter-spacing: 3px;
+  margin-top: 4px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.nav-links {
+  display: flex;
+  gap: 36px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  padding-bottom: 6px;
+  transition: color 0.2s ease;
+}
+
+.nav-links a.active {
+  color: #f5a623;
+  border-bottom: 2px solid #f5a623;
+}
+
+.nav-links a:hover {
+  color: #f5a623;
+}
+
+.btn-coach {
+  background: #f5a623;
+  color: #000000;
+  border: none;
+  padding: 12px 22px;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.2s ease;
+}
+
+.btn-coach:hover {
+  background: #e0961a;
+}
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+}
+
+.nav-toggle .bar {
+  width: 24px;
+  height: 2px;
+  background: #ffffff;
+  display: block;
+}
+
+@media (max-width: 1024px) {
+  .nav-links {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    gap: 16px;
+    order: 3;
+    padding-top: 18px;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-toggle {
+    display: flex;
+  }
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.prowss-nav {
+  background: #0d0d0d;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 40px;
+  flex-wrap: wrap;
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.prowss-nav * {
+  box-sizing: border-box;
+}
+
+/* ---------- Logo ---------- */
+.prowss-nav-logo {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+  order: 1;
+  flex-shrink: 0;
+}
+
+.prowss-nav-logo-img {
+  width: 200px;
+  height: 50px;
+  display: block;
+}
+
+/* ---------- Nav Links ---------- */
+.prowss-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  order: 2;
+}
+
+.prowss-nav-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  padding-bottom: 6px;
+  transition: color 0.2s ease;
+  white-space: nowrap;
+}
+
+.prowss-nav-links a.active {
+  color: #f5a623;
+  border-bottom: 2px solid #f5a623;
+}
+
+.prowss-nav-links a:hover {
+  color: #f5a623;
+}
+
+.prowss-nav-cta-item {
+  list-style: none;
+}
+
+/* ---------- CTA Button ---------- */
+.prowss-nav-cta {
+  background: #f5a623;
+  color: #000000 !important;
+  border: none;
+  border-radius: 5px;
+  padding: 12px 22px;
+  font-weight: 750 !important;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.2s ease;
+  order: 3;
+  flex-shrink: 0;
+  display: inline-block;
+}
+
+.prowss-nav-cta:hover {
+  background: #e0961a;
+}
+
+/* ---------- Mobile Toggle ---------- */
+.prowss-nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  order: 4;
+  flex-shrink: 0;
+  margin-left: auto;
+}
+
+.prowss-nav-bar {
+  width: 24px;
+  height: 2px;
+  background: #ffffff;
+  display: block;
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1200px) {
+  .prowss-nav {
+    padding: 14px 28px;
+  }
+  .prowss-nav-links {
+    gap: 22px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .prowss-nav {
+    padding: 14px 20px;
+  }
+
+  .prowss-nav-logo {
+    order: 1;
+  }
+
+  .prowss-nav-toggle {
+    display: flex;
+    order: 2;
+  }
+
+  .prowss-nav-links {
+    display: none;
+    order: 3;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    padding-top: 18px;
+  }
+
+  .prowss-nav-links.show {
+    display: flex;
+  }
+
+  
+}
+
+/* desktop wala hamesha dikhta hai (order 3 se position set hai) */
+.prowss-nav-cta-desktop {
+  order: 3;
+}
+
+/* mobile wala by default hidden */
+.prowss-nav-cta-mobile {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  /* desktop wala mobile pe hide */
+  .prowss-nav-cta-desktop {
+    display: none !important;
+  }
+
+  /* mobile wala ab dikhega, ul ke andar hi */
+  .prowss-nav-cta-mobile {
+    display: block;
+    width: 100%;
+  }
+
+  .prowss-nav-cta-item {
+    width: 100%;
+  }
+
+  .prowss-nav-cta {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .prowss-nav {
+    padding: 12px 16px;
+  }
+  .prowss-nav-logo-img {
+    width: 150px;
+    height: 38px;
+  }
+}

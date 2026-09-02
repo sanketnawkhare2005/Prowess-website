@@ -1,0 +1,313 @@
+/* ==========================================================================
+   LET'S BUILD REAL WORLD PERFORMANCE TOGETHER — contact5-prow-*
+   ========================================================================== */
+
+.contact5-prow-section {
+  position: relative;
+  background-color: #0a0a0a;
+  padding: 22px 30px;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* ---------- Background: mostly black, narrow image on the right blending in ---------- */
+.contact5-prow-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.contact5-prow-bg-img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 22%;
+  object-fit: cover;
+  opacity: 1;
+}
+
+.contact5-prow-bg-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    #0a0a0a 0%,
+    #0a0a0a 62%,
+    rgba(10, 10, 10, 0.9) 70%,
+    rgba(10, 10, 10, 0.65) 78%,
+    rgba(10, 10, 10, 0.4) 86%,
+    rgba(10, 10, 10, 0.55) 93%,
+    rgba(10, 10, 10, 0.75) 100%
+  );
+}
+
+/* ---------- Foreground: everything centered, button on the right ---------- */
+.contact5-prow-container {
+  position: relative;
+  z-index: 1;
+  max-width: 1600px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.contact5-prow-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.contact5-prow-icon-circle {
+  flex: 0 0 46px;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(245, 179, 1, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact5-prow-icon-circle svg {
+  width: 24px;
+  height: 24px;
+}
+
+.contact5-prow-text {
+  min-width: 0;
+}
+
+.contact5-prow-heading {
+  margin: 0 0 4px 0;
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 19px;
+  font-weight: 800;
+  line-height: 1.3;
+  white-space: nowrap;
+}
+
+.contact5-prow-heading-accent {
+  color: #f5b301;
+}
+
+.contact5-prow-desc {
+  margin: 0;
+  color: #c7c7c7;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12.5px;
+  line-height: 1.5;
+  white-space: nowrap;
+}
+
+/* ---------- Button ---------- */
+.contact5-prow-btn {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #f5b301;
+  color: #0a0a0a;
+  border: none;
+  border-radius: 8px;
+  padding: 14px 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12.5px;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 0.2s ease;
+}
+
+.contact5-prow-btn:hover {
+  background-color: #ffc61a;
+}
+
+.contact5-prow-btn-icon {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background-color: #0a0a0a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 22px;
+}
+
+.contact5-prow-btn-icon svg {
+  width: 13px;
+  height: 13px;
+}
+
+/* ==========================================================================
+   RESPONSIVE
+   ========================================================================== */
+
+/* Laptop / small desktop */
+@media (max-width: 1350px) {
+  .contact5-prow-container {
+    gap: 26px;
+  }
+
+  .contact5-prow-heading {
+    font-size: 16px;
+    white-space: normal;
+  }
+
+  .contact5-prow-desc {
+    white-space: normal;
+  }
+}
+
+/* Small laptop */
+@media (max-width: 1180px) {
+  .contact5-prow-container {
+    flex-direction: column;
+    gap: 18px;
+    text-align: center;
+  }
+
+  .contact5-prow-left {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contact5-prow-bg-img {
+    width: 100%;
+    opacity: 0.2;
+  }
+
+  .contact5-prow-bg-overlay {
+    background: linear-gradient(
+      180deg,
+      rgba(10, 10, 10, 0.4) 0%,
+      #0a0a0a 50%,
+      #0a0a0a 100%
+    );
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .contact5-prow-section {
+    padding: 26px 20px;
+  }
+
+  .contact5-prow-heading {
+    font-size: 15px;
+  }
+
+  .contact5-prow-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Mobile */
+@media (max-width: 520px) {
+  .contact5-prow-section {
+    padding: 22px 16px;
+  }
+
+  .contact5-prow-heading {
+    font-size: 13.5px;
+  }
+
+  .contact5-prow-desc {
+    font-size: 11.5px;
+  }
+
+  .contact5-prow-btn {
+    font-size: 11.5px;
+    padding: 12px 16px;
+  }
+
+  .contact5-prow-btn-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .contact5-prow-btn-icon svg {
+    width: 11px;
+    height: 11px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   HOVER EFFECTS + AOS SMOOTHING — additive only, no layout change
+   contact5-prow-* (append to bottom of Contact5.css)
+   ========================================================================== */
+
+/* ---------- Icon circle: fills yellow and spins on hover of the whole left block ---------- */
+.contact5-prow-icon-circle-hover {
+  transition: background-color 0.35s ease, transform 0.5s ease,
+    border-color 0.35s ease;
+}
+
+.contact5-prow-left:hover .contact5-prow-icon-circle-hover {
+  background-color: #f5b301;
+  border-color: #f5b301;
+  transform: rotate(360deg);
+}
+
+.contact5-prow-left:hover .contact5-prow-icon-circle-hover svg circle {
+  stroke: #0a0a0a;
+}
+
+.contact5-prow-left:hover .contact5-prow-icon-circle-hover svg circle[fill] {
+  fill: #0a0a0a;
+}
+
+/* ---------- Heading: subtle color pulse on hover of left block ---------- */
+.contact5-prow-heading-accent {
+  transition: color 0.3s ease;
+}
+
+.contact5-prow-left:hover .contact5-prow-heading-accent {
+  color: #ffd452;
+}
+
+/* ---------- Button: scale + icon rotate on hover (in addition to existing bg change) ---------- */
+.contact5-prow-btn-hover {
+  transition: background-color 0.2s ease, transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.contact5-prow-btn-hover:hover {
+  transform: scale(1.045);
+  box-shadow: 0 8px 18px rgba(245, 179, 1, 0.35);
+}
+
+.contact5-prow-btn-icon {
+  transition: transform 0.3s ease;
+}
+
+.contact5-prow-btn-hover:hover .contact5-prow-btn-icon {
+  transform: rotate(45deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-aos],
+  .contact5-prow-icon-circle-hover,
+  .contact5-prow-heading-accent,
+  .contact5-prow-btn-hover,
+  .contact5-prow-btn-icon {
+    transition: none !important;
+    transform: none !important;
+  }
+}

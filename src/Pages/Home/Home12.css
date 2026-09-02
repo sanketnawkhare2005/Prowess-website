@@ -1,0 +1,168 @@
+
+        .prog-home12-section {
+          --prog-home12-ink: #0f1222;
+          --prog-home12-muted: #6b7280;
+          --prog-home12-accent: #7c3aed;
+          --prog-home12-card-bg: #f4f4f5;
+          --prog-home12-bg: #ffffff;
+          width: 100%;
+          background: var(--prog-home12-bg);
+          padding: 56px 24px 72px;
+          box-sizing: border-box;
+          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, Roboto, sans-serif;
+        }
+
+        .prog-home12-header {
+          max-width: 760px;
+          margin: 0 auto 40px;
+          text-align: center;
+        }
+
+        .prog-home12-title {
+          font-size: clamp(32px, 4.5vw, 48px);
+          font-weight: 800;
+          color: var(--prog-home12-ink);
+          line-height: 1.15;
+          letter-spacing: -0.01em;
+          margin: 0 0 16px;
+        }
+
+        .prog-home12-subtitle {
+          font-size: 17px;
+          line-height: 1.6;
+          color: var(--prog-home12-muted);
+          margin: 0;
+          font-weight: 600;
+        }
+
+        .prog-home12-grid {
+          max-width: 900px;
+          margin: 0 auto;
+          display: flex;
+          flex-direction: column;
+          gap: 32px;
+        }
+
+        .prog-home12-card {
+          background: var(--prog-home12-card-bg);
+          border-radius: 16px;
+          overflow: hidden;
+          border: 1px solid #e9e9ec;
+        }
+
+        .prog-home12-card-top {
+          padding: 28px 32px 24px;
+        }
+
+        .prog-home12-card-heading {
+          font-size: 26px;
+          font-weight: 800;
+          color: var(--prog-home12-ink);
+          margin: 0 0 10px;
+          letter-spacing: -0.01em;
+        }
+
+        .prog-home12-card-desc {
+          font-size: 15px;
+          line-height: 1.55;
+          color: #374151;
+          margin: 0 0 18px;
+          max-width: 720px;
+        }
+
+        .prog-home12-cta {
+          display: inline-block;
+          padding: 10px 26px;
+          border: 1.5px solid var(--prog-home12-accent);
+          border-radius: 999px;
+          color: var(--prog-home12-accent);
+          font-weight: 700;
+          font-size: 14px;
+          text-decoration: none;
+          background: transparent;
+          transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+        }
+
+        .prog-home12-cta:hover {
+          background: var(--prog-home12-accent);
+          color: #fff;
+          transform: translateY(-1px);
+        }
+
+        .prog-home12-cta:focus-visible {
+          outline: 3px solid #ede9fe;
+          outline-offset: 2px;
+        }
+
+        .prog-home12-image {
+          position: relative;
+          width: 100%;
+          line-height: 0;
+        }
+
+        .prog-home12-image img {
+          width: 100%;
+          height: 320px;
+          object-fit: cover;
+          display: block;
+        }
+
+        .prog-home12-image--split img {
+          filter: brightness(0.55) contrast(1.1);
+        }
+
+        .prog-home12-split-overlay {
+          position: absolute;
+          inset: 0;
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+        }
+
+        .prog-home12-split-cell {
+          display: flex;
+          align-items: flex-end;
+          justify-content: center;
+          padding: 0 0 28px;
+          border-right: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        .prog-home12-split-cell:last-child {
+          border-right: none;
+        }
+
+        .prog-home12-split-label {
+          color: #fff;
+          font-weight: 800;
+          font-style: italic;
+          font-size: 16px;
+          line-height: 1.2;
+          text-align: center;
+          text-transform: uppercase;
+          letter-spacing: 0.02em;
+          text-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+        }
+
+        @media (max-width: 640px) {
+          .prog-home12-card-top {
+            padding: 22px 20px 20px;
+          }
+          .prog-home12-card-heading {
+            font-size: 22px;
+          }
+          .prog-home12-image img {
+            height: 220px;
+          }
+          .prog-home12-split-label {
+            font-size: 11px;
+          }
+          .prog-home12-split-cell {
+            padding-bottom: 14px;
+          }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+          .prog-home12-cta {
+            transition: none !important;
+          }
+        }
+      

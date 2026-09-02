@@ -1,0 +1,439 @@
+/* ==========================================================================
+   TALK TO COACH — POPUP FORM (talk-form-new-*)
+   ========================================================================== */
+
+/* ---------- Overlay ---------- */
+.talk-form-new-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s ease;
+  padding: 20px;
+}
+
+.talk-form-new-overlay.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ---------- Card ---------- */
+.talk-form-new-card {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  background: #111111;
+  border: 1px solid rgba(245, 179, 1, 0.12);
+  border-radius: 16px;
+  padding: 36px 32px 32px;
+  box-sizing: border-box;
+  transform: translateY(30px) scale(0.95);
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+              opacity 0.35s ease;
+  opacity: 0;
+}
+
+.talk-form-new-overlay.open .talk-form-new-card {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+}
+
+/* ---------- Close Button (Circle) ---------- */
+.talk-form-new-close {
+  position: absolute;
+  top: -14px;
+  right: -14px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid #f5b301;
+  background: #0a0a0a;
+  color: #f5b301;
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.25s ease,
+              color 0.25s ease,
+              transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
+              box-shadow 0.3s ease;
+  z-index: 2;
+  padding: 0;
+}
+
+.talk-form-new-close:hover {
+  background: #f5b301;
+  color: #0a0a0a;
+  transform: rotate(90deg) scale(1.1);
+  box-shadow: 0 0 16px rgba(245, 179, 1, 0.4);
+}
+
+.talk-form-new-close:active {
+  transform: rotate(90deg) scale(0.95);
+}
+
+/* ---------- Heading ---------- */
+.talk-form-new-heading {
+  text-align: center;
+  margin: 0 0 6px 0;
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 1.3;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+}
+
+.talk-form-new-subheading {
+  text-align: center;
+  margin: 0 0 28px 0;
+  color: #b9b9b9;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+/* ---------- Form ---------- */
+.talk-form-new-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* ---------- Field ---------- */
+.talk-form-new-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  opacity: 0;
+  transform: translateY(18px);
+}
+
+.talk-form-new-field.revealed {
+  animation: tfn-slideUp 0.45s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation-delay: calc(var(--d, 0) * 0.07s + 0.15s);
+}
+
+.talk-form-new-field.hover-ready {
+  opacity: 1;
+  transform: translateY(0);
+  animation: none;
+}
+
+/* ---------- Label ---------- */
+.talk-form-new-label {
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.talk-form-new-field.hover-ready:hover .talk-form-new-label {
+  color: #f5b301;
+}
+
+/* ---------- Input / Select ---------- */
+.talk-form-new-input,
+.talk-form-new-select {
+  width: 100%;
+  height: 42px;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  border: 1px solid #2a2a2a;
+  border-radius: 8px;
+  padding: 0 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  box-sizing: border-box;
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  transition: border-color 0.3s ease,
+              box-shadow 0.3s ease,
+              transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+              background-color 0.3s ease;
+  box-shadow: 0 2px 0 0 rgba(245, 179, 1, 0);
+}
+
+.talk-form-new-select {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'><path d='M1 1l4 4 4-4' stroke='%23f5b301' stroke-width='1.4' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  padding-right: 32px;
+  cursor: pointer;
+}
+
+.talk-form-new-select option {
+  background: #111111;
+  color: #ffffff;
+}
+
+.talk-form-new-input::placeholder {
+  color: #666666;
+}
+
+/* Hover effect */
+.talk-form-new-field.hover-ready:hover .talk-form-new-input,
+.talk-form-new-field.hover-ready:hover .talk-form-new-select {
+  border-color: rgba(245, 179, 1, 0.4);
+  box-shadow: 0 3px 0 0 #f5b301;
+  transform: translateY(-1px);
+  background-color: #1e1e1e;
+}
+
+/* Focus effect */
+.talk-form-new-field.hover-ready .talk-form-new-input:focus,
+.talk-form-new-field.hover-ready .talk-form-new-select:focus {
+  border-color: #f5b301;
+  box-shadow: 0 3px 0 0 #f5b301,
+              0 4px 16px rgba(245, 179, 1, 0.12);
+  transform: translateY(-1px);
+  background-color: #1e1e1e;
+}
+
+/* ---------- Submit Button ---------- */
+.talk-form-new-submit-wrap {
+  opacity: 0;
+  transform: translateY(18px);
+  margin-top: 4px;
+}
+
+.talk-form-new-submit-wrap.revealed {
+  animation: tfn-slideUp 0.45s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation-delay: 0.55s;
+}
+
+.talk-form-new-submit-wrap.hover-ready {
+  opacity: 1;
+  transform: translateY(0);
+  animation: none;
+}
+
+.talk-form-new-submit {
+  width: 100%;
+  height: 46px;
+  background-color: #f5b301;
+  color: #0a0a0a;
+  border: none;
+  border-radius: 8px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.25s ease,
+              transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 0.35s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.talk-form-new-submit::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(105deg, transparent 40%, rgba(255, 255, 255, 0.25) 50%, transparent 60%);
+  transform: translateX(-100%);
+  transition: transform 0.5s ease;
+}
+
+.talk-form-new-submit-wrap.hover-ready:hover .talk-form-new-submit {
+  background-color: #ffc61a;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(245, 179, 1, 0.35);
+}
+
+.talk-form-new-submit-wrap.hover-ready:hover .talk-form-new-submit::after {
+  transform: translateX(100%);
+}
+
+.talk-form-new-submit:active {
+  transform: translateY(0) !important;
+  box-shadow: 0 2px 8px rgba(245, 179, 1, 0.2) !important;
+}
+
+/* ---------- Note ---------- */
+.talk-form-new-note {
+  text-align: center;
+  color: #777777;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  margin: 10px 0 0 0;
+  line-height: 1.4;
+  transition: color 0.3s ease;
+}
+
+.talk-form-new-submit-wrap.hover-ready:hover .talk-form-new-note {
+  color: #b9b9b9;
+}
+
+/* ---------- Keyframes ---------- */
+@keyframes tfn-slideUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ---------- Body scroll lock ---------- */
+.talk-form-new-body-lock {
+  overflow: hidden !important;
+}
+
+/* ==========================================================================
+   RESPONSIVE
+   ========================================================================== */
+
+@media (max-width: 520px) {
+  .talk-form-new-card {
+    padding: 30px 20px 24px;
+    border-radius: 12px;
+  }
+
+  .talk-form-new-close {
+    top: -12px;
+    right: -12px;
+    width: 32px;
+    height: 32px;
+    font-size: 16px;
+  }
+
+  .talk-form-new-heading {
+    font-size: 17px;
+  }
+
+  .talk-form-new-subheading {
+    font-size: 12px;
+    margin-bottom: 22px;
+  }
+
+  .talk-form-new-input,
+  .talk-form-new-select {
+    height: 40px;
+    font-size: 13px;
+  }
+
+  .talk-form-new-submit {
+    height: 44px;
+    font-size: 13px;
+  }
+
+  .talk-form-new-form {
+    gap: 16px;
+  }
+}
+
+@media (max-width: 360px) {
+  .talk-form-new-card {
+    padding: 26px 16px 20px;
+  }
+
+  .talk-form-new-heading {
+    font-size: 15px;
+  }
+
+  .talk-form-new-input,
+  .talk-form-new-select {
+    height: 38px;
+    font-size: 12px;
+    padding: 0 12px;
+  }
+
+  .talk-form-new-select {
+    padding-right: 28px;
+  }
+}
+
+/* ==========================================================================
+   REDUCED MOTION
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  .talk-form-new-overlay,
+  .talk-form-new-card {
+    transition: none !important;
+  }
+  .talk-form-new-field,
+  .talk-form-new-submit-wrap {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .talk-form-new-input,
+  .talk-form-new-select,
+  .talk-form-new-submit,
+  .talk-form-new-label,
+  .talk-form-new-close,
+  .talk-form-new-note {
+    transition: none !important;
+  }
+  .talk-form-new-field.hover-ready:hover .talk-form-new-input,
+  .talk-form-new-field.hover-ready:hover .talk-form-new-select,
+  .talk-form-new-field.hover-ready .talk-form-new-input:focus,
+  .talk-form-new-field.hover-ready .talk-form-new-select:focus,
+  .talk-form-new-submit-wrap.hover-ready:hover .talk-form-new-submit {
+    box-shadow: none !important;
+    transform: none !important;
+  }
+  .talk-form-new-close:hover {
+    transform: none !important;
+  }
+}
+
+
+
+
+
+
+
+
+
+/* ---------- Submit Button: Disabled / Loading State ---------- */
+.talk-form-new-submit:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+.talk-form-new-submit:disabled::after {
+  display: none;
+}
+
+/* ---------- API Message ---------- */
+.talk-form-new-api-msg {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  margin: 14px 0 0 0;
+  line-height: 1.4;
+  opacity: 0;
+  animation: tfn-fadeIn 0.35s ease forwards;
+}
+
+.talk-form-new-api-msg.success {
+  color: #22c55e;
+}
+
+.talk-form-new-api-msg.error {
+  color: #ef4444;
+}
+
+@keyframes tfn-fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}

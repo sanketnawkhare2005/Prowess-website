@@ -1,0 +1,409 @@
+.meet-prowess-section {
+  /* background-color: #0a0a0a; */
+  padding: 30px 30px;
+  /* width: 100%; */
+  box-sizing: border-box;
+}
+
+.meet-prowess-container {
+  max-width: 1600px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 0px;
+}
+
+/* ---------- Heading ---------- */
+.meet-prowess-heading {
+  flex: 0 0 260px;
+}
+
+.meet-prowess-title {
+  color: #000;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 1.35;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  margin: 0 0 10px 0;
+}
+
+.meet-prowess-underline {
+  display: block;
+  width: 34px;
+  height: 3px;
+  background-color: #f5b301;
+  border-radius: 2px;
+}
+
+/* ---------- Carousel wrapper (new) ---------- */
+.meet-prowess-carousel-wrap {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---------- Cards grid (same row, equal size) ---------- */
+.meet-prowess-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  width: 100%;
+}
+
+/* ---------- Carousel mode (activates only when data > visible slots) ---------- */
+.meet-prowess-grid.carousel-mode {
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-x;
+  scrollbar-width: none; /* firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+}
+
+.meet-prowess-grid.carousel-mode::-webkit-scrollbar {
+  display: none; /* chrome/safari */
+}
+
+.meet-prowess-grid.carousel-mode .meet-prowess-card {
+  scroll-snap-align: start;
+  flex-shrink: 0;
+}
+
+/* ---------- Dots ---------- */
+.meet-prowess-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.meet-prowess-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  background-color: #d9d9d9;
+  padding: 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.meet-prowess-dot.active {
+  background-color: #f5b301;
+  transform: scale(1.25);
+}
+
+/* ---------- Status text (loading / error) ---------- */
+.meet-prowess-status {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  color: #7a7a7a;
+  margin: 0;
+  padding: 20px 0;
+}
+
+.meet-prowess-card {
+  position: relative;
+  background-color: #ffffff;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  height:110px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* ---------- Image ---------- */
+.meet-prowess-image-wrap {
+  flex: 0 0 92px;
+  width: 92px;
+  height: 92px;
+}
+
+.meet-prowess-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ---------- LinkedIn icon: right side, bottom of card ---------- */
+.meet-prowess-linkedin {
+  position: absolute;
+  right: 10px;
+  bottom: 8px;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.meet-prowess-linkedin-icon {
+  width: 16px;
+  height: 16px;
+  color: #ffffff;
+  background-color: #0a66c2;
+  border-radius: 5px;
+}
+
+/* ---------- Text info ---------- */
+.meet-prowess-info {
+  padding: 0 16px;
+  padding-right: 34px; /* space so text doesn't sit under the linkedin icon */
+  flex: 1;
+  min-width: 0;
+}
+
+.meet-prowess-name {
+  margin: 0 0 2px 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #111111;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.meet-prowess-position {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: #7a7a7a;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ==========================================================================
+   RESPONSIVE
+   ========================================================================== */
+
+/* Laptop / small desktop */
+@media (max-width: 1280px) {
+  .meet-prowess-section {
+    padding: 36px 40px;
+  }
+
+  .meet-prowess-container {
+    gap: 28px;
+  }
+
+  .meet-prowess-heading {
+    flex-basis: 220px;
+  }
+
+  .meet-prowess-title {
+    font-size: 18px;
+  }
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .meet-prowess-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .meet-prowess-heading {
+    flex-basis: auto;
+  }
+
+  .meet-prowess-carousel-wrap {
+    width: 100%;
+  }
+
+  .meet-prowess-grid {
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    gap: 16px;
+  }
+}
+
+/* Small tablet */
+@media (max-width: 700px) {
+  .meet-prowess-section {
+    padding: 28px 24px;
+  }
+
+  .meet-prowess-card {
+    height: 84px;
+  }
+
+  .meet-prowess-image-wrap {
+    flex-basis: 84px;
+    width: 84px;
+    height: 84px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 520px) {
+  .meet-prowess-section {
+    padding: 24px 16px;
+  }
+
+  .meet-prowess-title {
+    font-size: 16px;
+  }
+
+  .meet-prowess-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .meet-prowess-card {
+    height: 80px;
+  }
+
+  .meet-prowess-image-wrap {
+    flex-basis: 80px;
+    width: 80px;
+    height: 80px;
+  }
+
+  .meet-prowess-name {
+    font-size: 13px;
+  }
+
+  .meet-prowess-position {
+    font-size: 11px;
+  }
+}
+
+
+/* ==========================================================================
+   HOME7 ANIMATION EFFECTS
+   ========================================================================== */
+
+/* --- Keyframes --- */
+@keyframes h7p-slideLeft {
+  from { opacity: 0; transform: translateX(-35px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes h7p-scaleX {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
+}
+@keyframes h7p-wipeRight {
+  from { clip-path: inset(0 100% 0 0); }
+  to   { clip-path: inset(0 0 0 0); }
+}
+
+/* --- Initial hidden states (no layout shift) --- */
+.meet-prowess-heading  { opacity: 0; transform: translateX(-35px); }
+.meet-prowess-underline { transform: scaleX(0); transform-origin: left center; }
+.meet-prowess-card     { clip-path: inset(0 100% 0 0); }
+
+/* --- Reveal animations with stagger via --d --- */
+.meet-prowess-heading.revealed {
+  animation: h7p-slideLeft 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0s forwards;
+}
+.meet-prowess-heading.revealed .meet-prowess-underline {
+  animation: h7p-scaleX 0.5s cubic-bezier(0.22, 1, 0.36, 1) 0.2s forwards;
+}
+.meet-prowess-card.revealed {
+  animation: h7p-wipeRight 0.65s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation-delay: calc(var(--d, 0) * 0.1s + 0.15s);
+}
+
+/* --- Post-reveal: lock final values, kill animation for hover --- */
+.meet-prowess-heading.hover-ready {
+  opacity: 1; transform: translateX(0); animation: none;
+}
+.meet-prowess-heading.hover-ready .meet-prowess-underline {
+  transform: scaleX(1); animation: none;
+}
+.meet-prowess-card.hover-ready {
+  clip-path: inset(0 0 0 0); animation: none;
+}
+
+/* ==========================================================================
+   HOVER EFFECTS
+   ========================================================================== */
+
+.meet-prowess-underline {
+  transition: width 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.meet-prowess-heading.hover-ready:hover .meet-prowess-underline {
+  width: 60px;
+}
+
+.meet-prowess-card.hover-ready {
+  transition: border-color 0.35s ease,
+              box-shadow 0.35s ease,
+              transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.meet-prowess-card.hover-ready:hover {
+  border-color: #f5b301;
+  box-shadow: 0 0 0 1px rgba(245, 179, 1, 0.25),
+              0 6px 20px rgba(245, 179, 1, 0.12);
+  transform: translateY(-3px);
+}
+
+.meet-prowess-image {
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.meet-prowess-card.hover-ready:hover .meet-prowess-image {
+  transform: scale(1.08);
+}
+
+.meet-prowess-name {
+  transition: color 0.3s ease;
+}
+.meet-prowess-card.hover-ready:hover .meet-prowess-name {
+  color: #c48f00;
+}
+
+.meet-prowess-linkedin-icon {
+  transition: transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1),
+              box-shadow 0.3s ease;
+}
+.meet-prowess-card.hover-ready:hover .meet-prowess-linkedin-icon {
+  transform: scale(1.25) rotate(-8deg);
+  box-shadow: 0 0 10px rgba(10, 102, 194, 0.5);
+}
+
+/* ==========================================================================
+   REDUCED MOTION
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  .meet-prowess-heading {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .meet-prowess-underline {
+    animation: none !important;
+    transform: none !important;
+  }
+  .meet-prowess-card {
+    animation: none !important;
+    clip-path: none !important;
+  }
+  .meet-prowess-underline,
+  .meet-prowess-card.hover-ready,
+  .meet-prowess-image,
+  .meet-prowess-name,
+  .meet-prowess-linkedin-icon {
+    transition: none !important;
+  }
+  .meet-prowess-card.hover-ready:hover {
+    box-shadow: none !important;
+  }
+  .meet-prowess-card.hover-ready:hover .meet-prowess-linkedin-icon {
+    box-shadow: none !important;
+  }
+}

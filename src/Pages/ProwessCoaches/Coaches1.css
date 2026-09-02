@@ -1,0 +1,559 @@
+/* ==========================================================================
+   PERFORMANCE COACHES BANNER — coach-prow-*
+   ========================================================================== */
+
+.coach-prow-section {
+  background-color: #0a0a0a;
+  padding: 30px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.coach-prow-container {
+  max-width: 1600px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+/* ---------- Left: video ---------- */
+.coach-prow-video-card {
+  flex: 0 0 46%;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #000000;
+  border: 1px solid #262626;
+  display: flex;
+  flex-direction: column;
+}
+
+.coach-prow-video-frame {
+  position: relative;
+  width: 100%;
+  height: 280px;
+  background-color: #1a1a1a;
+}
+
+.coach-prow-video-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  background-color: transparent;
+}
+
+.coach-prow-play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+}
+
+.coach-prow-play-icon {
+  width: 22px;
+  height: 22px;
+  margin-left: 3px;
+}
+
+/* ---------- Right: content ---------- */
+.coach-prow-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.coach-prow-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #f5b301;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 14px;
+}
+
+.coach-prow-eyebrow-line {
+  display: inline-block;
+  width: 26px;
+  height: 2px;
+  background-color: #f5b301;
+}
+
+.coach-prow-heading {
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 1.25;
+  margin: 0 0 16px 0;
+}
+
+.coach-prow-heading-accent {
+  color: #f5b301;
+}
+
+.coach-prow-description {
+  color: #c7c7c7;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.6;
+  margin: 0 0 26px 0;
+  max-width: 480px;
+}
+
+/* ---------- Features row ---------- */
+.coach-prow-features {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.coach-prow-feature-wrap {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  min-width: 0;
+}
+
+.coach-prow-feature-divider {
+  flex: 0 0 1px;
+  width: 1px;
+  height: 30px;
+  background-color: #333333;
+  margin-right: 14px;
+}
+
+.coach-prow-feature {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.coach-prow-feature-icon {
+  flex: 0 0 22px;
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.coach-prow-feature-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.coach-prow-feature-title {
+  margin: 0;
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12.5px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+/* ==========================================================================
+   RESPONSIVE
+   ========================================================================== */
+
+/* Laptop / small desktop */
+@media (max-width: 1280px) {
+  .coach-prow-heading {
+    font-size: 26px;
+  }
+  .coach-prow-feature-title {
+    font-size: 11.5px;
+  }
+}
+
+/* Small laptop */
+@media (max-width: 1180px) {
+  .coach-prow-features {
+    flex-wrap: wrap;
+    row-gap: 14px;
+  }
+  .coach-prow-feature-wrap {
+    flex: 1 1 45%;
+  }
+  .coach-prow-feature-divider {
+    display: none;
+  }
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .coach-prow-container {
+    flex-direction: column;
+  }
+  .coach-prow-video-card {
+    flex-basis: auto;
+    width: 100%;
+  }
+  .coach-prow-video-frame {
+    height: 260px;
+  }
+  .coach-prow-heading {
+    font-size: 24px;
+  }
+}
+
+/* Small tablet */
+@media (max-width: 700px) {
+  .coach-prow-section {
+    padding: 20px;
+  }
+  .coach-prow-video-frame {
+    height: 230px;
+  }
+  .coach-prow-heading {
+    font-size: 21px;
+  }
+  .coach-prow-feature-wrap {
+    flex: 1 1 100%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 520px) {
+  .coach-prow-section {
+    padding: 16px;
+  }
+  .coach-prow-container {
+    gap: 20px;
+  }
+  .coach-prow-video-frame {
+    height: 200px;
+  }
+  .coach-prow-heading {
+    font-size: 19px;
+  }
+  .coach-prow-description {
+    font-size: 13px;
+  }
+  .coach-prow-play-btn {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+/* ==========================================================================
+   BACKGROUND BLEND & ANIMATIONS
+   ========================================================================== */
+
+.coach-prow-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.coach-prow-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  /* Dynamic image from API via CSS custom property, fallback to static unsplash */
+  background-image: var(
+    --coach-bg-image,
+    url('https://images.unsplash.com/photo-1521737226708-a1ae6f60bb5c?q=80&w=1200&auto=format&fit=crop')
+  );
+  background-size: cover;
+  background-position: center;
+  opacity: 0.12;
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(0, 0, 0, 0.8) 30%,
+    black 60%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    rgba(0, 0, 0, 0.8) 30%,
+    black 60%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+.coach-prow-container {
+  position: relative;
+  z-index: 1;
+}
+
+/* --- Keyframes --- */
+@keyframes cp1-slideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes cp1-fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes cp1-scaleX {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+@keyframes cp1-scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes cp1-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 20px rgba(255, 255, 255, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  }
+}
+
+/* --- Initial hidden states --- */
+.coach-prow-content {
+  opacity: 0;
+  transform: translateX(-40px);
+}
+.coach-prow-eyebrow-line {
+  transform: scaleX(0);
+  transform-origin: left center;
+}
+.coach-prow-heading {
+  opacity: 0;
+  transform: translateY(15px);
+}
+.coach-prow-description {
+  opacity: 0;
+  transform: translateY(15px);
+}
+.coach-prow-feature-wrap {
+  opacity: 0;
+  transform: translateY(15px);
+}
+.coach-prow-video-card {
+  opacity: 0;
+  transform: scale(0.9);
+}
+
+/* --- Reveal animations with stagger --- */
+.coach-prow-content.revealed {
+  animation: cp1-slideLeft 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0s forwards;
+}
+.coach-prow-content.revealed .coach-prow-eyebrow-line {
+  animation: cp1-scaleX 0.5s cubic-bezier(0.22, 1, 0.36, 1) 0.2s forwards;
+}
+.coach-prow-content.revealed .coach-prow-heading {
+  animation: cp1-fadeUp 0.5s ease 0.3s forwards;
+}
+.coach-prow-content.revealed .coach-prow-description {
+  animation: cp1-fadeUp 0.5s ease 0.45s forwards;
+}
+.coach-prow-content.revealed .coach-prow-feature-wrap {
+  animation: cp1-fadeUp 0.45s ease forwards;
+  animation-delay: calc(var(--d, 0) * 0.08s + 0.55s);
+}
+
+.coach-prow-video-card.revealed {
+  animation: cp1-scaleIn 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.25s forwards;
+}
+
+/* --- Post-reveal: lock final values, kill animation for hover --- */
+.coach-prow-content.hover-ready {
+  opacity: 1;
+  transform: translateX(0);
+  animation: none;
+}
+.coach-prow-content.hover-ready .coach-prow-eyebrow-line {
+  transform: scaleX(1);
+  animation: none;
+}
+.coach-prow-content.hover-ready .coach-prow-heading {
+  opacity: 1;
+  transform: translateY(0);
+  animation: none;
+}
+.coach-prow-content.hover-ready .coach-prow-description {
+  opacity: 1;
+  transform: translateY(0);
+  animation: none;
+}
+.coach-prow-feature-wrap.hover-ready {
+  opacity: 1;
+  transform: translateY(0);
+  animation: none;
+}
+.coach-prow-video-card.hover-ready {
+  opacity: 1;
+  transform: scale(1);
+  animation: none;
+}
+
+/* --- Play Button Pulse --- */
+.coach-prow-play-btn {
+  animation: cp1-pulse 2s infinite;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.coach-prow-play-btn:hover {
+  background-color: #f5b301;
+  transform: translate(-50%, -50%) scale(1.1) !important;
+}
+
+/* ==========================================================================
+   HOVER EFFECTS
+   ========================================================================== */
+
+.coach-prow-video-card.hover-ready {
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.4s ease;
+}
+.coach-prow-video-card.hover-ready:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+}
+
+.coach-prow-feature-icon svg {
+  transition: transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1),
+    filter 0.4s ease;
+}
+.coach-prow-feature-wrap.hover-ready:hover .coach-prow-feature-icon svg {
+  transform: scale(1.2) rotate(-6deg);
+  filter: drop-shadow(0 0 5px rgba(245, 179, 1, 0.5));
+}
+
+.coach-prow-feature-title {
+  transition: color 0.3s ease;
+}
+.coach-prow-feature-wrap.hover-ready:hover .coach-prow-feature-title {
+  color: #f5b301;
+}
+
+.coach-prow-feature-divider {
+  transition: background-color 0.3s ease;
+}
+.coach-prow-feature-wrap.hover-ready:hover .coach-prow-feature-divider {
+  background-color: #444444;
+}
+
+/* ==========================================================================
+   REDUCED MOTION
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  .coach-prow-content,
+  .coach-prow-eyebrow-line,
+  .coach-prow-heading,
+  .coach-prow-description,
+  .coach-prow-feature-wrap,
+  .coach-prow-video-card {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .coach-prow-play-btn {
+    animation: none !important;
+  }
+  .coach-prow-video-card.hover-ready,
+  .coach-prow-feature-icon svg,
+  .coach-prow-feature-title,
+  .coach-prow-feature-divider {
+    transition: none !important;
+  }
+  .coach-prow-video-card.hover-ready:hover {
+    box-shadow: none !important;
+    transform: none !important;
+  }
+  .coach-prow-feature-wrap.hover-ready:hover .coach-prow-feature-icon {
+    filter: none !important;
+    transform: none !important;
+  }
+}
+
+
+
+
+/* ==========================================================================
+   BANNER DOTS NAVIGATION (only rendered when >1 banner from API)
+   Bottom-center, absolute positioned inside .coach-prow-section
+   ========================================================================== */
+
+.coach-prow-dots {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 18px;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.coach-prow-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  border: none;
+  background-color: #444444;
+  padding: 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease, width 0.3s ease;
+}
+
+.coach-prow-dot:hover {
+  background-color: #888888;
+}
+
+.coach-prow-dot-active {
+  background-color: #f5b301;
+  width: 22px;
+  border-radius: 5px;
+}
+
+/* Mobile spacing tweak */
+@media (max-width: 520px) {
+  .coach-prow-dots {
+    bottom: 12px;
+  }
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .coach-prow-dot {
+    transition: none !important;
+  }
+}

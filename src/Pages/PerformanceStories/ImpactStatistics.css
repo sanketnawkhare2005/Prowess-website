@@ -1,0 +1,106 @@
+.grape-strip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #000000;
+  border-radius: 12px;
+  padding: 24px 32px;
+  margin-bottom: 56px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* Har item default me hidden + thoda neeche + halka scale down */
+.grape-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex: 1 1 0;
+  min-width: 0;
+  justify-content: center;
+  opacity: 0;
+  transform: translateY(24px) scale(0.96);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* Jab section visible ho jaye, items apni jagah aa jaayenge */
+.grape-strip.grape-visible .grape-item {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.grape-icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.grape-text {
+  min-width: 0;
+}
+
+.grape-value {
+  font-size: 26px;
+  font-weight: 800;
+  color: #FFFFFF;
+  margin: 0 0 2px 0;
+  line-height: 1.1;
+  white-space: nowrap;
+}
+
+.grape-label {
+  font-size: 12px;
+  font-weight: 500;
+  color: #B8B8B8;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.grape-divider {
+  width: 1px;
+  height: 44px;
+  background: #3A3A3A;
+  flex-shrink: 0;
+  margin: 0 16px;
+  opacity: 0;
+  transition: opacity 0.6s ease 0.3s;
+}
+
+.grape-strip.grape-visible .grape-divider {
+  opacity: 1;
+}
+
+@media (max-width: 900px) {
+  .grape-strip {
+    flex-wrap: wrap;
+    gap: 20px 0;
+    padding: 24px;
+  }
+
+  .grape-item {
+    flex: 1 1 45%;
+    justify-content: flex-start;
+  }
+
+  .grape-divider {
+    display: none;
+  }
+
+  .grape-value {
+    font-size: 22px;
+  }
+
+  .grape-label {
+    font-size: 11px;
+    white-space: normal;
+  }
+}
+
+@media (max-width: 480px) {
+  .grape-item {
+    flex: 1 1 100%;
+    justify-content: center;
+    text-align: center;
+  }
+}

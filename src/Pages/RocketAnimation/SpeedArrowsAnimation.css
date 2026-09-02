@@ -1,0 +1,140 @@
+.sa-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 9999;
+  overflow: hidden;
+}
+
+/* Trails */
+.sa-trail {
+  position: absolute;
+  top: 30px;
+  right: -40px;
+  z-index: 3;
+}
+
+.sa-trail-1 {
+  animation: saTrail1 9s cubic-bezier(0.45, 0, 0.85, 1) infinite;
+}
+.sa-trail-2 {
+  animation: saTrail2 9s cubic-bezier(0.45, 0, 0.85, 1) infinite;
+}
+.sa-trail-3 {
+  animation: saTrail3 9s cubic-bezier(0.45, 0, 0.85, 1) infinite;
+}
+
+/* Main group */
+.sa-main {
+  position: absolute;
+  top: -20px;
+  right: -50px;
+  z-index: 10;
+  animation: saFall 9s cubic-bezier(0.45, 0, 0.85, 1) infinite;
+}
+
+/* Arrow positions within group - diagonal spread */
+.sa-arrow {
+  position: absolute;
+}
+
+.sa-arrow-1 {
+  top: 0px;
+  left: 50px;
+}
+.sa-arrow-2 {
+  top: 28px;
+  left: 30px;
+}
+.sa-arrow-3 {
+  top: 55px;
+  left: 5px;
+}
+.sa-arrow-4 {
+  top: 82px;
+  left: -20px;
+}
+.sa-arrow-5 {
+  top: 108px;
+  left: -45px;
+}
+
+/* Main fall */
+@keyframes saFall {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+  2% {
+    opacity: 1;
+  }
+  72% {
+    opacity: 0.8;
+  }
+  80% {
+    transform: translate(-120vw, 125vh);
+    opacity: 0;
+  }
+  81%,
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Trail animations - offset behind */
+@keyframes saTrail1 {
+  0% {
+    transform: translate(35px, -30px);
+    opacity: 0;
+  }
+  5% {
+    opacity: 0.22;
+  }
+  80% {
+    transform: translate(-120vw, 125vh);
+    opacity: 0;
+  }
+  81%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes saTrail2 {
+  0% {
+    transform: translate(65px, -55px);
+    opacity: 0;
+  }
+  8% {
+    opacity: 0.12;
+  }
+  80% {
+    transform: translate(-120vw, 125vh);
+    opacity: 0;
+  }
+  81%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes saTrail3 {
+  0% {
+    transform: translate(95px, -80px);
+    opacity: 0;
+  }
+  11% {
+    opacity: 0.06;
+  }
+  80% {
+    transform: translate(-120vw, 125vh);
+    opacity: 0;
+  }
+  81%,
+  100% {
+    opacity: 0;
+  }
+}
